@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    //headerパーツ読み込み
+
+    $(function () {
+      $('#header').load('./header.html');
+      $('#footer').load('./footer.html');
+    });
+  </script>
+
+</head>
+
+<body>
+  <div id="header"></div>
+  <h2 class="max-w-xl text-2xl text-white bg-red-800 py-2 text-lg m-auto center text-center mt-10 mb-2"> @timeのサービス </h2>
+
+  <div class="flex items-center justify-center">
+    <div class="grid grid-cols-6 gap-x-2 gap-y-1 max-w-2xl">
+      <!-- Card 1 -->
+      <div class="col-span-2 wow fadeInUp" data-wow-duration="1s"
+        style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+
+        <a href="">
+          <img src="./img/karaoke.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> カラオケ </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-span-2">
+        <a href="">
+          <img src="./img/billiard.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> ビリヤード </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-span-2">
+        <a href="">
+          <img src="./img/darts.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> ダーツ </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-span-2">
+        <a href="">
+          <img src="./img/pinpon.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> 卓球 </p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-span-2">
+        <a href="">
+          <img src="./img/karaoke.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> 麻雀格闘具楽部 </p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="col-span-2">
+        <a href="">
+          <img src="./img/anime.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> 映画・アニメ</p>
+      </div>
+
+      <!-- Card 7 -->
+      <div class="col-span-2">
+        <a href="./comic.html">
+          <img src="./img/book.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> コミック・雑誌 </p>
+      </div>
+
+      <!-- Card 8 -->
+      <div class="col-span-2">
+        <a href="">
+          <img src="./img/study.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> ビジネス・勉強 </p>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="col-span-2">
+        <a href="./online.html">
+          <img src="./img/game.svg" class="bg-gray-400 px-8 py-3" alt="">
+        </a>
+        <p class="bg-red-800 text-white py-2 text-center"> オンラインゲーム </p>
+      </div>
+
+      <p class="
+       text-white
+       "></p>
+
+    </div>
+  </div>
+  <div class="max-w-2xl m-auto">
+    <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています。</h2>
+    <a class="twitter-timeline" href="https://twitter.com/attime_shiga?ref_src=twsrc%5Etfw" data-tweet-limit="3"
+      data-chrome="noheader nofooter">Tweets by attime_shiga</a>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  </div>
+  <div id="footer"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

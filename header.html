@@ -1,0 +1,151 @@
+<!-- header -->
+<header class="header items-center h-16 py-8 flex justify-between mt-4">
+  <a href="./TOP.html">
+    <img src="./img/logo.JPG" alt="">
+  </a>
+
+  <div class="nav-wrapper float-left">
+    <!-- ②ナビゲーションメニュー -->
+    <nav class="header-nav font-bold">
+      <ul class="nav-list flex">
+        <li class="nav-item list-none mr-14"><a href="./first.html" class="a-nav">はじめての方へ</a></li>
+        <li class="nav-item list-none mr-14"><a href="./services.html" class="a-nav">サービス一覧</a></li>
+        <li class="nav-item list-none mr-14"><a href="./booth-menu.html" class="a-nav">お食事メニュー</a></li>
+        <li class="nav-item list-none mr-14"><a href="./search.html" class="a-nav">近くの店舗を探す</a></li>
+        <li class="nav-item list-none mr-14"><a href="./QandA.html" class="a-nav">よくある質問</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <button class="burger-btn">
+    <!-- ③ハンバーガーボタン -->
+    <span class="bar bar_top"></span>
+    <span class="bar bar_mid"></span>
+    <span class="bar bar_bottom"></span>
+  </button>
+</header>
+<!-- //header -->
+
+<style>
+
+  .burger-btn {
+    display: none;
+  }
+
+
+  @media screen and (max-width:900px) {
+    .burger-btn {
+      display: block;
+      color: black;
+    }
+
+    .header {
+      padding: 0 5%;
+    }
+
+    .burger-btn {
+      display: block;
+      height: 39px;
+      position: relative;
+      width: 39px;
+      z-index: 3;
+      background-color: rgb(0, 0, 0);
+
+    }
+
+    .bar {
+      background-color: #fff;
+      display: block;
+      height: 1px;
+      left: 50%;
+      position: absolute;
+      transform: translateX(-50%);
+      width: 20px;
+    }
+
+    .bar_top {
+      top: 10px;
+    }
+
+    .bar_mid {
+      top: 50%;
+      /*transform: translate(-50%, -50%);*/
+    }
+
+    .bar_bottom {
+      bottom: 10px;
+    }
+
+    .burger-btn.close .bar_top {
+      transform: translate(-50%, 10px) rotate(45deg);
+      transition: transform .3s;
+    }
+
+    .burger-btn.close .bar_mid {
+      opacity: 0;
+      transition: opacity .3s;
+    }
+
+    .burger-btn.close .bar_bottom {
+      transform: translate(-50%, -8px) rotate(-45deg);
+      transition: transform .3s;
+    }
+
+    /* スクロール制御 */
+    .noscroll {
+      overflow: hidden;
+    }
+
+    /* 以下、ハンバーガーメニュー */
+    .nav-wrapper {
+      visibility: hidden;
+      height: 100vh;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100vw;
+      opacity: 0;
+      transition: opacity .5s;
+      z-index: 2;
+    }
+
+    .header-nav {
+      background-color: #89000A;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+    }
+
+    .nav-list {
+      display: block;
+      left: 50%;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .nav-item {
+      margin-bottom: 40px;
+      margin-right: 0;
+    }
+
+    .nav-wrapper.fade {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .a-nav {
+      color: white;
+    }
+  }
+</style>
+<script>
+  $('.burger-btn').on('click', function () {
+    $('.burger-btn').toggleClass('close');
+    $('.nav-wrapper').toggleClass('fade');
+    $('body').toggleClass('noscroll');
+    $('.nav-list').toggleClass('a-nav');
+  });
+
+</script>
