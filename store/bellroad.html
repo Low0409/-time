@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
+  <title>アットタイム彦根ベルロード店 カラオケ＆アミューズメント＆インターネットカフェ</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    //headerパーツ読み込み
+
+    $(function () {
+      $('#header').load('../header.html');
+      $('#footer').load('../footer.html');
+    });
+  </script>
+
+</head>
+
+<body>
+
+  <div class="max-w-3xl mx-auto">
+    <img src="../img/store/bellroad/top.jpg" alt="" class="mx-auto">
+    <div class="relative">
+      <img src="../img/store/bellroad/bellroad.jpg" alt="">
+      <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center absolute
+        top-20 left-0 right-0 text-white bg-black
+        opacity-80">彦根ベルロード店</h2>
+    </div>
+    <div>
+      <p>アットタイム彦根ベルロード店です。
+        最新機種を設置したカラオケ部屋は、全部で26室。
+        豊富なフードメニューや⾷べ放題のソフトクリームと共にお楽しみください。また、ダーツ・ビリヤード・卓球などもご⽤意させていただいております。 </p>
+    </div>
+
+    <div
+      class="flex bg-red-800 text-white text-center py-4 md:text-xl leading-normal font-bold h-28 justify-center items-center">
+
+      <button class="text-yellow-100 mx-4 sm:mx-8">アクセス情報</button>
+      <button class="text-yellow-100 mx-4 sm:mx-8">料金案内表</button>
+      <button class="text-yellow-100 mx-4 sm:mx-8">設備・サービス</button>
+    </div>
+
+    <img src="../img/store/bellroad/04_bell.jpg" alt="" class="mx-auto">
+
+    <div id="access">
+      <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center bg-red-800 text-yellow-100 mt-2 py-4">—
+        アクセス情報 —</h2>
+      <div class="googleMap mx-auto">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d968.5978764199276!2d136.2377675155134!3d35.257202921144945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003d53b2d12fd35%3A0xc61f97e700ede4a2!2z44Ki44OD44OI44K_44Kk44OgIOW9puagueODmeODq-ODreODvOODieW6lw!5e0!3m2!1sja!2sjp!4v1653375223494!5m2!1sja!2sjp"
+          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" zoom="1" frameborder="0"></iframe>
+      </div>
+      <div id="price_table">
+        <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center bg-red-800 text-yellow-100 mt-2 py-4">—
+          料金案内表 —</h2>
+        <img src="../img/store/bellroad/charge_karaoke1.jpg" alt="" class="mx-auto">
+        <img src="../img/store/bellroad/charge_karaoke2.jpg" alt="" class="mx-auto">
+        <img src="../img/store/bellroad/charge_karaoke3.jpg" alt="" class="mx-auto">
+        <img src="../img/store/bellroad/charge_karaoke4.jpg" alt="" class="mx-auto">
+      </div>
+      <div id="services">
+        <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center bg-red-800 text-yellow-100 mt-2 py-4">—
+          設備・サービス —</h2>
+
+      </div>
+    </div>
+
+    <style>
+      .googleMap {
+        position: relative;
+        width: 600px;
+        height: 450px;
+      }
+
+      .googleMap:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        display: block;
+        background-color: #ff6c00;
+        position: absolute;
+        top: 0;
+        left: 0;
+        mix-blend-mode: hue;
+        pointer-events: none;
+      }
+    </style>
+
+
+
+
+  </div>
+  <div id="footer"></div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
