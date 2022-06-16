@@ -57,16 +57,16 @@
             <div>
                 <ul>
                     <!-- スクロールされる -->
-                    <a href="#don">丼もの</a>
-                    <a href="#curry">カレー</a>
-                    <a href="#plate">プレート</a>
-                    <a href="#pasta">パスタ</a>
-                    <a href="#pan">パン&ピザ</a>
-                    <a href="#side">サイドメニュー</a>
-                    <a href="#sweets">デザート</a>
+                    <a href="#h2-don">丼もの</a>
+                    <a href="#h2-curry">カレー</a>
+                    <a href="#h2-plate">プレート</a>
+                    <a href="#h2-pasta">パスタ</a>
+                    <a href="#h2-pan">パン&ピザ</a>
+                    <a href="#h2-side">サイドメニュー</a>
+                    <a href="#h2-sweets">デザート</a>
                 </ul>
             </div>
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16">丼もの</h2>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16" id="h2-don">丼もの</h2>
             <div class="flex flex-wrap flex-row -mx-4 text-center" id="don">
 
                 <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;" v-for="menu in menulist">
@@ -80,7 +80,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16">カレー</h2>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16" id="h2-curry">カレー</h2>
             <div class="flex flex-wrap flex-row -mx-4 text-center" id="curry">
 
                 <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;" v-for="menu in menulist">
@@ -94,7 +94,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16">プレート</h2>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16" id="h2-plate">プレート</h2>
             <div class="flex flex-wrap flex-row -mx-4 text-center" id="plate">
 
                 <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;" v-for="menu in menulist">
@@ -108,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16">パスタ</h2>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16" id="h2-pasta">パスタ</h2>
             <div class="flex flex-wrap flex-row -mx-4 text-center" id="pasta">
 
                 <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;" v-for="menu in menulist">
@@ -122,7 +122,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16">バン&ピザ</h2>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16" id="h2-pan">バン&ピザ</h2>
             <div class="flex flex-wrap flex-row -mx-4 text-center" id="pan">
 
                 <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;" v-for="menu in menulist">
@@ -136,7 +136,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16">サイドメニュー</h2>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16" id="h2-side">サイドメニュー</h2>
             <div class="flex flex-wrap flex-row -mx-4 text-center" id="side">
 
                 <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;" v-for="menu in menulist">
@@ -150,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16">デザート</h2>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mb-16" id="h2-sweets">デザート</h2>
             <div class="flex flex-wrap flex-row -mx-4 text-center" id="sweets">
 
                 <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;" v-for="menu in menulist">

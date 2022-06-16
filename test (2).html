@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <p>fdasfdafda</p>
+  <div class="flex">
+    <div class="zoom-box">
+      <div class="img-zup zoom"> <img src="./img/billiard.svg" class="bg-gray-400 px-8 py-3 zoom" alt="">
+      </div>
+    </div>
+    <div class="zoom-box">
+      <div class="img-zup zoom"> <img src="./img/billiard.svg" class="bg-gray-400 px-8 py-3 zoom" alt="">
+      </div>
+    </div>
+  </div>
+
+  <p>fdafda</p>
+
+</body>
+<style>
+
+
+  .img-zup {
+    width: 240px;
+    height: 240px;
+  }
+
+  .zoom-box {
+    overflow: hidden;
+  }
+
+  .img-zup.zoom {
+    display: block;
+    transition-duration: .5s;
+  }
+
+  .img-zup.zoom:hover {
+    transform: scale(1.2);
+  }
+</style>
+
+</html>

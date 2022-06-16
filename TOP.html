@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
   <title>Document</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
     //headerパーツ読み込み
 
@@ -29,65 +28,52 @@
 
     <!-- Slider -->
 
-
-      <div id="default-carousel" class="relative" data-carousel="static">
-        <!-- Carousel wrapper -->
-        <div class="overflow-hidden relative h-96">
-          <!-- Item 1 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <span
-              class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First
-              Slide</span>
-            <img src="./img/top-slider-img/slider_6.jpg"
-              class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-          </div>
-          <!-- Item 2 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="./img/top-slider-img/slider_4.jpg"
-              class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-          </div>
-          <!-- Item 3 -->
-          <div class="hidden duration-700 ease-in-out" data-carousel-item>
-            <img src="./img/top-slider-img/slider_10.jpg"
-              class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
-          </div>
-        </div>
-        <!-- Slider indicators -->
-        <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1"
-            data-carousel-slide-to="0"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2"
-            data-carousel-slide-to="1"></button>
-          <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3"
-            data-carousel-slide-to="2"></button>
-        </div>
-        <!-- Slider controls -->
-        <button type="button"
-          class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-          data-carousel-prev>
-          <span
-            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-            </svg>
-            <span class="hidden">Previous</span>
-          </span>
-        </button>
-        <button type="button"
-          class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-          data-carousel-next>
-          <span
-            class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-            </svg>
-            <span class="hidden">Next</span>
-          </span>
-        </button>
+<div class="bg-gray-300">
+  <div id="default-carousel" class="relative container xl:max-w-6xl mx-auto z-0" data-carousel="static">
+    <!-- Carousel wrapper -->
+    <div class="overflow-hidden relative h-96">
+      <!-- Item 1 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <span class="absolute top-1/2 left-1/2 text-2xl font-semibold text-white -translate-x-1/2 -translate-y-1/2 sm:text-3xl dark:text-gray-800">First
+          Slide</span>
+        <img src="./img/top-slider-img/slider_6.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
       </div>
-      <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
+      <!-- Item 2 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./img/top-slider-img/slider_4.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+      </div>
+      <!-- Item 3 -->
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./img/top-slider-img/slider_10.jpg" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+      </div>
+    </div>
+    <!-- Slider indicators -->
+    <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+    </div>
+    <!-- Slider controls -->
+    <button type="button" class="flex absolute top-0 left-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-prev>
+      <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="hidden">Previous</span>
+      </span>
+    </button>
+    <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
+      <span class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+        <span class="hidden">Next</span>
+      </span>
+    </button>
+  </div>
+</div>
+
+    <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 
     <!-- Slider -->
   </div>
@@ -98,8 +84,7 @@
   <div class="flex items-center justify-center">
     <div class="grid grid-cols-6 gap-x-2 gap-y-1 max-w-2xl">
       <!-- Card 1 -->
-      <div class="col-span-2 wow fadeInUp" data-wow-duration="1s"
-        style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+      <div class="col-span-2 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
 
         <a href="">
           <img src="./img/karaoke.svg" class="bg-gray-400 px-8 py-3" alt="">
@@ -136,7 +121,7 @@
         <a href="">
           <img src="./img/karaoke.svg" class="bg-gray-400 px-8 py-3" alt="">
         </a>
-        <p class="bg-red-800 text-white py-2 text-center"> 麻雀格闘具楽部 </p>
+        <p class="bg-red-800 text-white py-2 text-center"> 麻雀格闘俱楽部 </p>
       </div>
 
       <!-- Card 6 -->
@@ -179,14 +164,12 @@
   </div>
   <div class="max-w-2xl m-auto">
     <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています。</h2>
-    <a class="twitter-timeline" href="https://twitter.com/attime_shiga?ref_src=twsrc%5Etfw" data-tweet-limit="3"
-      data-chrome="noheader nofooter">Tweets by attime_shiga</a>
+    <a class="twitter-timeline" href="https://twitter.com/attime_shiga?ref_src=twsrc%5Etfw" data-tweet-limit="3" data-chrome="noheader nofooter">Tweets by attime_shiga</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
   </div>
   <div id="footer"></div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 
 </body>
