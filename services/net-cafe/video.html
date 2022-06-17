@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
+    <title>-基本サービス-</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        //headerパーツ読み込み
+
+        $(function () {
+            $('#header').load('../../header.html');
+            $('#footer').load('../../footer.html');
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="header"></div>
+    <div style="background-image:url(../../img/services/darts.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
+        <h2 class="text-2xl leading-normal mb-2 font-black text-black text-center bg-black text-white py-2">－動画サービス－</h2>
+    </div>
+    <div class="max-w-4xl m-auto">
+
+
+
+        <h3 class="text-red-800 font-black text-2xl mb-2 text-center">動画サービス</h3>
+        <div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20">
+          <img src="../img/services/basic-services/soft.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
+          <p class="ml-4 mt-4 align-middle">ソフトドリンクはもちろん、淹れたてのコーヒーや紅茶、フローズンドリンクまで。20種類以上のドリンクが全て飲み放題です。ドリンクバーにはソフトクリームの食べ放題も設置しています。
+          </p>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

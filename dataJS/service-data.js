@@ -44,30 +44,61 @@ new Vue({
 new Vue({
   el: "#netcafe",
   data: {
-    amusementlist: [
+    netcafeServiceList: [
       {
         name: "動画サービス",
-        img: "./img/services/billiard.jpg",
+        img: "./img/services/movie-services/bandai.jpg",
         description: "Video Content Service",
-        url: "./services/amusement/billiard.html",
+        url: "./services/net-cafe/video.html",
       },
       {
         name: "オンラインゲーム",
-        img: "./img/services/darts.jpg",
+        img: "./img/online_game/valorant.jpg",
         description: "PC Online Game",
-        url: "./services/amusement/darts.html",
+        url: "./services/online.html",
       },
       {
         name: "コミック雑誌を読む",
         img: "./img/services/takkyu.jpg",
         description: "Comic & Magazines",
-        url: "./services/amusement/takkyu.html",
+        url: "./comic.html",
       },
       {
         name: "ビジネス勉強",
         img: "./img/services/majan.jpeg",
         description: "Business & Study",
-        url: "./services/amusement/mahjong.html",
+        url: "./services/net-cafe/work_study.html",
+      },
+    ],
+  },
+});
+new Vue({
+  el: "#basic",
+  data: {
+    BasicServiceList: [
+      {
+        name: "ソフトクリーム食べ放題",
+        img: "./img/services/basic-services/soft.jpg",
+        description: "Soft-serve Ice Cream",
+        url: "./services/defaultservice.html",
+      },
+      {
+        name: "シャワー無料",
+        img: "./img/services/basic-services/syawa.jpg",
+        description: "Shower",
+        url: "./services/defaultservice.html",
+      },
+      {
+        name: "ドリンクバー飲み放題",
+        img: "./img/services/basic-services/drink.jpg",
+        description: "Drink bar",
+        url: "./services/defaultservice.html",
+      },
+      {
+        name: "スープバー",
+        img: "./img/services/majan.jpeg",
+        description: "Soup bar",
+        url: "./services/defaultservice.html",
       },
     ],
   },
