@@ -75,7 +75,7 @@
 
   </div>
   <h2 class="text-center text-3xl text-black">Infomation</h2>
-  <!-- バナー -->
+
   <div class="flex mb-20">
     <div class="w-1/5">
       <img src="./img/news&campaign/icon_corona.jpg" class="w-full h-full" alt="">
@@ -98,71 +98,12 @@
   <div class="flex items-center justify-center" id="sp-content">
     <div class="grid grid-cols-6 gap-x-2 gap-y-1 m-auto">
 
-
-
       <div class="col-span-2" v-for="item in ServiceListsp">
         <a :href="item.path">
           <img :src="item.icon" class="bg-gray-400 px-8 py-3" alt="">
         </a>
         <p class="bg-red-800 text-white py-2 text-center">{{item.name}} </p>
       </div>
-
-
-
-      <!-- <div class="col-span-2">
-        <a href="./services/karaoke.html">
-          <img src="./img/icon/karaoke.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> カラオケ </p>
-      </div>
-      <div class="col-span-2">
-        <a href="./services/amusement/billiard.html">
-          <img src="./img/icon/billiard.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> ビリヤード </p>
-      </div>
-      <div class="col-span-2">
-        <a href="./services/amusement/darts.html">
-          <img src="./img/icon/darts.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> ダーツ </p>
-      </div>
-      <div class="col-span-2">
-        <a href="./services/amusement/takkyu.html">
-          <img src="./img/icon/pinpon.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> 卓球 </p>
-      </div>
-      <div class="col-span-2">
-        <a href="./services/amusement/mahjong.html">
-          <img src="./img/icon/karaoke.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> 麻雀格闘俱楽部 </p>
-      </div>
-      <div class="col-span-2">
-        <a href="./">
-          <img src="./img/icon/anime.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> 映画・アニメ</p>
-      </div>
-      <div class="col-span-2">
-        <a href="./comic.html">
-          <img src="./img/icon/book.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> コミック・雑誌 </p>
-      </div>
-      <div class="col-span-2">
-        <a href="">
-          <img src="./img/icon/study.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> ビジネス・勉強 </p>
-      </div>
-      <div class="col-span-2">
-        <a href="./services/online.html">
-          <img src="./img/icon/game.svg" class="bg-gray-400 px-8 py-3" alt="">
-        </a>
-        <p class="bg-red-800 text-white py-2 text-center"> オンラインゲーム </p>
-      </div> -->
 
     </div>
   </div>
@@ -181,7 +122,12 @@
   </div>
 
   <div class="max-w-2xl m-auto">
-    <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています。</h2>
+    <div class="flex">   
+       <img src="./img/icon/twitter.svg" alt="" class="w-1/6">
+      <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています。</h2>
+
+    </div>
+
     <a class="twitter-timeline" href="https://twitter.com/attime_shiga?ref_src=twsrc%5Etfw" data-tweet-limit="3" data-chrome="noheader nofooter">Tweets by attime_shiga</a>
     <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
