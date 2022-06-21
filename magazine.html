@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,194 +9,202 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
     <title>コミック・雑誌一覧</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         //headerパーツ読み込み
-    
-        $(function () {
-          $('#header').load('./header.html');
-          $('#footer').load('./footer.html');
-        });
-      </script>
-    
-</head>
-<body>
-    <div id="header"></div>
-  <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0 bg-white">
-    <div class="container xl:max-w-6xl mx-auto px-4">
-        <!-- Heading start -->
 
-        <header class="text-center mx-auto mb-12 lg:px-20">
+        $(function () {
+            $('#header').load('./header.html');
+            $('#footer').load('./footer.html');
+        });
+    </script>
+
+</head>
+
+<body background="../img/background/email-pattern.webp">
+    <div id="header"></div>
+    <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
+        <div class="container xl:max-w-6xl mx-auto px-4">
+            <!-- Heading start -->
+
+            <header class="text-center mx-auto mb-12 lg:px-20">
 
                 <h2 class="text-2xl leading-normal mb-2 font-bold text-black">-コミック・雑誌-</h2>
 
 
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
-                <circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
-                <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-                <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
-            </svg>
-            <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Save time managing advertising &amp; Content for your business.</p>
-            <!-- 漫画と雑誌切り替え -->
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 60" style="margin: 0 auto;height: 35px;" xml:space="preserve">
+                    <circle cx="50.1" cy="30.4" r="5" class="stroke-primary" style="fill: transparent;stroke-width: 2;stroke-miterlimit: 10;"></circle>
+                    <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
+                    <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
+                </svg>
+                <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Save time managing advertising &amp; Content for your business.</p>
+                <!-- 漫画と雑誌切り替え -->
 
-            <div class="flex flex-wrap justify-center">
-                <a class="w-full md:w-1/2 p-4 bg-gray-400 hover:bg-red-800 text-yellow-100" href="./comic.html">
-                    <div class="flex flex-col items-center">
-                        <div class="flex-1">
-                            <p>コミック</p>
+                <div class="flex flex-wrap justify-center">
+                    <a class="w-full md:w-1/2 p-4 bg-gray-400 hover:bg-red-800 text-yellow-100" href="./comic.html">
+                        <div class="flex flex-col items-center">
+                            <div class="flex-1">
+                                <p>コミック</p>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2">Comic</h3>
+
+                            </div>
                         </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2">Comic</h3>
+                    </a>
 
-                        </div>
-                    </div>
-                </a>
+                    <div class="w-full md:w-1/2 p-4 bg-red-800">
+                        <div class="flex flex-col items-center">
+                            <div class="flex-1">
+                                <p class="text-yellow-100">雑誌</p>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="text-xl font-bold mb-2 text-yellow-100">Magazine</h3>
 
-                <div class="w-full md:w-1/2 p-4 bg-red-800">
-                    <div class="flex flex-col items-center">
-                        <div class="flex-1">
-                            <p class="text-yellow-100">雑誌</p>
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-xl font-bold mb-2 text-yellow-100">Magazine</h3>
-
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </header>
-        <!-- End heading -->
-        <!-- row -->
-        <div class="flex flex-wrap flex-row -mx-4 text-center" id="comiclist">
-            <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-                <!-- service block -->
-                <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                    <div class="inline-block text-gray-900 mb-4">
-                        <!-- icon -->
-                        <img src="./img/comic.JPG" alt="">
+            </header>
+            <!-- End heading -->
+            <!-- row -->
+
+
+
+
+            <div class="flex flex-wrap flex-row -mx-4 text-center" id="Magazineist">
+                <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                    <!-- service block -->
+                    <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+                        <div class="inline-block text-gray-900 mb-4">
+                            <!-- icon -->
+                            <img src="./img/comic.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
                     </div>
-                    <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                    <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    <!-- end service block -->
                 </div>
-                <!-- end service block -->
-            </div>
-            <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <!-- service block -->
-                <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4">
-                      <!-- icon -->
-                      <img src="./img/comic2.JPG" alt="">
-                  </div>
-                  <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-              </div>
-                <!-- end service block -->
-            </div>
-            <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                <!-- service block -->
-                <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4">
-                      <!-- icon -->
-                      <img src="./img/comic.JPG" alt="">
-                  </div>
-                  <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-              </div>
-                <!-- end service block -->
-            </div>
-            <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
-                <!-- service block -->
-                <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4">
-                      <!-- icon -->
-                      <img src="./img/comic2.JPG" alt="">
-                  </div>
-                  <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-              </div>
-                <!-- end service block -->
-            </div>
-            <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
-                <!-- service block -->
-                <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4">
-                      <!-- icon -->
-                      <img src="./img/comic.JPG" alt="">
-                  </div>
-                  <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-              </div>
-                <!-- end service block -->
-            </div>
-            <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
-                <!-- service block -->
-                <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                  <div class="inline-block text-gray-900 mb-4">
-                      <!-- icon -->
-                      <img src="./img/comic2.JPG" alt="">
-                  </div>
-                  <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                  <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-              </div>
-                <!-- end service block -->
-            </div>
-            <!-- もっと見る -->
+                <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <!-- service block -->
+                    <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+                        <div class="inline-block text-gray-900 mb-4">
+                            <!-- icon -->
+                            <img src="./img/comic2.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
+                    <!-- end service block -->
+                </div>
+                <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <!-- service block -->
+                    <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+                        <div class="inline-block text-gray-900 mb-4">
+                            <!-- icon -->
+                            <img src="./img/comic.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
+                    <!-- end service block -->
+                </div>
+                <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" style="visibility: visible; animation-duration: 1s; animation-name: fadeInUp;">
+                    <!-- service block -->
+                    <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+                        <div class="inline-block text-gray-900 mb-4">
+                            <!-- icon -->
+                            <img src="./img/comic2.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
+                    <!-- end service block -->
+                </div>
+                <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".1s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInUp;">
+                    <!-- service block -->
+                    <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+                        <div class="inline-block text-gray-900 mb-4">
+                            <!-- icon -->
+                            <img src="./img/comic.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
+                    <!-- end service block -->
+                </div>
+                <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;">
+                    <!-- service block -->
+                    <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
+                        <div class="inline-block text-gray-900 mb-4">
+                            <!-- icon -->
+                            <img src="./img/comic2.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
+                    <!-- end service block -->
+                </div>
+                <!-- もっと見る -->
                 <button class="bg-red-800 hover:bg-red:700 text-white font-bold py-2 px-12 rounded-full block container mb-20 mx-10 md:mx-64" v-on:click="more" v-if="btnMore">もっと見る</button>
                 <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-if="number">
-                    
+
                     <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                      <div class="inline-block text-gray-900 mb-4">
-                          
-                          <img src="./img/comic.JPG" alt="">
-                      </div>
-                      <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                      <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                  </div>
+                        <div class="inline-block text-gray-900 mb-4">
+
+                            <img src="./img/comic.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
                 </div>
 
                 <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-if="number">
-                    
+
                     <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                      <div class="inline-block text-gray-900 mb-4">
-                          
-                          <img src="./img/comic.JPG" alt="">
-                      </div>
-                      <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                      <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                  </div>
+                        <div class="inline-block text-gray-900 mb-4">
+
+                            <img src="./img/comic.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
                 </div>
 
                 <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-if="number">
-                    
+
                     <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                      <div class="inline-block text-gray-900 mb-4">
-                          
-                          <img src="./img/comic.JPG" alt="">
-                      </div>
-                      <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                      <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                  </div>
+                        <div class="inline-block text-gray-900 mb-4">
+
+                            <img src="./img/comic.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
                 </div>
 
                 <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-if="number">
-                    
+
                     <div class="py-8 px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2">
-                      <div class="inline-block text-gray-900 mb-4">
-                          
-                          <img src="./img/comic.JPG" alt="">
-                      </div>
-                      <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
-                      <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
-                  </div>
+                        <div class="inline-block text-gray-900 mb-4">
+
+                            <img src="./img/comic.JPG" alt="">
+                        </div>
+                        <h3 class="text-lg leading-normal mb-2 font-semibold text-black">SEO Services</h3>
+                        <p class="text-gray-500">This is a wider card with supporting text below as a natural content.</p>
+                    </div>
                 </div>
+            </div>
+
+
+
+
+            
+            <!-- end row -->
         </div>
-        
-        <!-- end row -->
+        <div id="footer"></div>
     </div>
-    <div id="footer"></div>
-</div>
 </body>
 <script>
     new Vue({
@@ -205,11 +214,12 @@
             btnMore: 1,
         },
         methods: {
-            more: function() {
+            more: function () {
                 this.number++;
                 this.btnMore--;
             }
         }
     });
 </script>
+
 </html>

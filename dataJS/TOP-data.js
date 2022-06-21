@@ -48,7 +48,7 @@ new Vue({
         name: "ビジネス・勉強",
         icon: "./img/icon/study.svg",
         img: "./img/TOP/8.jpg",
-        path: "",
+        path: "./services/net-cafe/work_study.html",
       },
       {
         name: "オンラインゲーム",

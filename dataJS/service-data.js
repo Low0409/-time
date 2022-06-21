@@ -4,26 +4,26 @@ new Vue({
     amusementlist: [
       {
         name: "ビリヤード",
-        img: "./img/services/billiard.jpg",
+        img: "./img/TOP/2.jpg",
         description: "Billiard",
         url: "./services/amusement/billiard.html",
       },
       {
         name: "ダーツ",
-        img: "./img/services/darts.jpg",
+        img: "./img/TOP/3.jpg",
         description: "Darts",
         url: "./services/amusement/darts.html",
       },
       {
         name: "卓球",
-        img: "./img/services/takkyu.jpg",
+        img: "./img/TOP/4.jpg",
         description: "Table tennis",
         url: "./services/amusement/takkyu.html",
       },
       {
         name: "麻雀格闘俱楽部・麻雀",
         img: "./img/services/majan.jpeg",
-        description: "Majan",
+        description: "Mahjong",
         url: "./services/amusement/mahjong.html",
       },
       {
@@ -53,19 +53,19 @@ new Vue({
       },
       {
         name: "オンラインゲーム",
-        img: "./img/online_game/valorant.jpg",
+        img: "./img/TOP/9.jpg",
         description: "PC Online Game",
         url: "./services/online.html",
       },
       {
-        name: "コミック雑誌を読む",
-        img: "./img/services/takkyu.jpg",
+        name: "コミック・雑誌",
+        img: "./img/TOP/7.jpg",
         description: "Comic & Magazines",
         url: "./comic.html",
       },
       {
         name: "ビジネス勉強",
-        img: "./img/services/majan.jpeg",
+        img: "./img/TOP/8.jpg",
         description: "Business & Study",
         url: "./services/net-cafe/work_study.html",
       },
