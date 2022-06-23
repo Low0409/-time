@@ -24,7 +24,7 @@
 <body background="./img/background/email-pattern.webp">
   <div id="header"></div>
   <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
-    <h2 class="text-2xl leading-normal mb-2 font-black text-black text-center bg-black text-white py-2">－サービス一覧－</h2>
+    <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－サービス一覧－</h2>
   </div>
 
   <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
@@ -32,18 +32,18 @@
     <div class="container xl:max-w-6xl mx-auto px-6">
 
 
-      <h3 class="text-2xl leading-normal mb-2 font-bold text-black text-center">-カラオケ-</h3>
+      <h3 class="text-2xl leading-normal mb-2 font-bold text-center">-カラオケ-</h3>
 
       <div class="text-center w-full mx-auto border-2 border-black shadow-lg p-6 bg-white">
         <a href="./services/karaoke.html">
-          <p class="text-2xl leading-normal mb-2 font-bold text-black text-center">最新カラオケマシン</p>
+          <p class="text-2xl leading-normal mb-2 font-bold text-center">最新カラオケマシン</p>
           <p class="text-gray-500 text-sm">Latest karaoke machines</p>
           <img src="./img/services/karaoke.JPG" alt="" class="w-full h-auto object-cover">
           <button class="bg-black text-white py-2 px-6 my-2">詳細</button>
         </a>
       </div>
 
-      <h3 class="text-2xl leading-normal mb-2 font-bold text-black text-center mt-10">-アミューズメント-</h3>
+      <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">-アミューズメント-</h3>
 
       <div class="flex flex-wrap flex-row -mx-4 text-center" id="amusement">
 
@@ -51,7 +51,7 @@
           <a :href="item.url">
             <div class="py-2 sm:px-12 mb-12 bg-gray-50 border-b border-gray-100">
               <div class="inline-block text-gray-900 mb-4">
-                <p class="text-lg leading-normal mb-2 font-extrabold text-black">{{ item.name }}</p>
+                <p class="text-lg leading-normal mb-2 font-extrabold">{{ item.name }}</p>
                 <p class="text-gray-500 text-sm">{{ item.description }}</p>
                 <img :src="item.img" alt="">
               </div>
@@ -60,14 +60,14 @@
           </a>
         </div>
       </div>
-      <h3 class="text-2xl leading-normal mb-2 font-bold text-black text-center mt-10">-ネットカフェ-</h3>
+      <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">-ネットカフェ-</h3>
 
       <div class="flex flex-wrap flex-row -mx-4 text-center" id="netcafe">
         <div class="flex-shrink px-4 sm:w-1/2  lg:px-6 wow fadeInUp border-2 border-black shadow-lg transform transition duration-300 ease-in-out hover:-translate-y-2 mt-6 bg-white" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-for="item in netcafeServiceList">
           <a :href="item.url">
             <div class="py-2 sm:px-12 mb-12 bg-gray-50 border-b border-gray-100">
               <div class="inline-block text-gray-900 mb-4">
-                <p class="text-lg leading-normal mb-2 font-extrabold text-black">{{ item.name }}</p>
+                <p class="text-lg leading-normal mb-2 font-extrabold">{{ item.name }}</p>
                 <p class="text-gray-500 text-sm">{{ item.description }}</p>
                 <img :src="item.img" alt="" class="w-full h-auto object-cover">
               </div>
@@ -77,14 +77,14 @@
           </a>
         </div>
       </div>
-      <h3 class="text-2xl leading-normal mb-2 font-bold text-black text-center mt-10">-基本サービス-</h3>
+      <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">-基本サービス-</h3>
       <div class="flex flex-wrap flex-row -mx-4 text-center" id="basic">
 
         <div class="flex-shrink px-4 sm:w-1/2  lg:px-6 wow fadeInUp border-2 border-black shadow-lg transform transition duration-300 ease-in-out hover:-translate-y-2 mt-6 bg-white" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-for="item in BasicServiceList">
           <a :href="item.url">
             <div class="py-2 sm:px-12 mb-12 bg-gray-50 border-b border-gray-100">
               <div class="inline-block text-gray-900 mb-4">
-                <p class="text-lg leading-normal mb-2 font-extrabold text-black">{{ item.name }}</p>
+                <p class="text-lg leading-normal mb-2 font-extrabold">{{ item.name }}</p>
                 <p class="text-gray-500 text-sm">{{ item.description }}</p>
                 <img :src="item.img" alt="" class="w-full h-auto object-cover">
               </div>
@@ -96,21 +96,21 @@
 
       </div>
 
-      <h3 class="text-2xl leading-normal mb-2 font-bold text-black text-center mt-10">-部屋・席-</h3>
+      <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">-部屋・席-</h3>
 
       <div class="text-center w-full mx-auto border-2 border-black shadow-lg p-6 bg-white">
         <a href="./room-chair.html">
-        <p class="text-2xl leading-normal mb-2 font-bold text-black text-center">豊富な部屋の種類</p>
+        <p class="text-2xl leading-normal mb-2 font-bold text-center">豊富な部屋の種類</p>
         <img src="./img/services/karaoke.JPG" alt="" class="w-full h-auto object-cover">
         <button class="bg-black text-white py-2 px-6 my-2">詳細</button>
       </a>
       </div>
 
-      <h3 class="text-2xl leading-normal mb-2 font-bold text-black text-center mt-10">- お食事メニュー-</h3>
+      <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">- お食事メニュー-</h3>
 
       <div class="text-center w-full mx-auto border-2 border-black shadow-lg p-6 bg-white">
         <a href="./booth-menu.html">
-          <p class="text-2xl leading-normal mb-2 font-bold text-black text-center">豊富なお食事メニュー</p>
+          <p class="text-2xl leading-normal mb-2 font-bold text-center">豊富なお食事メニュー</p>
           <img src="./img/services/karaoke.JPG" alt="" class="w-full h-auto object-cover">
           <button class="bg-black text-white py-2 px-6 my-2">詳細</button>
 

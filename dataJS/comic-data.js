@@ -1,23 +1,152 @@
-
 new Vue({
-  el: "#magazine",
+  el: "#comiclist",
   data: {
-    MagagineList: [
+    number: 0,
+    btnMore: 1,
+    ComicList: [
       {
-        name: "新聞",
-        img: "../img/magazine/viewn.jpg",
-        description: "text",
+        title: "ワンパンマン/26巻",
+        img: "./img/comic/comic1.JPG",
+        day: "2022/06/23",
       },
       {
-        name: "ビューン",
-        img: "../img/magazine/viewn.jpg",
-        description: "text",
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic2.JPG",
+        day: "2022/06/23",
       },
       {
-        name: "各種雑誌",
-        img: "../img/magazine/viewn.jpg",
-        description: "text",
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic4.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic5.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic6.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic7.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
       },
     ],
+    MoreComicList: [
+      {
+        title: "ワンパンマン/26巻",
+        img: "./img/comic/comic1.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "ワンパンマン/26巻",
+        img: "./img/comic/comic1.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "ワンパンマン/26巻",
+        img: "./img/comic/comic1.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "ワンパンマン/26巻",
+        img: "./img/comic/comic1.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "ワンパンマン/26巻",
+        img: "./img/comic/comic1.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic2.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic4.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic5.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic6.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic7.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+      {
+        title: "タイトル/〇巻",
+        img: "./img/comic/comic3.JPG",
+        day: "2022/06/23",
+      },
+    ],
+  },
+  methods: {
+    more: function () {
+      this.number++;
+      this.btnMore--;
+    },
   },
 });

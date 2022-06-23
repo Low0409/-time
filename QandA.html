@@ -8,153 +8,72 @@
 	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
 	<title>はじめての方へ</title>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script>
-		//headerパーツ読み込み
-
 		$(function () {
 			$('#header').load('./header.html');
 			$('#footer').load('./footer.html');
 		});
 	</script>
-
 </head>
-
 <body background="./img/background/email-pattern.webp">
 	<div id="header"></div>
-	<h2 class="text-2xl leading-normal mb-2 font-bold text-black text-center">-よくある質問-</h2>
-
-
-
-
-	<!-- This is an example component -->
-	<div class="max-w-2xl mx-auto bg-white rounded">
-
-		<div id="accordion-collapse" data-accordion="collapse">
-			<h2 id="accordion-collapse-heading-1">
-				<button type="button"
-					class="flex items-center focus:ring-4 justify-between p-5 w-full font-medium text-left border bg-red-800 border-b-0 text-gray-900 dark:text-yellow-100 bg-red-800 dark:bg-red-800 hover:bg-red-800 dark:hover:bg-red-800 rounded-t-xl"
-					data-accordion-target="#accordion-collapse-body-1" aria-expanded="true"
-					aria-controls="accordion-collapse-body-1">
-					<span class="text-yellow-100">個室を利用したいのですが、料金はどれくらいになりますか︖</span>
-					<svg data-accordion-icon class="w-6 h-6 shrink-0 rotate-180" fill="currentColor"
-						xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd"
-							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-							clip-rule="evenodd"></path>
-					</svg>
-				</button>
-			</h2>
-			<div id="accordion-collapse-body-1" aria-labelledby="accordion-collapse-heading-1">
-				<div class="p-5 border bg-red-800 dark:bg-gray-900 border-b-0">
-					<p class="mb-2 text-yellow-100 dark:text-gray-400">Flowbite is an open-source library of interactive</p>
-					<p class="text-yellow-100 dark:text-gray-400">Check out this guide to learn how to <a
-							href="https://flowbite.com/docs/getting-started/introduction/" target="_blank"
-							class="text-blue-600 dark:text-blue-500 hover:underline">get started</a> and start
-						developing
-						websites even faster with components on top of Tailwind CSS.</p>
+	<div style="background-image:url(../img/store575.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
+		<h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－よくある質問－</h2>
+	  </div>
+	<div class="max-w-2xl mx-auto bg-red-800 rounded">
+		<section class="shadow row">
+			<div class="tabs" id="QA">
+				<!-- 質問div -->
+				<div class="border-b overflow-hidden" v-for="item in QA_List">
+					<div class="border-l-2 border-transparent relative">
+						<input class="w-full absolute z-10 cursor-pointer opacity-0 h-5 top-6" type="checkbox" id="chck1">
+						<header class="flex justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none tab-label" for="chck1">
+							<span class="text-yellow-100 font-black">{{item.Q}}</span>
+							<div class="rounded-full border border-grey w-7 h-7 flex items-center justify-center test">
+								<svg aria-hidden="true" class="" data-reactid="266" fill="none" height="24" stroke="#606F7B" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="24" xmlns="http://www.w3.org/2000/svg">
+									<polyline points="6 9 12 15 18 9"></polyline>
+								</svg>
+							</div>
+						</header>
+						<div class="tab-content">
+							<div class="pl-8 pr-8 pb-5">
+								<p class="text-white">{{item.A}}</p>
+							</div>
+						</div>
+					</div>
 				</div>
+				<!-- 質問div -->
 			</div>
-			<h2 id="accordion-collapse-heading-2">
-				<button type="button"
-					class="flex items-center focus:ring-4 justify-between p-5 w-full font-medium border bg-red-800 border-b-0 text-left text-yellow-100 dark:text-gray-400 hover:bg-red-800 dark:hover:bg-red-800"
-					data-accordion-target="#accordion-collapse-body-2" aria-expanded="false"
-					aria-controls="accordion-collapse-body-2">
-					<span class="text-yellow-100">どんな漫画が置いてありますか︖</span>
-					<svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
-						xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd"
-							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-							clip-rule="evenodd"></path>
-					</svg>
-				</button>
-			</h2>
-			<div id="accordion-collapse-body-2" class="hidden" aria-labelledby="accordion-collapse-heading-2">
-				<div class="p-5 border bg-red-800 border-b-0">
-					<p class="mb-2 text-yellow-100 dark:text-gray-400">Flowbite is first conceptualized and designed using
-						the
-						Figma software so everything you see in the library has a design equivalent in our Figma file.
-					</p>
-					<p class="text-yellow-100 dark:text-gray-400">Check out the <a href="https://flowbite.com/figma/"
-							target="_blank" class="text-blue-600 dark:text-blue-500 hover:underline">Figma design system</a>
-						based on the utility classes from Tailwind CSS and components from Flowbite.</p>
-				</div>
-			</div>
-			<h2 id="accordion-collapse-heading-3">
-				<button type="button"
-					class="flex items-center border focus:ring-4 bg-red-800 justify-between p-5 w-full font-medium text-left text-yellow-100 dark:text-gray-400 hover:bg-red-800 dark:hover:bg-red-800"
-					data-accordion-target="#accordion-collapse-body-3" aria-expanded="false"
-					aria-controls="accordion-collapse-body-3">
-					<span class="text-yellow-100">店舗にある設備はどこで確認できますか︖</span>
-					<svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
-						xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd"
-							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-							clip-rule="evenodd"></path>
-					</svg>
-				</button>
-			</h2>
-			<div id="accordion-collapse-body-3" class="hidden" aria-labelledby="accordion-collapse-heading-3">
-				<div class="p-5 border bg-red-800 border-t-0">
-					<p class="mb-2 text-yellow-100 dark:text-gray-400">The main difference is that the core components</p>
-					<p class="mb-2 text-yellow-100 dark:text-gray-400">However, we actually recommend using both </p>
-				</div>
-			</div>
-			<h2 id="accordion-collapse-heading-4">
-				<button type="button"
-					class="flex items-center border focus:ring-4 bg-red-800 justify-between p-5 w-full font-medium text-left text-yellow-100 dark:text-gray-400 hover:bg-red-800 dark:hover:bg-red-800"
-					data-accordion-target="#accordion-collapse-body-4" aria-expanded="false"
-					aria-controls="accordion-collapse-body-4">
-					<span class="text-yellow-100">食事メニューは何がありますか︖</span>
-					<svg data-accordion-icon class="w-6 h-6 shrink-0" fill="currentColor"
-						xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd"
-							d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-							clip-rule="evenodd"></path>
-					</svg>
-				</button>
-			</h2>
-			<div id="accordion-collapse-body-4" class="hidden" aria-labelledby="accordion-collapse-heading-4">
-				<div class="p-5 border bg-red-800">
-					<p class="mb-2 text-yellow-100 dark:text-gray-400">The main difference is that the core components
-						from
-						Flowbite are open source under the MIT license, whereas Tailwind UI is a paid product. Another
-						difference is that Flowbite relies on smaller and standalone components, whereas Tailwind UI
-						offers
-						sections of pages.</p>
-					<p class="mb-2 text-yellow-100 dark:text-gray-400">However, we actually recommend usi</p>
-					<p class="mb-2 text-yellow-100 dark:text-gray-400">Learn more about these technologies:</p>
-				</div>
-			</div>
-
-
-		</div>
-
-
+		</section>
 		<script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
 	</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	<div id="footer"></div>
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="./dataJS/Q&A-data.js"></script>
 </body>
+<style>
+	.tab-content {
+		max-height: 0;
+		transition: all 0.5s;
+	}
 
+	input:checked+.tab-label .test {
+		background-color: #000;
+	}
+
+	input:checked+.tab-label .test svg {
+		transform: rotate(180deg);
+		stroke: #fff;
+	}
+
+	input:checked+.tab-label::after {
+		transform: rotate(90deg);
+	}
+
+	input:checked~.tab-content {
+		max-height: 100vh;
+	}
+</style>
 </html>

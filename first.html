@@ -8,10 +8,9 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
   <title>はじめての方へ</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
-    //headerパーツ読み込み
-
     $(function () {
       $('#header').load('./header.html');
       $('#footer').load('./footer.html');
@@ -23,7 +22,7 @@
 <body background="./img/background/email-pattern.webp">
   <div id="header"></div>
   <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
-    <h2 class="text-2xl leading-normal mb-2 font-black text-black text-center bg-black text-white py-2">-はじめての方へ-</h2>
+    <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">-はじめての方へ-</h2>
   </div>
 
   <div class="md:flex items-center shadow-2xl py-12 md:px-20 sm:px-14 px-6 rounded-2xl mb-20 sm:mx-8 bg-white">
@@ -32,95 +31,41 @@
       <h2 class="text-red-800 py-4 text-center text-4xl font-black m-auto">@timeとは</h2>
       <p class="text-gray-700 mb-2 md:mb-6 text-xl mt-4">滋賀県に10店舗展開するカラオケ&アミューズメント&インターネットカフェです。</p>
     </div>
-
     <div>
       <img class="bg-cover rounded-2xl" src="./img/store/bypass/ATバイパス外観.JPG" alt="" />
     </div>
-
   </div>
-
-
-  <div class="max-w-4xl m-auto">
-
-
-    <h3 class="text-red-800 font-black text-2xl mb-2 text-center">最新カラオケ機器・豊富な部屋</h3>
-    <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-      <img src="./img/services/karaoke.JPG" class="sm:w-1/2 rounded-lg rounded-3xl">
-      <p class="ml-4 mt-4 align-middle">「LIVE DAM Ai」などの最新カラオケ機種を続々導入しています。思い切りカラオケを楽しんでいただくために、バラエティに富んだお部屋もご用意しています。是非、ご友人とお楽しみください</p>
+  <div class="max-w-4xl m-auto" id="first">
+    <!-- @timeサービスの紹介 -->
+    <div v-for="item in ServiceList">
+      <h3 class="text-red-800 font-black text-2xl mb-2 text-center">{{item.name}}</h3>
+      <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
+        <img :src="item.img" class="sm:w-1/2 rounded-lg rounded-3xl">
+        <p class="ml-4 mt-4 align-middle">{{item.description}}</p>
+      </div>
     </div>
 
-
-    <h3 class="text-red-800 font-black text-2xl mb-2 text-center">豊富なコミック</h3>
-    <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-      <img src="./img/TOP/7.jpg" class="sm:w-1/2 rounded-lg rounded-3xl">
-      <p class="ml-4 mt-4 align-middle">アットタイムはコミックの宝庫!<br/>懐かしの名作から最新の人気作まで、県下最大級の品揃えでお待ちしております。雑誌のバックナンバーもご用意しておりますので、調べ物などにもお役立てください。</p>
-    </div>
-
-    <h3 class="text-red-800 font-black text-2xl mb-2 text-center">ドリンクバーとソフトクリームが無料</h3>
-    <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-      <img src="./img/services/basic-services/soft.jpg" class="sm:w-1/2 rounded-lg rounded-3xl">
-      <p class="ml-4 mt-4 align-middle">ソフトドリンクはもちろん、淹れたてのコーヒーや紅茶、フローズンドリンクまで。20種類以上のドリンクが全て飲み放題です。ドリンクバーにはソフトクリームの食べ放題も設置しています。</p>
-    </div>
-
-    <h3 class="text-red-800 font-black text-2xl mb-2 text-center">充実したアミューズメント</h3>
-    <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-      <img src="./img/amuse.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-      <p class="ml-4 mt-4 align-middle">最新型ダーツライブ、ビリヤード、卓球、スロットマシーンなど、アットタイムには遊びがいっぱい!ご家族やお友だちとご一緒にお楽しみください。</p>
-    </div>
-
-    <h3 class="text-red-800 font-black text-2xl mb-2 text-center">ハイスペックPC</h3>
-    <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-      <img src="./img/PC.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-      <p class="ml-4 mt-4 align-middle">ハイスペックPC導入の座席では多数の人気オンラインゲームがお楽しみいただけます。ビジネスや勉強にも役立つ「エクセル」「ワード」を全てのパソコンにインストールしてあります。試験勉強やレポート作成の際などにご利用ください。</p>
-    </div>
-
-    
     <a href="./services.html">
-      <p class="bg-red-800 text-white text-3xl py-8 px-8 mb-20 max-w-2xl mx-auto text-center hover:bg-black">サービス詳細はコチラ</p>
+      <p class="bg-red-800 text-white text-3xl py-8 px-8 mb-20 max-w-2xl mx-auto text-center hover:bg-black duration-500 hover:scale-110">サービス詳細はコチラ</p>
     </a>
     <h2 class="bg-red-800 text-white py-4 text-center text-2xl font-black w-1/3 m-auto mt-20 ">ご利用の流れ/会員登録</h2>
     <p class="text-center my-8">@timeは、お客様に安心してご利用して頂くために会員制になっております。</p>
 
-    <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white">
-      <div>
-        <h3 class="bg-red-800 text-white text-xl text-center w-1/2 mx-auto py-2">会員登録</h3>
-        <p class="ml-4 mt-4 align-middle">初めてご利用のお客様は、フロントにてご入会の手続きをお願い致します。ご本人様であることをご確認する為に、身分証明書（免許書・パスポート・学生証など）をご提示ください。その場で会員証を発行いたします。※別途入会金273円 (税込300円)が必要となります。※ご提示いただいた免許証、パスポート等のコピーをご提供いただいておりますので、ご了承ください。</p>
-      </div>
+    <!-- @time来店からの流れ・会員登録 -->
 
-      <img src="./img/services/basic-services/drink.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
+    <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white" v-for="item in  FlowList">
+      <div>
+        <h3 class="bg-red-800 text-white text-xl text-center w-1/2 mx-auto py-2">{{item.name}}</h3>
+        <p class="ml-4 mt-4 align-middle">{{item.description}}</p>
+      </div>
+      <img :src="item.img" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
     </div>
 
-    <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white">
-      <div>
-        <h3 class="bg-red-800 text-white text-xl text-center w-1/2 mx-auto py-2">ご利用サービスの選択</h3>
-        <p class="ml-4 mt-4 align-middle">ご希望の座席、サービスをお選びください。なお座席を移動する際はフロントまでお申し付けください。</p>
-      </div>
-
-      <img src="./img/services/basic-services/drink.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-    </div>
-
-    <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white">
-      <div>
-        <h3 class="bg-red-800 text-white text-xl text-center w-1/2 mx-auto py-2">サービスのご利用</h3>
-        <p class="ml-4 mt-4 align-middle">・ご希望の座席、サービスをお楽しみください。<br>・ドリンクバーはセルフサービスです。すべてご自由にご利用いただけます。<br>・お食事もご用意しております。インターホン又はＰＣからご注文ください。（別料金）</p>
-      </div>
-
-      <img src="./img/services/basic-services/drink.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-    </div>
-
-    <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white">
-      <div>
-        <h3 class="bg-red-800 text-white text-xl text-center w-1/2 mx-auto py-2">ご精算</h3>
-        <p class="ml-4 mt-4 align-middle">フロントにて、ご利用サービス・滞在時間に応じた利用料金をご精算ください。※パック設定時間以上の滞在は、通常延長料金でご精算いただいております。※当店は何時間でもご利用いただけますが、24時間ごとに精算をお願いしております。</p>
-      </div>
-
-      <img src="./img/services/basic-services/drink.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-    </div>
 
   </div>
   <div id="footer"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
+  <script src="./dataJS/first-data.js"></script>
 
 </body>
 
