@@ -8,6 +8,10 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="./slick/slick-theme.css">
+  <link rel="stylesheet" href="./slick/slick.css">
+  <script src="./slick/slick.js"></script>
+  <link rel="stylesheet" href="./slick/fonts/">
   <title>@time カラオケ&アミューズメント&インターネットカフェ</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
@@ -72,33 +76,30 @@
     <script src="https://unpkg.com/flowbite@1.4.0/dist/flowbite.js"></script>
 
   </div>
-  <h2 class="text-center text-3xl font-black">Infomation</h2>
+  <h2 class="text-center text-3xl md:text-4xl font-black my-10">—　Infomation —</h2>
 
-  <div class="flex mb-20">
-    <div class="w-1/5">
-      <img src="./img/news&campaign/icon_corona.jpg" class="w-full h-full" alt="">
-    </div>
-    <div class="w-1/5">
-      <img src="./img/news&campaign/icon_corona.jpg" class="w-full h-full" alt="">
-    </div>
-    <div class="w-1/5">
-      <img src="./img/news&campaign/icon_corona.jpg" class="w-full h-full" alt="">
-    </div>
-    <div class="w-1/5">
-      <img src="./img/news&campaign/icon_corona.jpg" class="w-full h-full" alt="">
-    </div>
-    <div class="w-1/5">
-      <img src="./img/news&campaign/icon_corona.jpg" class="w-full h-full" alt="">
-    </div>
+
+  <div class="multiple">
+    <div><img src="./img/top-slider-img/1.jpg"></div>
+    <div><img src="./img/top-slider-img/2.jpg"></div>
+    <div><img src="./img/top-slider-img/3.jpg"></div>
+    <div><img src="./img/top-slider-img/4.jpg"></div>
+    <div><img src="./img/top-slider-img/5.jpg"></div>
+    <div><img src="./img/top-slider-img/6.jpg"></div>
+    <div><img src="./img/top-slider-img/7.jpg"></div>
+    <div><img src="./img/top-slider-img/8.jpg"></div>
+    <div><img src="./img/top-slider-img/9.jpg"></div>
+    <div><img src="./img/top-slider-img/10.jpg"></div>
   </div>
-  <h2 class="text-2xl leading-normal mb-2 font-bold text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto my-8"> @timeのサービス</h2>
+
+  <h2 class="text-2xl leading-normal font-bold text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mt-20 mb-10"> @timeのサービス</h2>
 
 
-  <div id="k">
+  <div id="k" class="mb-20">
     <!-- スマホのサービスアイコン -->
     <div class="flex items-center justify-center" id="sp-content">
       <div class="grid grid-cols-6 gap-x-2 gap-y-1 m-auto">
-        <div class="col-span-2" v-for="item in ServiceListsp">
+        <div class="col-span-2" v-for="item in ServiceList">
           <a :href="item.path">
             <img :src="item.icon" class="bg-gray-400 px-8 py-3" alt="">
           </a>
@@ -120,7 +121,7 @@
   </div>
 
 
-  <div class="max-w-2xl m-auto">
+  <div class="max-w-3xl m-auto">
     <div class="flex">
       <img src="./img/icon/twitter.svg" alt="" class="w-1/6">
       <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています。</h2>
@@ -132,10 +133,80 @@
   </div>
   <div id="footer"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="./dataJS/TOP-data.js"></script>
 
 </body>
+<script type="text/javascript">
+
+
+  $(document).ready(function () {
+    $('.multiple').slick({
+      autoplay: true, //自動再生
+      infinite: true, //スライドのループ有効化
+      dots: true, //ドットのナビゲーションを表示
+      slidesToShow: 5, //表示するスライドの数
+      slidesToScroll: 5, //スクロールで切り替わるスライドの数
+      responsive: [{
+        breakpoint: 768, //ブレークポイントが768px
+        settings: {
+          slidesToShow: 4, //表示するスライドの数
+          slidesToScroll: 4, //スクロールで切り替わるスライドの数
+        }
+      }, {
+        breakpoint: 480, //ブレークポイントが480px
+        settings: {
+          slidesToShow: 2, //表示するスライドの数
+          slidesToScroll: 2, //スクロールで切り替わるスライドの数
+        }
+      }]
+    });
+  });
+</script>
 <style>
+  .multiple {
+    padding: 0;
+  }
+
+  .multiple img {
+    width: 100%;
+  }
+
+  .multiple div {
+    margin: 0 5px;
+  }
+
+  .multiple .slick-next {
+    right: 17px;
+    z-index: 100;
+  }
+
+  .multiple .slick-prev {
+    left: 23px;
+    z-index: 100;
+  }
+
+  .multiple {
+    padding: 0;
+  }
+
+  .multiple img {
+    width: 100%;
+  }
+
+  .multiple div {
+    margin: 0 5px;
+  }
+
+  .multiple .slick-next {
+    right: 17px;
+    z-index: 100;
+  }
+
+  .multiple .slick-prev {
+    left: 23px;
+    z-index: 100;
+  }
   @media (min-width: 768px) {
     #sp-content {
       display: none;

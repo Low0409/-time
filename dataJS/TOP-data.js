@@ -4,7 +4,7 @@ new Vue({
     ServiceList: [
       {
         name: "カラオケ",
-        icon: "./img/icon/billiard.svg",
+        icon: "./img/icon/karaoke.svg",
         img: "./img/TOP/1.jpg",
         path: "./services/karaoke.html",
       },
