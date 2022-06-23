@@ -1,7 +1,7 @@
 
 <header class="header items-center h-16 py-8 flex justify-between">
   <a href="./TOP.html">
-    <img src="./img/icon/logo.png" alt="" class="mt-12 ml-10">
+    <img src="./img/icon/logo.png" alt="" class="sm:ml-4 w-1/2">
   </a>
 
   <div class="nav-wrapper float-left">
@@ -24,14 +24,11 @@
   </button>
 </header>
 
-<!-- //header -->
-
 <style>
 
   .burger-btn {
     display: none;
   }
-
 
   @media screen and (max-width:900px) {
     .burger-btn {
@@ -61,35 +58,27 @@
       transform: translateX(-50%);
       width: 20px;
     }
-
     .bar_top {
       top: 10px;
     }
-
     .bar_mid {
       top: 50%;
-      /*transform: translate(-50%, -50%);*/
     }
-
     .bar_bottom {
       bottom: 10px;
     }
-
     .burger-btn.close .bar_top {
       transform: translate(-50%, 10px) rotate(45deg);
       transition: transform .3s;
     }
-
     .burger-btn.close .bar_mid {
       opacity: 0;
       transition: opacity .3s;
     }
-
     .burger-btn.close .bar_bottom {
       transform: translate(-50%, -8px) rotate(-45deg);
       transition: transform .3s;
     }
-
     /* スクロール制御 */
     .noscroll {
       overflow: hidden;
