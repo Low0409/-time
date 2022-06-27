@@ -1,6 +1,6 @@
-new Vue({
-  el: "#first",
-  data: {
+const app = Vue.createApp({
+  data(){
+    return{
     ServiceList: [
       {
         name: "最新カラオケ機器・豊富な部屋",
@@ -57,7 +57,8 @@ new Vue({
         img: "./img/services/basic-services/drink.jpg",
         description:
           "フロントにて、ご利用サービス・滞在時間に応じた利用料金をご精算ください。※パック設定時間以上の滞在は、通常延長料金でご精算いただいております。※当店は何時間でもご利用いただけますが、24時間ごとに精算をお願いしております。",
-      },
-    ],
-  },
-});
+        },
+      ],
+    }
+  }
+})
