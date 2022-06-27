@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
     <title>コミック・雑誌一覧</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@3.2.4"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         //headerパーツ読み込み
@@ -21,7 +21,7 @@
 
 </head>
 
-<body background="../img/background/email-pattern.webp">
+<body background="./img/background/email-pattern.webp">
     <div id="header"></div>
     <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
         <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">-コミック・雑誌-</h2>
@@ -36,7 +36,6 @@
                     <line x1="55.1" y1="30.4" x2="100" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
                     <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
                 </svg>
-                <p class="text-gray-500 leading-relaxed font-light text-xl mx-auto pb-2">Save time managing advertising &amp; Content for your business.</p>
                 <!-- 漫画と雑誌切り替え -->
 
                 <div class="flex flex-wrap justify-center">
@@ -85,7 +84,7 @@
                 <!-- ComicListのデータ -->
 
                 <!-- もっと見る MoreComicListのデータ -->
-                <button class="bg-red-800 hover:bg-red:700 text-white font-bold py-2 px-12 rounded-full block container mb-20 mx-10 md:mx-64 hover:bg-red-600" v-on:click="more" v-if="btnMore">もっと見る</button>
+                <button class="bg-red-800 hover:bg-red:700 text-white font-bold py-2 px-12 rounded-full block container mb-20 mx-10 md:mx-64 hover:bg-red-600" @click="more" v-if="btnMore">もっと見る</button>
                 <div class="flex-shrink px-4 max-w-full w-full sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-if="number" v-for="item in MoreComicList">
                     <div class="py-2 sm:px-12 mb-12 bg-gray-50 border-b border-gray-100 transform transition duration-300 ease-in-out hover:-translate-y-2 shadow-2xl">
                         <div class="inline-block text-gray-900 mb-4">
@@ -102,6 +101,9 @@
         <div id="footer"></div>
     </div>
     <script src="./dataJS/comic-data.js"></script>
+    <script>
+        const mountedApp = app.mount('#comiclist');
+      </script>
 </body>
 
 </html>
