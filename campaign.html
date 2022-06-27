@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/vue@3.2.4"></script>
+
+    <title>キャンペーン一覧</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+        $(function () {
+            $('#header').load('./header.html');
+            $('#footer').load('./footer.html');
+        });
+    </script>
+
+</head>
+
+<body background="./img/background/email-pattern.webp">
+    <div id="header"></div>
+    <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
+        <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－キャンペーン情報－</h2>
+    </div>
+    <div class="max-w-3xl mx-auto" id="campaign">
+        <div v-for="item in campaignList" class="mx-auto">
+            <p class="bg-red-800 text-white text-center">{{ item.title }}</p>
+            <img :src="item.img" class="w-full">
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <script src="./dataJS/campaign-data.js"></script>
+    <script>
+        const mountedApp = app.mount('#campaign')
+    </script>
+</body>
+
+</html>
