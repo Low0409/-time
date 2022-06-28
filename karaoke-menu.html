@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
     <title>お食事メニュー一覧</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.4"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(function () {
@@ -23,7 +23,7 @@
     <div id="header"></div>
     <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
         <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－お食事メニュ－</h2>
-      </div>
+    </div>
     <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
         <div class="container xl:max-w-6xl mx-auto px-4">
             <!-- Heading start -->
@@ -157,13 +157,21 @@
 
             </div>
 
-
-            <!-- end row -->
         </div>
         <div id="footer"></div>
     </div>
 </body>
-<script src="./dataJS/caraoke-menu-data.js"></script>
+<!-- Vueデータ読み込み -->
+<script src="./dataJS/karaoke-menu-data.js"></script>
+<script>
+    const mountedApp1 = onecoin.mount('#onecoin');
+    const mountedApp2 = rice.mount('#rice');
+    const mountedApp3 = pizza.mount('#pizza');
+    const mountedApp4 = hot.mount('#hot');
+    const mountedApp5 = side.mount('#side');
+    const mountedApp6 = sweets.mount('#sweets');
+    const mountedApp7 = alcoal.mount('#alcoal');
+</script>
 <style>
     @media (max-width: 640px) {
         .f-640 {
