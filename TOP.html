@@ -15,6 +15,7 @@
   <title>@time カラオケ&アミューズメント&インターネットカフェ</title>
   <script src="https://unpkg.com/vue@3.2.4"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
   <script>
     //headerパーツ読み込み
 
@@ -118,8 +119,23 @@
       </div>
     </div>
   </div>
+  <a href="./services.html">
+    <p class="bg-black text-white text-2xl sm:text-3xl py-8 px-8 mb-20 max-w-2xl mx-auto text-center hover:bg-black duration-500 hover:scale-110 rounded-full hover:bg-gray-200 hover:text-black font-black">サービス一覧</p>
+  </a>
 
 
+  <p class="bg-red-800 text-white text-2xl sm:text-3xl py-8 px-8 max-w-2xl mx-auto text-center duration-500">豊富なお食事メニュー</p>
+  <div class="bg-gray-500 py-48 w-1/2 mx-auto mt-4">
+    <p class="text-white text-center">料理サムネイル画像</p>
+  </div>
+  <a href="./booth-menu.html">
+    <p class="bg-black text-white text-2xl sm:text-3xl py-8 px-8 mb-20 max-w-2xl mx-auto text-center hover:bg-black duration-500 hover:scale-110 rounded-full hover:bg-gray-200 hover:text-black font-black mt-8">お食事メニュー一覧</p>
+  </a>
+
+  <p class="bg-red-800 text-white text-2xl sm:text-3xl py-8 px-8 max-w-2xl mx-auto text-center duration-500 mt-20">店舗を探す</p>
+  <div class="bg-gray-500 py-48 w-1/2 mx-auto mt-4">
+    <p class="text-white text-center">店舗を探すサムネイル画像</p>
+  </div>
   <div class="max-w-3xl m-auto">
     <div class="flex justify-center">
       <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています。</h2>
@@ -171,27 +187,6 @@
     width: 50px;
     height: 50px;
   }
-  .multiple {
-    padding: 0;
-  }
-
-  .multiple img {
-    width: 100%;
-  }
-
-  .multiple div {
-    margin: 0 5px;
-  }
-
-  .multiple .slick-next {
-    right: 17px;
-    z-index: 100;
-  }
-
-  .multiple .slick-prev {
-    left: 23px;
-    z-index: 100;
-  }
 
   .multiple {
     padding: 0;
@@ -214,6 +209,29 @@
     left: 23px;
     z-index: 100;
   }
+
+  .multiple {
+    padding: 0;
+  }
+
+  .multiple img {
+    width: 100%;
+  }
+
+  .multiple div {
+    margin: 0 5px;
+  }
+
+  .multiple .slick-next {
+    right: 17px;
+    z-index: 100;
+  }
+
+  .multiple .slick-prev {
+    left: 23px;
+    z-index: 100;
+  }
+
   @media (min-width: 768px) {
     #sp-content {
       display: none;
