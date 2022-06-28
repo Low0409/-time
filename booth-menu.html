@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
     <title>お食事メニュー一覧</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue@3.2.4"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         //headerパーツ読み込み
@@ -170,6 +170,15 @@
     </div>
 </body>
 <script src="./dataJS/booth-menu-data.js"></script>
+<script>
+    const mountedApp1 = don.mount('#don');
+    const mountedApp2 = curry.mount('#curry');
+    const mountedApp3 = plate.mount('#plate');
+    const mountedApp4 = pasta.mount('#pasta');
+    const mountedApp5 = pan.mount('#pan');
+    const mountedApp6 = side.mount('#side');
+    const mountedApp7 = sweets.mount('#sweets');
+  </script>
 <style>
     @media (max-width: 640px) {
         .f-640 {
