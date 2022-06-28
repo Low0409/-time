@@ -17,11 +17,12 @@
 		});
 	</script>
 </head>
+
 <body background="./img/background/email-pattern.webp">
 	<div id="header"></div>
 	<div style="background-image:url(../img/store575.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
 		<h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－よくある質問－</h2>
-	  </div>
+	</div>
 	<div class="max-w-2xl mx-auto bg-red-800 rounded">
 		<section class="shadow row">
 			<div class="tabs" id="QA">
@@ -40,6 +41,9 @@
 						<div class="tab-content">
 							<div class="pl-8 pr-8 pb-5">
 								<p class="text-white">{{item.A}}</p>
+								<!-- 回答にリンクが必要な場合のみ表示 -->
+								<a :href="item.path" v-if="item.path" class="text-blue-600">{{item.pathName}}</a>
+								<!-- 回答にリンクが必要な場合のみ表示 -->
 							</div>
 						</div>
 					</div>
@@ -76,4 +80,5 @@
 		max-height: 100vh;
 	}
 </style>
+
 </html>
