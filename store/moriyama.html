@@ -78,7 +78,6 @@
 <style>
   .googleMap {
     position: relative;
-    width: 600px;
     height: 450px;
   }
 
@@ -94,6 +93,20 @@
     mix-blend-mode: hue;
     pointer-events: none;
   }
+  iframe{
+    margin: 0 auto;
+  }
+  @media (max-width: 1020px) and (min-width: 768px){
+    iframe{
+     width:100%; /* 横幅 */
+   }
+   }
+   /* スマホでの大きさ */
+   @media (max-width: 767px) {
+   iframe{
+    width:100%; /* 横幅 */
+   }
+   }
 </style>
 
 </html>

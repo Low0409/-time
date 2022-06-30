@@ -30,8 +30,7 @@
   </div>
   <div class="max-w-4xl m-auto" id="room">
 
-
-    <h2 class="text-center">カラオケ</h2>
+    <h2 class="text-center text-2xl leading-normal font-black text-white py-2 bg-black mb-20">カラオケルーム</h2>
     <div v-for="item in roomList">
       <h3 class="text-red-800 font-black text-2xl mb-2 text-center">{{ item.name}}</h3>
       <div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
@@ -40,7 +39,7 @@
       </div>
     </div>
 
-    <h2 class="text-center">ネットカフェ</h2>
+    <h2 class="text-center text-2xl leading-normal font-black text-white py-2 bg-black mb-20">ネットカフェ座席</h2>
     <div v-for="item in chairList">
       <h3 class="text-red-800 font-black text-2xl mb-2 text-center">{{ item.name}}</h3>
       <div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
@@ -58,4 +57,5 @@
 <script>
   const mountedApp = app.mount('#room');
 </script>
+
 </html>

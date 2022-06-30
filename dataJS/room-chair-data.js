@@ -82,7 +82,7 @@ const app = Vue.createApp({
             description: "大人気！！座り心地抜群のキャプテンシート。頭を支えてくれるほどに背もたれが高いので、ビジネスや勉強にと、多目的にご利用いただけます。",
           },
           {
-            name: "マッサージ席",
+            name: "マッサージチェア",
             img: "./img/room-chair/booth_massage.jpg",
 
             description: "仕事や生活で溜まった疲れを、アットタイム自慢のスーパーマッサージチェアで癒してください。",
