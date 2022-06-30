@@ -1,3 +1,4 @@
+// トップページのPC用画像とスマホ用アイコンデータ
 const app = Vue.createApp({
   data(){
     return{
@@ -28,7 +29,7 @@ const app = Vue.createApp({
         },
         {
           name: "麻雀格闘俱楽部",
-          icon: "./img/icon/karaoke.svg",
+          icon: "./img/icon/MKG.png",
           img: "./img/TOP/5.jpg",
           path: "./services/amusement/mahjong.html",
         },

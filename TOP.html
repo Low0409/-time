@@ -59,7 +59,7 @@
             <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
             </svg>
-            <span class="hidden">Previous</span>
+            <span class="hidden z-1">Previous</span>
           </span>
         </button>
         <button type="button" class="flex absolute top-0 right-0 z-30 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none" data-carousel-next>
@@ -67,7 +67,7 @@
             <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
-            <span class="hidden">Next</span>
+            <span class="hidden z-1">Next</span>
           </span>
         </button>
       </div>
@@ -99,7 +99,7 @@
     <!-- スマホのサービスアイコン -->
     <div class="flex items-center justify-center" id="sp-content">
       <div class="grid grid-cols-6 gap-x-2 gap-y-1 m-auto">
-        <div class="col-span-2" v-for="item in ServiceList">
+        <div class="col-span-2 bg-gray-400" v-for="item in ServiceList">
           <a :href="item.path">
             <img :src="item.icon" class="bg-gray-400 px-8 py-3" alt="">
           </a>
