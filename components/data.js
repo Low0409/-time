@@ -70,7 +70,7 @@ services.component("service-div", {
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
   <div class="col-span-full mb-3">
-    <p class="text-2xl text-gray-800 text-center font-black mt-10">アミューズメント</p>
+    <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">アミューズメント</p>
   </div>
   <div class="col-span-2" v-if="karaoke">
     <img src="../img/icon/service-icon/karaoke.svg" class="rounded-xl px-2" />
@@ -114,7 +114,7 @@ services.component("service-div", {
 
 <div class="grid grid-cols-12 max-w-4xl">
   <div class="col-span-full mb-3">
-    <p class="text-2xl text-gray-800 text-center font-black mt-10">基本サービス・基本設備</p>
+    <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">基本サービス・基本設備</p>
   </div>
   <div class="col-span-2" v-if="food">
   <img src="../img/icon/service-icon/food.svg" class="rounded-xl px-2" />
@@ -140,7 +140,7 @@ services.component("service-div", {
 
 <div class="grid grid-cols-12 max-w-4xl">
   <div class="col-span-full mb-3">
-    <p class="text-2xl text-gray-800 text-center font-black mt-10">カラオケルーム・ネットカフェ席</p>
+    <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">カラオケルーム・ネットカフェ席</p>
   </div>
   <div class="col-span-2" v-if="karaoke">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
@@ -166,3 +166,4 @@ services.component("service-div", {
 
 `,
 });
+
