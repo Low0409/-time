@@ -1,0 +1,36 @@
+.googleMap {
+    position: relative;
+    height: 450px;
+}
+
+.googleMap:after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: #ff6c00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: hue;
+    pointer-events: none;
+}
+
+iframe {
+    margin: 0 auto;
+}
+
+@media (max-width: 1020px) and (min-width: 768px) {
+    iframe {
+        width: 100%;
+        /* 横幅 */
+    }
+}
+
+/* スマホでの大きさ */
+@media (max-width: 767px) {
+    iframe {
+        width: 100%;
+        /* 横幅 */
+    }
+}

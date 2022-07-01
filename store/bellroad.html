@@ -8,6 +8,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
   <script src="https://unpkg.com/vue@3.2.4"></script>
+  <link rel="stylesheet" href="./googlemap.css">
 
   <title>アットタイム彦根ベルロード店 カラオケ＆アミューズメント＆インターネットカフェ</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -31,7 +32,6 @@
     <store-div store="彦根ベルロード" text="アットタイム彦根ベルロード店です。最新機種を設置したカラオケ部屋は、全部で26室。豊富なフードメニューや⾷べ放題のソフトクリームと共にお楽しみください。また、ダーツ・ビリヤード・卓球などもご⽤意させていただいております。" img="../img//store/bellroad/bellroad.jpg"></store-div>
   </div>
   <!-- 共通パーツend-->
-
   <div class="max-w-3xl mx-auto">
     <img src="../img/store/bellroad/04_bell.jpg" alt="" class="mx-auto">
 
@@ -55,8 +55,9 @@
 
 
     <div id="services">
-      <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
-        設備・サービス —</h2>
+      <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—設備・サービス —</h2>
+      <!-- 店舗にあるサービスには場合は『1』、無い場合は『""を渡す』 -->
+      <service-div karaoke="1" billiard="1" darts="1" pinpon="1" mahjong="1" mahjongkakutou="1" online="1" comic="1" band="1" slot="1" food="1"  drink="1" soft="1" soup="1" shower="1" massage="1" zashiki="1" kagituki="1" jyosei="1"></service-div>
 
     </div>
 
@@ -69,27 +70,26 @@
   <script>
     app.mount('#store')
     Access.mount('#access')
+    services.mount('#services')
   </script>
 </body>
-<style>
-  .googleMap {
-    position: relative;
-    width: 600px;
-    height: 450px;
-  }
 
-  .googleMap:after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color: #ff6c00;
-    position: absolute;
-    top: 0;
-    left: 0;
-    mix-blend-mode: hue;
-    pointer-events: none;
-  }
-</style>
 
 </html>
+
+<!-- drink・・・フリードリンク
+food・・・フードメニュー
+karaoke・・・カラオケ
+billiard・・・ビリヤード
+darts・・・ダーツ
+pinpon・・・卓球
+mahjongkakutou・・ 麻雀格闘俱楽部
+comic・・・コミック
+band・・・バンドスタジオ
+massage・・・マッサージチェア
+slot・・・スロットマシン
+zashiki・・・座敷席
+kagituki・・・鍵付き個室
+shower・・・シャワー 
+band・・・バンドスタジオ
+ -->
