@@ -65,7 +65,6 @@ services.component("service-div", {
     "video",
     "soft",
     "soup",
-
   ],
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
@@ -166,4 +165,3 @@ services.component("service-div", {
 
 `,
 });
-

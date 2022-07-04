@@ -1,6 +1,6 @@
-new Vue({
-  el: "#video-contents",
-  data: {
+const video = Vue.createApp({
+  data() {
+    return {
     VideoServiceList: [
       {
         name: "BANDAI CHANNEL",
@@ -55,14 +55,15 @@ new Vue({
         img: "../../img/services/movie-services/pati.png",
         description:
           "「パチテレ!NETプレミアム」が全面リニューアル! 5000本以上の動画が見放題!新規番組を毎月70本追加＆最新話を一挙最速配信! 再生プレイヤーの機能が大幅アップ!",
-      },
-    ],
+        },
+      ],
+    };
   },
-});
-
-new Vue({
-  el: "#study-contents",
-  data: {
+  });
+  
+  const study = Vue.createApp({
+    data() {
+      return {
     StudyServiceList: [
       {
         name: "WPS Office",
@@ -88,5 +89,6 @@ new Vue({
         description: "資格の総合スクールLECの講座を無料で受講可能!",
       },
     ],
-  },
+  };
+},
 });

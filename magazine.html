@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
     <title>コミック・雑誌一覧</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.4"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
 
@@ -24,7 +24,6 @@
     <div id="header"></div>
     <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
         <div class="container xl:max-w-6xl mx-auto px-4">
-            <!-- Heading start -->
 
             <header class="text-center mx-auto mb-12 lg:px-20">
 
@@ -66,8 +65,6 @@
                 </div>
 
             </header>
-            <!-- End heading -->
-            <!-- row -->
 
 
             <div class="max-w-4xl m-auto" id="magazine">
@@ -86,5 +83,8 @@
     </div>
 </body>
 <script src="./dataJS/magazine-data.js"></script>
+<script>
+    const mountedApp = magazinelist.mount('#magazine');
+  </script>
 
 </html>

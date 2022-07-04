@@ -66,8 +66,22 @@
             </header>
             <!-- End heading -->
             <!-- row -->
-            <div class="flex flex-wrap flex-row -mx-4 text-center" id="comiclist">
+            <div class="text-center">
+                <p class="relative group overflow-hidden py-8 rounded-md bg-lime-500 mx-auto mb-10 font-black text-2xl w-1/2
+                before:absolute 
+                before:inset-0 
+                before:bg-lime-600 
+                before:scale-y-[0.1] 
+                before:origin-bottom
+                before:transition
+                before:duration-300
+                hover:before:scale-y-100
+                ">
+                <span class="relative uppercase text-white">店舗別コミック検索はコチラ</span>
+            </p>
+            </div>
 
+            <div class="flex flex-wrap flex-row -mx-4 text-center" id="comiclist">
 
 
                 <!-- ComicListのデータ -->
@@ -91,7 +105,7 @@
                             <img :src="item.img" :alt="item.title">
                         </div>
                         <h3 class="text-lg leading-normal mb-2 font-semibold">{{item.title}}</h3>
-                        <p class="text-gray-500">{{item.day}}</p>
+                        <p class="text-gray-500">入荷日：{{item.day}}</p>
                     </div>
                 </div>
                 <!-- MoreComicListのデータ -->
@@ -103,7 +117,7 @@
     <script src="./dataJS/comic-data.js"></script>
     <script>
         const mountedApp = app.mount('#comiclist');
-      </script>
+    </script>
 </body>
 
 </html>

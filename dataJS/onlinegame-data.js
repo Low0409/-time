@@ -1,6 +1,6 @@
-new Vue({
-  el: "#onlinegame",
-  data: {
+const app = Vue.createApp({
+  data() {
+    return {
     gameList: [
       {
         name: "G123",
@@ -118,5 +118,6 @@ new Vue({
         url: "http://www.nepoca.com/browser/",
       },
     ],
-  },
+  };
+},
 });
