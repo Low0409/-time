@@ -7,7 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
-  <title>はじめての方へ</title>
+  <title>@time 店舗を探す</title>
+  <script src="https://unpkg.com/vue@3.2.4"></script>
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
     //headerパーツ読み込み
@@ -25,30 +27,32 @@
   <div style="background-image:url(./img/background/5.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
     <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－店舗を探す－</h2>
   </div>
-  <div class="max-w-4xl m-auto">
+  <div class="max-w-4xl m-auto" id="store">
 
+    <img src="./img/SHIGA.jpg" usemap="#image-map" class="mx-auto">
 
-    <div class="relative">
-      <img src="./img/SHIGA.jpg" alt="" class="object-cover object-center h-auto mx-auto">
-    </div>
-
-    <a href="./store/nagahama.html">長浜店</a>
-    <a href="./store/bypass.html">長浜バイパス店</a>
-    <a href="./store/hikone.html">彦根店</a>
-    <a href="./store/bellroad.html">彦根ベルロード店</a>
-    <a href="./store/youkaiti.html">八日市店</a>
-    <a href="./store/hatiman.html">近江八幡店</a>
-    <a href="./store/minakuti.html">水口店</a>
-    <a href="./store/moriyama.html">守山店</a>
-    <a href="./store/kusathu.html">草津店</a>
-    <a href="./store/nishiohthu.html">西大津店</a>
-    
+    <map name="image-map">
+      <area target="_blank" alt="nagahama" title="nagahama" href="./store/nagahama.html" coords="402,212,527,264" shape="rect">
+      <area target="_blank" alt="bypass" title="bypass" href="./store/bypass.html" coords="461,299,591,352" shape="rect">
+      <area target="_blank" alt="bellroad" title="bellroad" href="./store/bellroad.html" coords="285,308,411,360" shape="rect">
+      <area target="_blank" alt="hikone" title="hikone" href="./store/hikone.html" coords="420,399,542,446" shape="rect">
+      <area target="_blank" alt="hatiman" title="hatiman" href="./store/hatiman.html" coords="299,434,404,486" shape="rect">
+      <area target="_blank" alt="youkaiti" title="youkaiti" href="./store/youkaiti.html" coords="390,497,523,550" shape="rect">
+      <area target="_blank" alt="minakuti" title="minakuti" href="./store/minakuti.html" coords="346,561,473,611" shape="rect">
+      <area target="_blank" alt="moriyama" title="moriyama" href="./store/moriyama.html" coords="132,440,256,493" shape="rect">
+      <area target="_blank" alt="nishiohthu" title="nishiohthu" href="./store/nishiohthu.html" coords="13,498,140,549" shape="rect">
+      <area target="_blank" alt="kusathu" title="kusathu" href="./store/kusathu.html" coords="59,611,187,663" shape="rect">
+    </map>
   </div>
+
 
   <div id="footer"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
+  <script src="./dataJS/store-data.js"></script>
+  <script>
+    const mountedApp = store.mount('#store');
+  </script>
 </body>
 
 </html>

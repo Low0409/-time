@@ -32,7 +32,7 @@
 
   <div class="xl mx-auto mt-10">
     <div class="bg-gray-300">
-      <div id="default-carousel" class="relative container xl:max-w-6xl mx-auto z-0" data-carousel="static">
+      <div id="default-carousel" class="relative container xl:max-w-6xl mx-auto z-0" data-carousel="static" data-ride="carousel">
         <!-- Carousel wrapper -->
         <div class="overflow-hidden relative h-96">
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
@@ -67,7 +67,7 @@
             <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor" xmlns="http://www.w3.org/2000/svg">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
             </svg>
-            <span class="hidden z-1">Next</span>
+            <span class="hidden z-1" id="nextbtn">Next</span>
           </span>
         </button>
       </div>
@@ -181,6 +181,11 @@
       }]
     });
   });
+</script>
+<script>
+  setInterval(function () {
+    document.getElementById("nextbtn").click();
+  }, 5000);
 </script>
 <style>
   .icon {
