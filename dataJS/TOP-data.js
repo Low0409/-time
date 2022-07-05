@@ -1,7 +1,7 @@
 // トップページのPC用画像とスマホ用アイコンデータ
 const app = Vue.createApp({
-  data(){
-    return{
+  data() {
+    return {
       ServiceList: [
         {
           name: "カラオケ",
@@ -58,7 +58,96 @@ const app = Vue.createApp({
           path: "./services/online.html",
         },
       ],
-    }
-  }
-})
+    };
+  },
+});
 
+const topslider = Vue.createApp({
+  data() {
+    return {
+      TOPsliderList: [
+        {
+          img: "./img/top-slider-img/slider_11.jpg",
+          path: "./services/karaoke.html",
+          alt: "ダーツ岩田夏海プロ、来店イベント開催！",
+        },
+        {
+          img: "./img/top-slider-img/slider_6.jpg",
+          path: "./services/amusement/billiard.html",
+          alt: "LIVEDAMAi大量導入!",
+        },
+        {
+          img: "./img/top-slider-img/slider_4.jpg",
+          path: "./services/amusement/darts.html",
+          alt: "24時間年中無休のカラオケ&アミューズ&インターネットカフェ",
+        },
+        {
+          img: "./img/top-slider-img/slider_10.jpg",
+          path: "./services/amusement/takkyu.html",
+          alt: "各種アミューズ施設も充実！",
+        },
+      ],
+    };
+  },
+});
+
+const subslider = Vue.createApp({
+  data() {
+    return {
+      SUBsliderList: [
+        {
+          // pathのページ内リンク(#)はcampaign-data.jsのid属性を参照する
+          img: "./img/top-slider-img/1.jpg",
+          path: "./info/campaign.html",
+          alt: "カラオケビリヤード新料金プラン登場",
+        },
+        {
+          img: "./img/top-slider-img/2.jpg",
+          path: "./info/campaign.html#bellroad",
+          alt: "@time彦根ベルロードリニューアルオープン",
+        },
+        {
+          img: "./img/top-slider-img/3.jpg",
+          path: "./info/campaign.html#mahjong",
+          alt: "麻雀格闘俱楽部",
+        },
+        {
+          img: "./img/top-slider-img/4.jpg",
+          path: "./info/campaign.html",
+          alt: "新規入会金無料キャンペーン実施中",
+        },
+        {
+          img: "./img/top-slider-img/5.jpg",
+          path: "./info/campaign.html",
+          alt: "TIGER&BUNNY2スペシャルキャンペーン",
+        },
+        {
+          img: "./img/top-slider-img/6.jpg",
+          path: "./info/campaign.html",
+          alt: "ボルガライス",
+        },
+        {
+          img: "./img/top-slider-img/7.jpg",
+          path: "./info/campaign.html",
+          alt: "安心の新型コロナウイルス対策",
+        },
+        {
+          img: "./img/top-slider-img/8.jpg",
+          path: "./info/campaign.html",
+          alt: "GREENチャンネル店内放送中",
+        },
+        {
+          img: "./img/top-slider-img/9.jpg",
+          path: "./info/campaign.html",
+          alt: "いつでもシニア割",
+        },
+        {
+          img: "./img/top-slider-img/10.jpg",
+          path: "./info/campaign.html",
+          alt: "レディースデー",
+        },
+
+      ],
+    };
+  },
+});
