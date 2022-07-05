@@ -1,5 +1,5 @@
 <meta charset="UTF-8">
-<img src="/-time/img/icon/up.svg" alt="" class="button">
+<img src="/-time/img/icon/up.svg" alt="" class="button flex opacity-0 right-0 bottom-0">
 <div id="footer">
   <div class="bg-yellow-100 pt-8 mx-auto">
     <p class="text-center font-bold text-2xl">@timeの最新お得情報をCheck!</p>
@@ -23,55 +23,41 @@
 <style>
   .button {
     position: fixed;
-    display: flex;
     align-items: center;
     justify-content: center;
-    right: 0;
-    bottom: 0;
     width: 50px;
     height: 50px;
-    color: #fff;
     transition: .3s;
-    opacity: 0;
     visibility: hidden;
   }
 
   .is-active {
-    /* 表示する */
     opacity: 1;
     visibility: visible;
   }
 </style>
 <script>
+  //スムーススクロール
   $(function () {
     $('a[href^="#"]').click(function () {
-      //スクロールのスピード
       var speed = 500;
-      //リンク元を取得
       var href = $(this).attr("href");
-      //リンク先を取得
       var target = $(href == "#" || href == "" ? 'html' : href);
-      //リンク先までの距離を取得
       var position = target.offset().top;
-      //スムーススクロール
       $("html, body").animate({ scrollTop: position }, speed, "swing");
       return false;
     });
   });
+  //スムーススクロール
+  //ページ上部へスクロール
   $(function () {
     var btn = $('.button');
     var timer;
 
     $(window).scroll(function () {
-      //スクロール開始するとボタンを非表示
       btn.removeClass('is-active');
-
-      //スクロール中はイベントの発火をキャンセルする
       clearTimeout(timer);
-
-      //スクロールが停止して0.2秒後にイベントを発火する
       timer = setTimeout(function () {
-        //スクロール位置を判定してページ上部のときはボタンを非表示にする
         if ($(this).scrollTop()) {
           btn.addClass('is-active');
         } else {
@@ -87,4 +73,5 @@
       });
     });
   });
+      //ページ上部へスクロール
 </script>
