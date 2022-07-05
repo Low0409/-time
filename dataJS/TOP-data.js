@@ -138,15 +138,14 @@ const subslider = Vue.createApp({
         },
         {
           img: "./img/top-slider-img/9.jpg",
-          path: "./info/campaign.html",
+          path: "./info/campaign.html#senior",
           alt: "いつでもシニア割",
         },
         {
           img: "./img/top-slider-img/10.jpg",
-          path: "./info/campaign.html",
+          path: "./info/campaign.html#ladies",
           alt: "レディースデー",
         },
-
       ],
     };
   },

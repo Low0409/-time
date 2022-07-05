@@ -63,6 +63,26 @@ const app = Vue.createApp({
           img: "../img/news&campaign/line.jpg",
           id: "line",
         },
+        {
+          title: "【西大津店】カラオケ・ダーツ・ビリヤード新料金プラン登場！",
+          img: "../img/news&campaign/02_nishi.jpg",
+          id: "newplan",
+        },
+        {
+          title: "小学生以下のお子様、ご利用料金無料キャンペーン実施中！",
+          img: "../img/news&campaign/02_kids.jpg",
+          id: "syougakusei",
+        },
+        {
+          title: "【ネットカフェ】 60歳以上毎日ブース料金10%オフ！",
+          img: "../img/news&campaign/senior.jpg",
+          id: "senior",
+        },
+        {
+          title: "レディースデー毎週水曜日席料20%FF",
+          img: "../img/news&campaign/ladies.jpg",
+          id: "ladies",
+        },
       ],
     };
   },
