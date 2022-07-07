@@ -54,14 +54,14 @@ const app = Vue.createApp({
           name: "キッズフラットルーム",
           img: "./img/room-chair/room_kids.jpg",
           description:
-            "全面がフラットになったお部屋です。思い切り足を伸ばせるほか、寝転んでもOK。くつろぎながらカラオケをお楽しみいただけます。",
+            "全面がフラットになったお部屋です。思い切り足を伸ばせるほか、寝転んでもOK。くつろぎながらカラオケをお楽しみいただけます。（水口店・草津店のみ）",
         },
-        {
-          name: "こたつの部屋",
-          img: "./img/room-chair/room_kotatu.jpg",
-          description:
-            "座りやすい座椅子を設置したこたつのあるお部屋です。掘りごたつになっているので、足が痛くなる心配もありません。",
-        },
+        // {
+        //   name: "こたつの部屋",
+        //   img: "./img/room-chair/room_kotatu.jpg",
+        //   description:
+        //     "座りやすい座椅子を設置したこたつのあるお部屋です。掘りごたつになっているので、足が痛くなる心配もありません。",
+        // },
         {
           name: "パーティールーム",
           img: "./img/room-chair/room_party.jpg",
