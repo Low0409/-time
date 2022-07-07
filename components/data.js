@@ -200,3 +200,21 @@ services.component("service-div", {
 
 `,
 });
+const price = Vue.createApp({
+  data() {
+      return {
+          table: 'karaoke',
+      }
+  },
+  methods: {
+      karaoke() {
+          this.table = 'karaoke'
+      },
+      booth() {
+          this.table = 'booth'
+      },
+      mahjong() {
+          this.table = 'mahjong';
+      }
+  }
+});

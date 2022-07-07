@@ -73,7 +73,7 @@ const app = Vue.createApp({
           url: "./services/defaultservice.html",
         },
         {
-          name: "シャワー無料",
+          name: "シャワー無料(一部店舗有料)",
           img: "./img/services/basic-services/syawa.jpg",
           description: "Shower",
           url: "./services/defaultservice.html",

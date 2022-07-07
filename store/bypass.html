@@ -13,7 +13,7 @@
   <title>アットタイム長浜バイパス店 カラオケ＆アミューズメント＆インターネットカフェ</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script>
-    //headerパーツ読み込み
+    //headerパーツ読みみ
 
     $(function () {
       $('#header').load('/-time/header.html');
@@ -33,7 +33,7 @@
   </div>
   <!-- 共通パーツend-->
 
-  <div class="max-w-3xl mx-auto">
+  <div class="max-w-4xl mx-auto">
     <img src="../img/store/bellroad/04_bell.jpg" alt="" class="mx-auto">
 
     <!--共通パーツ各店舗のグーグルマップurl props -->
@@ -48,13 +48,970 @@
 
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
         料金案内表 —</h2>
-      <img src="../img/store/bellroad/charge_karaoke1.jpg" alt="" class="mx-auto">
-      <img src="../img/store/bellroad/charge_karaoke2.jpg" alt="" class="mx-auto">
-      <img src="../img/store/bellroad/charge_karaoke3.jpg" alt="" class="mx-auto">
-      <img src="../img/store/bellroad/charge_karaoke4.jpg" alt="" class="mx-auto">
+      <div class="flex">
+
+        <p @click="karaoke()">カラオケ料金表</p>
+        <p @click="booth()">ブース料金表</p>
+        <p @click="mahjong()">麻雀time料金表</p>
+      </div>
+
+      <div>
+        <!-- カラオケ料金↓ -->
+
+        <div v-if="table === 'karaoke'">
+          <div class="flex">
+            <p class="bg-red-400 text-2xl p-2 text-white mx-auto my-2">月～木</p>
+            <p class="sm:text-2xl p-2 font-black"></p>
+          </div>
+          <table class="min-w-full text-center bg-white">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl" rowspan="2">
+                  基本料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  30分まで
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  237円<span class="text-xs text-black block">税込(260円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  延長30分毎
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  191円<span class="text-xs text-black block">税込(210円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  237円<span class="text-xs text-black block">税込(260円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  237円<span class="text-xs text-black block">税込(260円)</span>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+          <table class="min-w-full text-center bg-white mt-10">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-blue-200 md:text-xl" rowspan="2">
+                  フリータイム
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  一般
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  773円<span class="text-xs text-black block">税850円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1173円<span class="text-xs text-black block">税込(1290円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2">
+                  1310円<span class="text-xs text-black block">税込(1440円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  シニア<br><span class="text-sm">(50歳以上)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  700円<span class="text-xs text-black block">税込(770円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1055円<span class="text-xs text-black block">税込(1160円)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex">
+            <p class="bg-red-400 text-2xl p-2 text-white mx-auto my-2">金・祝前日</p>
+            <p class="sm:text-2xl p-2 font-black"></p>
+          </div>
+          <table class="min-w-full text-center bg-white">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl" rowspan="2">
+                  基本料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  30分まで
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  237円<span class="text-xs text-black block">税込(260円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  328円<span class="text-xs text-black block">税込(360円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  328円<span class="text-xs text-black block">税込(360円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  延長30分毎
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  191円<span class="text-xs text-black block">税込(210円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(360円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+          <table class="min-w-full text-center bg-white mt-10">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-blue-200 md:text-xl" rowspan="2">
+                  フリータイム
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  一般
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  773円<span class="text-xs text-black block">税850円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1373円<span class="text-xs text-black block">税込(1510円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2">
+                  1510円<span class="text-xs text-black block">税込(1660円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  シニア<br><span class="text-sm">(50歳以上)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  700円<span class="text-xs text-black block">税込(770円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1228円<span class="text-xs text-black block">税込(1350円)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex">
+            <p class="bg-red-400 text-2xl p-2 text-white mx-auto my-2">土</p>
+            <p class="sm:text-2xl p-2 font-black"></p>
+          </div>
+          <table class="min-w-full text-center bg-white">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl" rowspan="2">
+                  基本料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  30分まで
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  328円<span class="text-xs text-black block">税込(360円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  328円<span class="text-xs text-black block">税込(360円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  延長30分毎
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  191円<span class="text-xs text-black block">税込(210円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+          <table class="min-w-full text-center bg-white mt-10">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-blue-200 md:text-xl" rowspan="2">
+                  フリータイム
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  一般
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  991円<span class="text-xs text-black block">税1090円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1373円<span class="text-xs text-black block">税込(1510円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2">
+                  1510円<span class="text-xs text-black block">税込(1660円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  シニア<br><span class="text-sm">(50歳以上)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  900円<span class="text-xs text-black block">税込(990円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1228円<span class="text-xs text-black block">税込(1350円)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="flex">
+            <p class="bg-red-400 text-2xl p-2 text-white mx-auto my-2">日・祝日</p>
+            <p class="sm:text-2xl p-2 font-black"></p>
+          </div>
+          <table class="min-w-full text-center bg-white">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl" rowspan="2">
+                  基本料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  30分まで
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  328円<span class="text-xs text-black block">税込(360円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  延長30分毎
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  191円<span class="text-xs text-black block">税込(210円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  282円<span class="text-xs text-black block">税込(310円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  237円<span class="text-xs text-black block">税込(260円)</span>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+          <table class="min-w-full text-center bg-white mt-10">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+                  8:00～18:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+                  18:00～24:00
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+                  0:00～8:00
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-blue-200 md:text-xl" rowspan="2">
+                  フリータイム
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  一般
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  991円<span class="text-xs text-black block">税1090円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1173円<span class="text-xs text-black block">税込(1290円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2">
+                  1310円<span class="text-xs text-black block">税込(1440円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  シニア<br><span class="text-sm">(50歳以上)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  900円<span class="text-xs text-black block">税込(990円)</span>
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1055円<span class="text-xs text-black block">税込(1160円)</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- カラオケ料金↑ -->
+
+        <!-- ブース料金↓ -->
+        <div v-else-if="table === 'booth'">
+
+          <div class="flex">
+            <p class="bg-red-400 text-2xl p-2 text-white mx-auto my-2">月～金</p>
+            <p class="sm:text-2xl p-2 font-black"></p>
+          </div>
+          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 block-block min-w-full sm:px-6 lg:px-8">
+              <div class="overflow-hidden">
+                <table class="min-w-full text-center bg-white">
+                  <thead class="border-b">
+                    <tr>
+                      <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                      </th>
+                      <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                      </th>
+                      <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-gray-300">
+                        ブース共通/麻雀/ビリヤード/ダーツ/卓球/スポーツコート
+                      </th>
+                      <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+                        オープンブース
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b">
+                      <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl" rowspan="2">
+                        基本料金
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        30分まで
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        255円<span class="text-xs text-black block">税(280円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        200円<span class="text-xs text-black block">税(220円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        延長10分毎
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        87円<span class="text-xs text-black block">税(90円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        64円<span class="text-xs text-black block">税(70円)</span>
+                      </td>
+                    </tr>
+                    <!-- 間 -->
+                    <tr class="border-b">
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+
+                      </td>
+                    </tr>
+                    <!-- 間 -->
+
+                    <tr class="border-b">
+                      <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="8">
+                        パック料金
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        3時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        955円<span class="text-xs text-black block">税(1050円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        546円<span class="text-xs text-black block">税(600円)</span>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        6時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1391円<span class="text-xs text-black block">税(1530円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        937円<span class="text-xs text-black block">税(1030円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        9時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1773円<span class="text-xs text-black block">税(1950円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1228円<span class="text-xs text-black block">税(1350円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        12時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2046円<span class="text-xs text-black block">税(2250円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1455円<span class="text-xs text-black block">税(1600円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        15時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2546円<span class="text-xs text-black block">税(2800円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1819円<span class="text-xs text-black block">税(2000円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        18時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        3046円<span class="text-xs text-black block">税(3350円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2137円<span class="text-xs text-black block">税(2350円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        21時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        3410円<span class="text-xs text-black block">税(3750円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2410円<span class="text-xs text-black block">税(2650円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        24時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        3500円<span class="text-xs text-black block">税(3850円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2546円<span class="text-xs text-black block">税(2800円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+                      <td class="text-sm font-medium sm:px-6 py-4 bg-gray-100 md:text-xl bg-blue-100" rowspan="2">
+                        ナイトパック<br>料金
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        深夜8時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1391円<span class="text-xs text-black block">税(1530円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        937円<span class="text-xs text-black block">税(1030円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        深夜10時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1728円<span class="text-xs text-black block">税(1900円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1182円<span class="text-xs text-black block">税(1300円)</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
 
 
-      
+
+
+          <div class="flex">
+            <p class="bg-red-400 text-2xl p-2 text-white mx-auto my-2">土日・祝日</p>
+            <p class="sm:text-2xl p-2 font-black"></p>
+          </div>
+          <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+            <div class="py-2 block-block min-w-full sm:px-6 lg:px-8">
+              <div class="overflow-hidden">
+                <table class="min-w-full text-center bg-white">
+                  <thead class="border-b">
+                    <tr>
+                      <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                      </th>
+                      <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                      </th>
+                      <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-gray-300">
+                        ブース共通/麻雀/ビリヤード/ダーツ/卓球/スポーツコート
+                      </th>
+                      <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+                        オープンブース
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr class="border-b">
+                      <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl" rowspan="2">
+                        基本料金
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        30分まで
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        255円<span class="text-xs text-black block">税(280円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        200円<span class="text-xs text-black block">税(220円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        延長10分毎
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        87円<span class="text-xs text-black block">税(90円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        64円<span class="text-xs text-black block">税(70円)</span>
+                      </td>
+                    </tr>
+                    <!-- 間 -->
+                    <tr class="border-b">
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+
+                      </td>
+                    </tr>
+                    <!-- 間 -->
+
+                    <tr class="border-b">
+                      <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="8">
+                        パック料金
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        3時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1046円<span class="text-xs text-black block">税(1150円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        637円<span class="text-xs text-black block">税(700円)</span>
+                      </td>
+                    </tr>
+
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        6時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1482円<span class="text-xs text-black block">税(1530円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        937円<span class="text-xs text-black block">税(1630円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        9時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1864円<span class="text-xs text-black block">税(2050円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1319円<span class="text-xs text-black block">税(1450円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        12時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2137円<span class="text-xs text-black block">税(2350円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1546円<span class="text-xs text-black block">税(1600円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        15時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2637円<span class="text-xs text-black block">税(2900円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1910円<span class="text-xs text-black block">税(2100円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        18時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        3137円<span class="text-xs text-black block">税(3450円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2228円<span class="text-xs text-black block">税(2450円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        21時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        3500円<span class="text-xs text-black block">税(3850円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2500円<span class="text-xs text-black block">税(2750円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        24時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        3591円<span class="text-xs text-black block">税(3950円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        2637円<span class="text-xs text-black block">税(2900円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+                      <td class="text-sm font-medium sm:px-6 py-4 bg-gray-100 md:text-xl bg-blue-100" rowspan="2">
+                        ナイトパック<br>料金
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        深夜8時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1482円<span class="text-xs text-black block">税(1630円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1028円<span class="text-xs text-black block">税(1130円)</span>
+                      </td>
+                    </tr>
+                    <tr class="border-b">
+
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                        深夜10時間
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1819円<span class="text-xs text-black block">税(2000円)</span>
+                      </td>
+                      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                        1273円<span class="text-xs text-black block">税(1400円)</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- ブース料金↑ -->
+        <!-- 麻雀time料金↓ -->
+
+        <div v-else-if="table === 'mahjong'">
+          <table class="min-w-full text-center bg-white">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4">
+                </th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl" rowspan="2">
+                  基本料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  30分まで
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  273円<span class="text-xs text-black block">税込(300円)</span>
+                </td>
+
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  延長15分毎
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  91円<span class="text-xs text-black block">税込(100円)</span>
+                </td>
+
+              </tr>
+              <!-- 間 -->
+              <tr class="border-b">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+
+                </td>
+              </tr>
+              <!-- 間 -->
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="6">
+                  パック料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  3時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1091円<span class="text-xs text-black block">税込(1200円)</span>
+                </td>
+              </tr>
+
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  6時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1910円<span class="text-xs text-black block">税込(2100円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  9時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  2455円<span class="text-xs text-black block">税込(2700円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  12時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  2910円<span class="text-xs text-black block">税込(3200円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  15時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  3364円<span class="text-xs text-black block">税込(3700円)</span>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 麻雀time料金↑ -->
+
+      </div>
+      <!-- heading -->
+
+
+
+
+
+
+
+
+
+
+
     </div>
 
 
@@ -77,9 +1034,14 @@
     app.mount('#store');
     Access.mount('#access');
     services.mount('#services');
+    price.mount('#price_table');
 
   </script>
 </body>
-
+<style>
+  span{
+    
+  }
+</style>
 
 </html>

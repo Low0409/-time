@@ -2,336 +2,336 @@
 <html lang="ja">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
-  <script src="https://unpkg.com/vue@3.2.4"></script>
-  <link rel="stylesheet" href="./googlemap.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
+    <script src="https://unpkg.com/vue@3.2.4"></script>
+    <link rel="stylesheet" href="./googlemap.css">
 
-  <title>アットタイム長浜店 カラオケ＆アミューズメント＆インターネットカフェ</title>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script>
-    //headerパーツ読み込み
+    <title>アットタイム長浜店 カラオケ＆アミューズメント＆インターネットカフェ</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        //headerパーツ読み込み
 
-    $(function () {
-      $('#header').load('/-time/header.html');
-      $('#footer').load('/-time/footer.html');
-    });
-  </script>
+        $(function () {
+            $('#header').load('/-time/header.html');
+            $('#footer').load('/-time/footer.html');
+        });
+    </script>
 
 </head>
 
 <body background="../img/background/email-pattern.webp">
-  <div id="header">
-  </div>
-
-  <!-- 共通パーツ・各店舗名・各店舗説明・各店舗画像 props -->
-  <div id="store">
-    <store-div store="長浜店" text="アットタイム長浜店です。リクライニング席やマッサージ席などのお部屋で、快適に、インターネットをお楽しみいただけます。人気のオンラインゲームも搭載しておりますので、ぜひご利用ください。" img="../img//store/nagahama/nagahama.jpg"></store-div>
-  </div>
-  <!-- 共通パーツend-->
-
-  <div class="max-w-3xl mx-auto">
-    <img src="../img/store/nagahama/04_bell.jpg" alt="" class="mx-auto">
-
-    <!--共通パーツ各店舗のグーグルマップurl props -->
-    <div id="access">
-      <access-div src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.535886549723!2d136.2763081155532!3d35.39196535338861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6002292855691437%3A0x4815b193b0fb9ec2!2z44Ki44OD44OI44K_44Kk44OgIOmVt-a1nOW6lw!5e0!3m2!1sja!2sjp!4v1656402575987!5m2!1sja!2sjp"></access-div>
-    </div>
-    <!--共通パーツend-->
-    <div id="price_table">
-
-
-
-      <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
-        料金案内表 —</h2>
-        <div class="flex">
-          <p class="bg-orange-400 sm:text-2xl p-2 text-white">平日(月～木)</p>
-                      <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
-      </div>
-      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                  <table class="min-w-full text-center">
-                      <thead class="border-b">
-                          <tr>
-                              <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-                                  お一人様料金
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
-                                  ☀10:00～18:00
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
-                                  ☽18:00～1:00
-                              </th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  基本30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  延長30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-      </div>
-
-      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                  <table class="min-w-full text-center">
-                      <thead class="border-b">
-                          <tr>
-                              <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-                                  フリータイム
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
-                                  10:00～18:00
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-green-300">
-                                  16:00～22:00
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
-                                  18:00～1:00
-                              </th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr class="">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl border-b">
-                                  基本30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap border-b">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  546円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  延長30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="">
-                                  fdssgfsgsgf
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-      </div>
-
-
-
-      <div class="flex">
-          <p class="bg-green-400 text-2xl p-2 text-white">金・祝前日</p>
-                      <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
-      </div>
-      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                  <table class="min-w-full text-center">
-                      <thead class="border-b">
-                          <tr>
-                              <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-                                  お一人様料金
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
-                                  ☀10:00～18:00
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
-                                  ☽18:00～1:00
-                              </th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  基本30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  延長30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-      </div>
-
-
-
-      <div class="flex">
-          <p class="bg-blue-400 text-2xl p-2 text-white">土曜日</p>
-                      <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
-      </div>
-      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                  <table class="min-w-full text-center">
-                      <thead class="border-b">
-                          <tr>
-                              <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-                                  お一人様料金
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
-                                  ☀10:00～18:00
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
-                                  ☽18:00～1:00
-                              </th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  基本30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  延長30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-      </div>
-
-
-
-      <div class="flex">
-          <p class="bg-red-400 text-2xl p-2 text-white">日・祝日</p>
-                      <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
-      </div>
-      <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-          <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
-              <div class="overflow-hidden">
-                  <table class="min-w-full text-center">
-                      <thead class="border-b">
-                          <tr>
-                              <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-                                  お一人様料金
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
-                                  ☀10:00～18:00
-                              </th>
-                              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
-                                  ☽18:00～1:00
-                              </th>
-                          </tr>
-                      </thead>
-                      <tbody>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  基本30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                          <tr class="border-b">
-                              <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
-                                  延長30分
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  237円<span class="text-xs text-black">税込(260円)</span>
-                              </td>
-                              <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
-                                  282円<span class="text-xs text-black">税込(310円)</span>
-                              </td>
-                          </tr>
-                      </tbody>
-                  </table>
-              </div>
-          </div>
-      </div>
-
-
-      
+    <div id="header">
     </div>
 
-
-    <div id="services">
-      <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—設備・サービス —</h2>
-      <!-- 店舗にないサービスに『1』を渡す -->
-      <service-div sportspark="1" band="1"></service-div>
+    <!-- 共通パーツ・各店舗名・各店舗説明・各店舗画像 props -->
+    <div id="store">
+        <store-div store="長浜店" text="アットタイム長浜店です。リクライニング席やマッサージ席などのお部屋で、快適に、インターネットをお楽しみいただけます。人気のオンラインゲームも搭載しておりますので、ぜひご利用ください。" img="../img//store/nagahama/nagahama.jpg"></store-div>
     </div>
+    <!-- 共通パーツend-->
+
+    <div class="max-w-3xl mx-auto">
+        <img src="../img/store/nagahama/04_bell.jpg" alt="" class="mx-auto">
+
+        <!--共通パーツ各店舗のグーグルマップurl props -->
+        <div id="access">
+            <access-div src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.535886549723!2d136.2763081155532!3d35.39196535338861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6002292855691437%3A0x4815b193b0fb9ec2!2z44Ki44OD44OI44K_44Kk44OgIOmVt-a1nOW6lw!5e0!3m2!1sja!2sjp!4v1656402575987!5m2!1sja!2sjp"></access-div>
+        </div>
+        <!--共通パーツend-->
+        <div id="price_table">
 
 
 
-  </div>
-  <div id="footer"></div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
+                料金案内表 —</h2>
+            <div class="flex">
+                <p class="bg-orange-400 sm:text-2xl p-2 text-white">平日(月～木)</p>
+                <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
+            </div>
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full text-center">
+                            <thead class="border-b">
+                                <tr>
+                                    <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+                                        お一人様料金
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+                                        ☀10:00～18:00
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
+                                        ☽18:00～1:00
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        基本30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        延長30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-  <script src="../components/data.js"></script>
-  <script>
-    app.mount('#store')
-    Access.mount('#access')
-    services.mount('#services')
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full text-center">
+                            <thead class="border-b">
+                                <tr>
+                                    <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+                                        フリータイム
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+                                        10:00～18:00
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-green-300">
+                                        16:00～22:00
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
+                                        18:00～1:00
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl border-b">
+                                        基本30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap border-b">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        546円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        延長30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="">
+                                        fdssgfsgsgf
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
 
-  </script>
+
+
+            <div class="flex">
+                <p class="bg-green-400 text-2xl p-2 text-white">金・祝前日</p>
+                <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
+            </div>
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full text-center">
+                            <thead class="border-b">
+                                <tr>
+                                    <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+                                        お一人様料金
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+                                        ☀10:00～18:00
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
+                                        ☽18:00～1:00
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        基本30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        延長30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flex">
+                <p class="bg-blue-400 text-2xl p-2 text-white">土曜日</p>
+                <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
+            </div>
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full text-center">
+                            <thead class="border-b">
+                                <tr>
+                                    <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+                                        お一人様料金
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+                                        ☀10:00～18:00
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
+                                        ☽18:00～1:00
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        基本30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        延長30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="flex">
+                <p class="bg-red-400 text-2xl p-2 text-white">日・祝日</p>
+                <p class="sm:text-2xl p-2 font-black">カラオケ・ダーツ・ビリヤード</p>
+            </div>
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
+                    <div class="overflow-hidden">
+                        <table class="min-w-full text-center">
+                            <thead class="border-b">
+                                <tr>
+                                    <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+                                        お一人様料金
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+                                        ☀10:00～18:00
+                                    </th>
+                                    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
+                                        ☽18:00～1:00
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        基本30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="text-sm font-medium sm:px-6 py-4 whitespace-nowrap bg-gray-100 md:text-xl">
+                                        延長30分
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        237円<span class="text-xs text-black">税込(260円)</span>
+                                    </td>
+                                    <td class="sm:text-2xl text-red-500 font-black font-black sm:px-6 py-4 whitespace-nowrap">
+                                        282円<span class="text-xs text-black">税込(310円)</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+        <div id="services">
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—設備・サービス —</h2>
+            <!-- 店舗にないサービスに『1』を渡す -->
+            <service-div sportspark="1" band="1"></service-div>
+        </div>
+
+
+
+    </div>
+    <div id="footer"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <script src="../components/data.js"></script>
+    <script>
+        app.mount('#store')
+        Access.mount('#access')
+        services.mount('#services')
+
+    </script>
 </body>
 
 </html>
