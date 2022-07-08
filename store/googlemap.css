@@ -19,18 +19,29 @@
 iframe {
     margin: 0 auto;
 }
+
 .catch:before, .catch:after {
     border-top: 3px solid;
     content: "";
-    width: 4em; /* 線の長さ */
-    }
-    .catch:before {
-    margin-right: 1em; /* 文字の右隣 */
-    }
-    .catch:after {
-    margin-left: 1em; /* 文字の左隣 */
-    }
-    
+    width: 4em;
+    /* 線の長さ */
+}
+
+.catch:before {
+    margin-right: 1em;
+    /* 文字の右隣 */
+}
+
+.catch:after {
+    margin-left: 1em;
+    /* 文字の左隣 */
+}
+
+.active {
+    background: rgb(160, 0, 0);
+    color: rgb(255, 255, 148);
+  }
+
 @media (max-width: 1020px) and (min-width: 768px) {
     iframe {
         width: 100%;

@@ -203,27 +203,23 @@ services.component("service-div", {
 const price = Vue.createApp({
   data() {
     return {
-      table: "karaoke",
       C1: true,
       C2: false,
       C3: false,
     };
   },
   methods: {
-    karaoke() {
-      this.table = "karaoke";
+    button1() {
       this.C1 = true;
       this.C2 = false;
       this.C3 = false;
     },
-    booth() {
-      this.table = "booth";
+    button2() {
       this.C1 = false;
       this.C2 = true;
       this.C3 = false;
     },
-    mahjong() {
-      this.table = "mahjong";
+    button3() {
       this.C1 = false;
       this.C2 = false;
       this.C3 = true;
@@ -347,6 +343,222 @@ basicPlan.component("basic-plan-table3", {
 
 
 </table>
+</div>
+`,
+});
+
+// ブース料金表
+const BoothPlan = Vue.createApp({});
+
+BoothPlan.component("booth-plan-table", {
+  props: [
+    "b3",
+    "b4",
+    "c3",
+    "c4",
+    "d3",
+    "d4",
+    "e3",
+    "e4",
+    "f3",
+    "f4",
+    "g3",
+    "g4",
+    "h3",
+    "h4",
+    "i3",
+    "i4",
+    "j3",
+    "j4",
+    "k3",
+    "k4",
+    "l3",
+    "l4",
+    "m3",
+    "m4",
+  ],
+  template: `
+  <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+  <div class="py-2 block-block min-w-full sm:px-6 lg:px-8">
+    <div class="overflow-hidden">
+  <table class="min-w-full text-center bg-white">
+<thead class="border-b border-r">
+  <tr>
+    <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+    </th>
+    <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+    </th>
+    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-gray-300">
+      ブース共通/麻雀/ビリヤード/ダーツ<br>/卓球/スポーツコート
+    </th>
+    <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-300">
+      オープンブース
+    </th>
+  </tr>
+</thead>
+<tbody>
+  <tr class="border-b border-r">
+    <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl basic" rowspan="2">
+      基本料金
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      30分まで
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{b3}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100)  }}円)</span>
+
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{b4}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      延長10分毎
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{c3}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+
+    </td>
+  </tr>
+  <tr class="border-b">
+    <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="8">
+      パック料金
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      3時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{d3}}円<span class="text-xs text-black block">税込({{  Math.floor(d3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{d4}}円<span class="text-xs text-black block">税込({{  Math.floor(d4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      6時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{e3}}円<span class="text-xs text-black block">税込({{  Math.floor(e3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{e4}}円<span class="text-xs text-black block">税込({{  Math.floor(e4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      9時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{f3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{f4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      12時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{g3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{g4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      15時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{h3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{h4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      18時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{i3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{i4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      21時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{j3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{j4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      24時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{k3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{k4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+    <td class="text-sm font-medium sm:px-6 py-4 bg-gray-100 md:text-xl bg-blue-100" rowspan="2">
+      ナイトパック<br>料金
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      深夜8時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{l3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{l4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      深夜10時間
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{m3}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{m4}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 `,
 });

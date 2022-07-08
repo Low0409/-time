@@ -47,13 +47,21 @@
 
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
         料金案内表 —</h2>
-      <img src="../img/store/moriyama/charge_karaoke1.jpg" alt="" class="mx-auto">
-      <img src="../img/store/moriyama/charge_karaoke2.jpg" alt="" class="mx-auto">
-      <img src="../img/store/moriyama/charge_karaoke3.jpg" alt="" class="mx-auto">
-      <img src="../img/store/moriyama/charge_karaoke4.jpg" alt="" class="mx-auto">
+        <div class="flex max-w-3xl justify-center mx-auto text-xl">
 
 
-      
+          <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
+          <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">ブース料金表</p>
+        </div>
+        <div>
+          <div v-show="C1">
+              a
+          </div>
+          <div v-show="C2">
+              b
+          </div>
+
+        </div>
     </div>
 
 
@@ -75,8 +83,21 @@
     app.mount('#store')
     Access.mount('#access')
     services.mount('#services')
+    price.mount('#price_table');
 
   </script>
 </body>
+<style>
+
+
+  .active {
+    background: rgb(160, 0, 0);
+    color: rgb(255, 255, 148);
+  }
+
+  .border-solid {
+    border: solid;
+  }
+</style>
 
 </html>

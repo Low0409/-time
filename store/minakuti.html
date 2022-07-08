@@ -29,7 +29,7 @@
 
   <!-- 共通パーツ・各店舗名・各店舗説明・各店舗画像 props -->
   <div id="store">
-    <store-div store="水口店" text="アットタイム水口店です。カラオケ、ネットカフェ、アミューズメントを一度に楽しめる快適な空間をご提供します。人気のオンラインゲームはもちろん、自動採点機能付きの『ダーツライブ』などの最新機器をご用意しております。" img="../img//store/minakuti/minakuti.jpg"></store-div>
+    <store-div store="水口店" text="カラオケ・ネットカフェ・アミューズメントを一度に楽しめる快適な空間をご提供します。人気のオンラインゲームはもちろん、自動採点機能付きの『ダーツライブ３』やカラオケ最高峰『ＬＩＶＥＤＡＭ　Ａｉ』などの最新機器をご用意しております。ダーツ・ビリヤードは地域最大設置数！" img="../img//store/minakuti/minakuti.jpg"></store-div>
   </div>
   <!-- 共通パーツend-->
 
@@ -47,19 +47,28 @@
 
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
         料金案内表 —</h2>
-      <img src="../img/store/minakuti/charge_karaoke1.jpg" alt="" class="mx-auto">
-      <img src="../img/store/minakuti/charge_karaoke2.jpg" alt="" class="mx-auto">
-      <img src="../img/store/minakuti/charge_karaoke3.jpg" alt="" class="mx-auto">
-      <img src="../img/store/minakuti/charge_karaoke4.jpg" alt="" class="mx-auto">
+        <div class="flex max-w-3xl justify-center mx-auto text-xl">
 
 
+          <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
+          <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">ブース料金表</p>
+        </div>
+        <div>
+          <div v-show="C1">
+              a
+          </div>
+          <div v-show="C2">
+              b
+          </div>
+
+        </div>
     </div>
 
 
     <div id="services">
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—設備・サービス —</h2>
       <!-- 店舗にないサービスに『1』を渡す -->
-      <service-div sportspark="1" band="1"></service-div>
+      <service-div sportspark="1" band="1" woman="1" kagi="1" mahjong="1"></service-div>
     </div>
 
 
@@ -73,9 +82,22 @@
     app.mount('#store')
     Access.mount('#access')
     services.mount('#services')
+    price.mount('#price_table');
 
   </script>
 </body>
+<style>
+
+
+  .active {
+    background: rgb(160, 0, 0);
+    color: rgb(255, 255, 148);
+  }
+
+  .border-solid {
+    border: solid;
+  }
+</style>
 
 
 </html>
