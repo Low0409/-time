@@ -67,8 +67,8 @@ services.component("service-div", {
     "soft",
     "soup",
     "kagi",
-    "motikomi"
-  ],  
+    "motikomi",
+  ],
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
   <div class="col-span-full mb-3">
@@ -202,19 +202,151 @@ services.component("service-div", {
 });
 const price = Vue.createApp({
   data() {
-      return {
-          table: 'karaoke',
-      }
+    return {
+      table: "karaoke",
+      C1: true,
+      C2: false,
+      C3: false,
+    };
   },
   methods: {
-      karaoke() {
-          this.table = 'karaoke'
-      },
-      booth() {
-          this.table = 'booth'
-      },
-      mahjong() {
-          this.table = 'mahjong';
-      }
-  }
+    karaoke() {
+      this.table = "karaoke";
+      this.C1 = true;
+      this.C2 = false;
+      this.C3 = false;
+    },
+    booth() {
+      this.table = "booth";
+      this.C1 = false;
+      this.C2 = true;
+      this.C3 = false;
+    },
+    mahjong() {
+      this.table = "mahjong";
+      this.C1 = false;
+      this.C2 = false;
+      this.C3 = true;
+    },
+  },
+});
+
+const basicPlan = Vue.createApp({});
+
+basicPlan.component("basic-plan-table3", {
+  props: [
+    "a23free",
+    "a23basic",
+    "time1",
+    "time2",
+    "time3",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "color",
+  ],
+  template: `          <div><table class="min-w-full text-center bg-white">
+  <thead class="border-b">
+    <tr>
+      <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+      </th>
+      <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+      </th>
+      <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+        {{time1}}
+      </th>
+      <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+        {{time2}}
+      </th>
+      <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+        {{time3}}
+      </th>
+    </tr>
+  </thead>
+
+
+
+
+  <tbody v-if="a23basic">
+    <tr class="border-b">
+      <td class="text-sm font-medium sm:px-6 py-4 md:text-xl basic" rowspan="2" v-bind:class="{'bg-green-200 ': a23basic, 'bg-sky-200': !a23basic}">
+        {{a23basic||a23free}}
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+        {{b2}}
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+        {{b3}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100)  }}円)</span>
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+      {{b4}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100)  }}円)</span>
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+      {{b5}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100)  }}円)</span>
+      </td>
+    </tr>
+    <tr class="border-b">
+
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+        {{c2}}
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+      {{c3}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100)  }}円)</span>
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+      {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+      {{c5}}円<span class="text-xs text-black block">税込({{  Math.floor(c5 * 110 / 100)  }}円)</span>
+      </td>
+
+    </tr>
+  </tbody>
+
+
+
+
+  <tbody v-if="a23free">
+  <tr class="border-b">
+    <td class="text-sm font-medium sm:px-6 py-4 bg-blue-200 md:text-xl" rowspan="2">
+      フリータイム
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      一般
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{b3}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{b4}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2">
+    {{b5}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+  <tr class="border-b">
+
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      シニア<br><span class="text-sm">(50歳以上)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{c3}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100)  }}円)</span>
+    </td>
+    <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+    {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+    </td>
+  </tr>
+</tbody>
+
+
+
+</table>
+</div>
+`,
 });
