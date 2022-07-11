@@ -52,8 +52,28 @@
       </div>
 
       <div>
-        <div v-show="C1">
-            a
+        <div v-show="C1" id="karaokeT">
+          <div class="flex justify-center ">
+            <a href="#1" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">月～木</a>
+            <a href="#2" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">金・祝日前</a>
+            <a href="#3" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">土</a>
+            <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
+          </div>
+          <div id="plan">
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="1">月～木</p>
+
+            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="1091" b4="1319" b5="1279" c2="学生" c3="773" c4="1182"></basic-plan-table3>
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="2">金・祝前日</p>
+            <basic-plan-table3 a23free="フリータイム" time1="10:00～18:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="864" b4="1319" b5="1319" c2="学生" c3="773" c4="1182"></basic-plan-table3>
+  
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="3">土</p>
+            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="864" b4="1319" b5="1319" c2="学生" c3="773" c4="1182"></basic-plan-table3>
+  
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="4">日・祝日</p>
+            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="864" b4="1319" b5="1319" c2="学生" c3="773" c4="1182"></basic-plan-table3>
+  
+          </div>
+
         </div>
         <div v-show="C2" id="booth">
           <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">月～金</p>
@@ -85,7 +105,7 @@
     services.mount('#services')
     price.mount('#price_table');
     BoothPlan.mount('#booth');
-
+    basicPlan.mount('#plan');
   </script>
   
 </body>
