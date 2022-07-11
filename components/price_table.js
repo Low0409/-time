@@ -1,50 +1,50 @@
 const price = Vue.createApp({
-    data() {
-      return {
-        C1: true,
-        C2: false,
-        C3: false,
-      };
+  data() {
+    return {
+      C1: true,
+      C2: false,
+      C3: false,
+    };
+  },
+  methods: {
+    button1() {
+      this.C1 = true;
+      this.C2 = false;
+      this.C3 = false;
     },
-    methods: {
-      button1() {
-        this.C1 = true;
-        this.C2 = false;
-        this.C3 = false;
-      },
-      button2() {
-        this.C1 = false;
-        this.C2 = true;
-        this.C3 = false;
-      },
-      button3() {
-        this.C1 = false;
-        this.C2 = false;
-        this.C3 = true;
-      },
+    button2() {
+      this.C1 = false;
+      this.C2 = true;
+      this.C3 = false;
     },
-  });
-  
-  const basicPlan = Vue.createApp({});
-  
-  basicPlan.component("basic-plan-table3", {
-    props: [
-      "a23free",
-      "a23basic",
-      "time1",
-      "time2",
-      "time3",
-      "b2",
-      "b3",
-      "b4",
-      "b5",
-      "c2",
-      "c3",
-      "c4",
-      "c5",
-      "color",
-    ],
-    template: `          <div><table class="min-w-full text-center bg-white">
+    button3() {
+      this.C1 = false;
+      this.C2 = false;
+      this.C3 = true;
+    },
+  },
+});
+
+const basicPlan = Vue.createApp({});
+
+basicPlan.component("basic-plan-table3", {
+  props: [
+    "a23free",
+    "a23basic",
+    "time1",
+    "time2",
+    "time3",
+    "b2",
+    "b3",
+    "b4",
+    "b5",
+    "c2",
+    "c3",
+    "c4",
+    "c5",
+    "color",
+  ],
+  template: `          <div><table class="min-w-full text-center bg-white">
     <thead class="border-b">
       <tr>
         <th scope="col" class="text-sm font-medium sm:px-6 py-4">
@@ -143,39 +143,39 @@ const price = Vue.createApp({
   </table>
   </div>
   `,
-  });
-  
+});
+
 //   ブース共通・オープンブースの列がある＋3時間パックから始まる　ブース料金表
 const BoothPlan = Vue.createApp({});
-  
-  BoothPlan.component("booth-plan-table", {
-    props: [
-      "b3",
-      "b4",
-      "c3",
-      "c4",
-      "d3",
-      "d4",
-      "e3",
-      "e4",
-      "f3",
-      "f4",
-      "g3",
-      "g4",
-      "h3",
-      "h4",
-      "i3",
-      "i4",
-      "j3",
-      "j4",
-      "k3",
-      "k4",
-      "l3",
-      "l4",
-      "m3",
-      "m4",
-    ],
-    template: `
+
+BoothPlan.component("booth-plan-table", {
+  props: [
+    "b3",
+    "b4",
+    "c3",
+    "c4",
+    "d3",
+    "d4",
+    "e3",
+    "e4",
+    "f3",
+    "f4",
+    "g3",
+    "g4",
+    "h3",
+    "h4",
+    "i3",
+    "i4",
+    "j3",
+    "j4",
+    "k3",
+    "k4",
+    "l3",
+    "l4",
+    "m3",
+    "m4",
+  ],
+  template: `
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 block-block min-w-full sm:px-6 lg:px-8">
       <div class="overflow-hidden">
@@ -359,28 +359,28 @@ const BoothPlan = Vue.createApp({});
   </div>
   </div>
   `,
-  });
-  
+});
 
 //   オープンブース列がないブース料金表
-  const BoothPlan2 = Vue.createApp({});
-  
-  BoothPlan.component("booth-plan-table2", {
-    props: [
-      "b3",
-      "c3",
-      "d3",
-      "e3",
-      "f3",
-      "g3",
-      "h3",
-      "i3",
-      "j3",
-      "k3",
-      "l3",
-      "m3",
-    ],
-    template: `
+const BoothPlan2 = Vue.createApp({});
+
+BoothPlan.component("booth-plan-table2", {
+  props: [
+    "text",
+    "b3",
+    "c3",
+    "d3",
+    "e3",
+    "f3",
+    "g3",
+    "h3",
+    "i3",
+    "j3",
+    "k3",
+    "l3",
+    "m3",
+  ],
+  template: `
 
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 block-block min-w-full sm:px-6 lg:px-8">
@@ -393,7 +393,7 @@ const BoothPlan = Vue.createApp({});
               <th scope="col" class="text-sm font-medium sm:px-6 py-4">
               </th>
               <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-gray-300">
-                ブース共通/麻雀格闘俱楽部
+                {{text}}
               </th>
             </tr>
           </thead>
@@ -537,25 +537,25 @@ const BoothPlan = Vue.createApp({});
     </div>
   </div>
   `,
-  });
+});
 
 //   5時間パックから始まるブース料金表/西大津とか
-  BoothPlan.component("booth-plan-table3", {
-    props: [
-      "b3",
-      "c3",
-      "d3",
-      "e3",
-      "f3",
-      "g3",
-      "h3",
-      "i3",
-      "j3",
-      "k3",
-      "l3",
-      "m3",
-    ],
-    template: `
+BoothPlan.component("booth-plan-table3", {
+  props: [
+    "b3",
+    "c3",
+    "d3",
+    "e3",
+    "f3",
+    "g3",
+    "h3",
+    "i3",
+    "j3",
+    "k3",
+    "l3",
+    "m3",
+  ],
+  template: `
 
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 block-block min-w-full sm:px-6 lg:px-8">
@@ -702,27 +702,25 @@ const BoothPlan = Vue.createApp({});
     </div>
   </div>
   `,
-  });
+});
 
-
-
-  const mahjongPlan = Vue.createApp({});
-  mahjongPlan.component("booth-plan-table4", {
-    props: [
-      "b3",
-      "c3",
-      "d3",
-      "e3",
-      "f3",
-      "g3",
-      "h3",
-      "i3",
-      "j3",
-      "k3",
-      "l3",
-      "m3",
-    ],
-    template: `
+const mahjongPlan = Vue.createApp({});
+mahjongPlan.component("booth-plan-table4", {
+  props: [
+    "b3",
+    "c3",
+    "d3",
+    "e3",
+    "f3",
+    "g3",
+    "h3",
+    "i3",
+    "j3",
+    "k3",
+    "l3",
+    "m3",
+  ],
+  template: `
 
     <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 block-block min-w-full sm:px-6 lg:px-8">
@@ -869,5 +867,4 @@ const BoothPlan = Vue.createApp({});
     </div>
   </div>
   `,
-  });
-  
+});
