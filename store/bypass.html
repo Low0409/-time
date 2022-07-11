@@ -108,10 +108,10 @@
                 <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl basic" rowspan="2">
                   基本料金
                 </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
                   30分まで
                 </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
                   273円<span class="text-xs text-black block">税込(300円)</span>
                 </td>
 
@@ -137,10 +137,10 @@
                 <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="6">
                   パック料金
                 </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
                   3時間
                 </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
                   1091円<span class="text-xs text-black block">税込(1200円)</span>
                 </td>
               </tr>
@@ -156,10 +156,10 @@
               </tr>
               <tr class="border-b">
 
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
                   9時間
                 </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
                   2455円<span class="text-xs text-black block">税込(2700円)</span>
                 </td>
               </tr>
@@ -174,10 +174,10 @@
               </tr>
               <tr class="border-b">
 
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
                   15時間
                 </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
                   3364円<span class="text-xs text-black block">税込(3700円)</span>
                 </td>
 
@@ -195,7 +195,7 @@
 
 
     <div id="services">
-      <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—設備・サービス —</h2>
+      <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4 mt-10">—設備・サービス —</h2>
       <!-- 店舗にないサービスに『1』を渡す -->
       <service-div></service-div>
 
@@ -208,6 +208,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   <script src="../components/data.js"></script>
+  <script src="../components/price_table.js"></script>
+
   <script>
     app.mount('#store');
     Access.mount('#access');
@@ -219,14 +221,6 @@
   </script>
 </body>
 <style>
-  th,
-  td {
-    border: 2px rgb(206, 206, 206) solid;
-  }
-
-  tr:nth-child(odd) {
-    background: rgb(248, 248, 248);
-  }
 
   .active {
     background: rgb(160, 0, 0);
