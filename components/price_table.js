@@ -65,8 +65,6 @@ basicPlan.component("basic-plan-table3", {
     </thead>
   
   
-  
-  
     <tbody v-if="a23basic">
       <tr class="border-b">
         <td class="text-sm font-medium sm:px-6 py-4 md:text-xl basic" rowspan="2" v-bind:class="{'bg-green-200 ': a23basic, 'bg-sky-200': !a23basic}">
@@ -127,7 +125,7 @@ basicPlan.component("basic-plan-table3", {
     <tr class="border-b">
   
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
-        シニア<br><span class="text-sm">(50歳以上)</span>
+        {{c2}}
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
       {{c3}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100)  }}円)</span>
