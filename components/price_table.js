@@ -146,7 +146,7 @@ basicPlan.component("basic-plan-table3", {
   </div>
   `,
 });
-// 時間が2列で2行の表 title2がフリーのとき行数増やす(ベルロード専用)
+// 時間が2列で2行の表
 basicPlan.component("basic-plan-table2_2", {
   props: [
     "time1",
@@ -180,11 +180,11 @@ basicPlan.component("basic-plan-table2_2", {
 
   <tbody>
       <tr class="border-b">
-          <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-green-200" rowspan="2" v-if="title1==='基本料金'">
-            {{title1}}<br>{{title2}}
-          </td>
-          <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-blue-200" rowspan="4" v-else-if="title2 ==='フリータイム'">
-            {{title1}}<br>{{title2}}
+      <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-green-200" rowspan="2" v-if="title1==='基本料金'">
+      {{title1}}<br>{{title2}}
+  </td>
+  <td class="text-sm font-medium sm:px-4 pt-10 md:text-xl bg-blue-200" rowspan="2" v-else-if="title2 ==='フリータイム'">
+          {{title1}}<br>{{title2}}
           </td>
           <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-yellow-200" rowspan="2" v-else>
               {{title1}}<br>{{title2}}
@@ -200,7 +200,7 @@ basicPlan.component("basic-plan-table2_2", {
           </td>
 
       </tr>
-      <tr class="border-b">
+      <tr v-bind:class="{'border-b': title2 !=='フリータイム'}">
 
           <td class="sm:text-xl font-black font-black sm:px-4 py-4">
               {{c2}}
@@ -212,35 +212,6 @@ basicPlan.component("basic-plan-table2_2", {
               {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
           </td>
       </tr>
-      <tr class="border-b" v-if="title2 ==='フリータイム'">
-
-      <td class="sm:text-xl font-black font-black sm:px-4 py-4">
-      </td>
-          <th scope="col" class="bg-orange-200 py-4">
-              {{time1}}
-          </th>
-          <th scope="col" class="bg-sky-200 py-4">
-              {{time2}}
-          </th>
-          <th scope="col" class="bg-orange-200 py-4">
-              {{time1}}
-          </th>
-  </tr>
-  <tr class="border-b" v-if="title2 ==='フリータイム'">
-
-  <td class="sm:text-xl font-black font-black sm:px-4 py-4">
-      学生
-  </td>
-  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-  {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
-</td>
-<td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-{{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
-</td>
-<td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-{{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
-</td>
-</tr>
   </tbody>
 
 </table>
