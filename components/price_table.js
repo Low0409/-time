@@ -51,7 +51,7 @@ basicPlan.component("basic-plan-table3", {
         <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
   
         </th>
-        <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+        <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
         </th>
         <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
           {{time1}}
@@ -107,7 +107,7 @@ basicPlan.component("basic-plan-table3", {
       <td class="text-sm font-medium sm:px-6 py-4 bg-blue-200 md:text-xl" rowspan="2">
         {{a23free}}
       </td>
-      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      <td class="sm:text-xl font-black font-black sm:px-6 py-4">
         一般
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
@@ -125,7 +125,7 @@ basicPlan.component("basic-plan-table3", {
     </tr>
     <tr class="border-b">
   
-      <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+      <td class="sm:text-xl font-black font-black sm:px-6 py-4">
         {{c2}}
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
@@ -146,7 +146,7 @@ basicPlan.component("basic-plan-table3", {
   </div>
   `,
 });
-// 時間が2列で2行の表
+// 時間が2列で2行の表 title2がフリーのとき行数増やす(ベルロード専用)
 basicPlan.component("basic-plan-table2_2", {
   props: [
     "time1",
@@ -168,10 +168,10 @@ basicPlan.component("basic-plan-table2_2", {
           </th>
           <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
           </th>
-          <th scope="col" class="bg-orange-200">
+          <th scope="col" class="bg-orange-200 py-4">
               {{time1}}
           </th>
-          <th scope="col" class="bg-sky-200">
+          <th scope="col" class="bg-sky-200 py-4">
               {{time2}}
           </th>
 
@@ -180,7 +180,13 @@ basicPlan.component("basic-plan-table2_2", {
 
   <tbody>
       <tr class="border-b">
-          <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-yellow-200" rowspan="2">
+          <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-green-200" rowspan="2" v-if="title1==='基本料金'">
+            {{title1}}<br>{{title2}}
+          </td>
+          <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-blue-200" rowspan="4" v-else-if="title2 ==='フリータイム'">
+            {{title1}}<br>{{title2}}
+          </td>
+          <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-yellow-200" rowspan="2" v-else>
               {{title1}}<br>{{title2}}
           </td>
           <td class="sm:text-xl font-black font-black sm:px-6 py-4">
@@ -196,7 +202,7 @@ basicPlan.component("basic-plan-table2_2", {
       </tr>
       <tr class="border-b">
 
-          <td class="font-black font-black sm:px-4 py-4">
+          <td class="sm:text-xl font-black font-black sm:px-4 py-4">
               {{c2}}
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
@@ -206,6 +212,35 @@ basicPlan.component("basic-plan-table2_2", {
               {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
           </td>
       </tr>
+      <tr class="border-b" v-if="title2 ==='フリータイム'">
+
+      <td class="sm:text-xl font-black font-black sm:px-4 py-4">
+      </td>
+          <th scope="col" class="bg-orange-200 py-4">
+              {{time1}}
+          </th>
+          <th scope="col" class="bg-sky-200 py-4">
+              {{time2}}
+          </th>
+          <th scope="col" class="bg-orange-200 py-4">
+              {{time1}}
+          </th>
+  </tr>
+  <tr class="border-b" v-if="title2 ==='フリータイム'">
+
+  <td class="sm:text-xl font-black font-black sm:px-4 py-4">
+      学生
+  </td>
+  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+  {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+</td>
+<td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+{{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+</td>
+<td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+{{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+</td>
+</tr>
   </tbody>
 
 </table>
@@ -447,6 +482,7 @@ BoothPlan.component("booth-plan-table2", {
     "k3",
     "l3",
     "m3",
+    "five_start",
   ],
   template: `
 
@@ -505,6 +541,8 @@ BoothPlan.component("booth-plan-table2", {
               </td>
   
             </tr>
+
+            
   
             <tr class="border-b">
   

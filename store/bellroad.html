@@ -45,14 +45,65 @@
 
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
         料金案内表 —</h2>
-        <div class="flex max-w-3xl justify-center mx-auto text-xl">
+      <div class="flex max-w-3xl justify-center mx-auto text-xl">
 
 
-          <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
-          <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">ブース料金表</p>
-          <p @click="button3()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C3}">麻雀time料金表</p>
+        <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
+        <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">カラオケ＆アミューズパック</p>
+      </div>
+      <div v-show="C1" id="karaoke">
+        <div class="flex justify-center ">
+          <a href="#1" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">月～木</a>
+          <a href="#2" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">金・祝日前</a>
+          <a href="#3" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">土</a>
+          <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
+        </div>
+        <div id="plan">
+
+
+
+          <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="1">月～木</p>
+          <basic-plan-table2_2 time1="10:00～18:00" time2="18:00～2:00" title1="基本料金" b2="30分まで" b3="255" b4="282" c2="延長30分毎" c3="182" c4="237"></basic-plan-table2_2>
+          <basic-plan-table2_2 time1="10:00～18:00" time2="18:00～2:00" title1="カラオケ" title2="フリータイム" b2="一般" b3="891" b4="1255" c2="シニア" c3="710" c4="1073"></basic-plan-table2_2>
+
+          <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="2">金・祝前日</p>
+          <basic-plan-table2_2 time1="10:00～18:00" time2="18:00～5:00" title1="基本料金" b2="30分まで" b3="255" b4="328" c2="延長30分毎" c3="182" c4="282"></basic-plan-table2_2>
+
+          <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="3">土</p>
+          <basic-plan-table2_2 time1="10:00～18:00" time2="18:00～5:00" title1="基本料金" b2="30分まで" b3="319" b4="328" c2="延長30分毎" c3="228" c4="282"></basic-plan-table2_2>
+
+          <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="4">日・祝日</p>
+          <basic-plan-table2_2 time1="10:00～18:00" time2="18:00～2:00" title1="基本料金" b2="30分まで" b3="255" b4="282" c2="延長30分毎" c3="182" c4="237"></basic-plan-table2_2>
+
+          <p class="font-black">※<span class="text-red-500">入店後のフリータイム・時間制の切替はシステム上できません。</span></p>
+          <p class="font-black">※満席の際は入店された順に<span class="text-red-500">3時間</span>までのご利用とさせていただく場合がありますので、ご了承ください。</p>
+          <p class="font-black">※フリータイムでのご利用は、カラオケのみのご利用となります。</p>
+          <p class="bg-red-600 text-yellow-400 text-center py-2 font-black">予定時刻より5分経過しますと追加料金が発生いたします</p>
+
         </div>
 
+      </div>
+      <div v-show="C2" id="booth">
+        <div class="flex justify-center ">
+          <a href="#5" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">月～木</a>
+          <a href="#6" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">金・祝日前</a>
+          <a href="#7" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">土</a>
+          <a href="#8" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
+        </div>
+        <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="5">月～木</p>
+        <karaoke-amuse-pack b3="1000" b4="1364" b5="1728" c3="910" c4="1182" c5="1546" d3="1182" d4="1564" d5="1910" e3="1091" e4="1364" e5="1728"></karaoke-amuse-pack>
+        
+
+        <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="6">金・祝前日</p>
+        <karaoke-amuse-pack b3="1000" b4="1364" b5="1728" c3="910" c4="1182" c5="1546" d3="1364" d4="1728" d5="2091" e3="1273" e4="1546" e5="1910"></karaoke-amuse-pack>
+
+        <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="7">土</p>
+        <karaoke-amuse-pack b3="1092" b4="1546" b5="1910" c3="1000" c4="1364" c5="1728" d3="1364" d4="1728" d5="2091" e3="1273" e4="1546" e5="1910"></karaoke-amuse-pack>
+
+        <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="8">日・祝日</p>
+        <karaoke-amuse-pack b3="1092" b4="1546" b5="1910" c3="1000" c4="1364" c5="1728" d3="1182" d4="1546" d5="1910" e3="1091" e4="1364" e5="1728"></karaoke-amuse-pack>
+
+      </div>
     </div>
 
 
@@ -69,16 +120,143 @@
 
   <script src="../components/data.js"></script>
   <script src="../components/price_table.js"></script>
+  <script>
 
+
+
+
+
+    const karaoke_amu = Vue.createApp({});
+
+    karaoke_amu.component("karaoke-amuse-pack", {
+      props: [
+        "b3",
+        "b4",
+        "b5",
+        "c3",
+        "c4",
+        "c5",
+        "d3",
+        "d4",
+        "d5",
+        "e3",
+        "e4",
+        "e5",
+      ],
+      template: `
+    <table class="min-w-full text-center bg-white">
+      <thead class="border-b">
+        <tr>
+          <th scope="col" class="text-sm font-medium sm:px-6 py-4"
+           colspan="2">
+
+
+          </th>
+
+          <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+            3時間パック
+          </th>
+          <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+            5時間パック
+          </th>
+          <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-300">
+            8時間パック
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="text-sm font-medium sm:px-6 py-4 md:text-xl w-1/5 bg-sky-200" rowspan="3">
+            10:00～18:00
+          </td>
+          <td class="sm:text-xl font-black font-black sm:px-6 py-4">
+            一般
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{b3}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{b4}}円<span class="text-xs text-black block">税込({{ Math.floor(b4 * 110 / 100) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{b5}}円<span class="text-xs text-black block">税込({{ Math.floor(b5 * 110 / 100) }}円)</span>
+          </td>
+        </tr>
+        <tr class="border-b">
+  
+          <td class="sm:text-xl font-black font-black sm:px-6 py-4">
+            学生・シニア<br><span class="text-sm">(50歳以上)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{c3}}円<span class="text-xs text-black block">税込({{ Math.floor(c3 * 110 / 100-0.01) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{c4}}円<span class="text-xs text-black block">税込({{ Math.floor(c4 * 110 / 100) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{c5}}円<span class="text-xs text-black block">税込({{ Math.floor(c5 * 110 / 100) }}円)</span>
+          </td>
+        </tr>
+
+      </tbody>
+      <tbody>
+        <tr class="border-b">
+          <td class="text-sm font-medium sm:px-6 py-4 md:text-xl w-1/5 bg-blue-300" rowspan="3">
+            18:00～
+          </td>
+          <td class="sm:text-xl font-black font-black sm:px-6 py-4">
+            一般
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{d3}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{d4}}円<span class="text-xs text-black block">税込({{ Math.floor(d4 * 110 / 100) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{d5}}円<span class="text-xs text-black block">税込({{ Math.floor(d5 * 110 / 100-0.01) }}円)</span>
+          </td>
+        </tr>
+        <tr class="border-b">
+  
+          <td class="sm:text-xl font-black font-black sm:px-6 py-4">
+            学生・シニア<br><span class="text-sm">(50歳以上)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{e3}}円<span class="text-xs text-black block">税込({{ Math.floor(e3 * 110 / 100) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{e4}}円<span class="text-xs text-black block">税込({{ Math.floor(e4 * 110 / 100) }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+            {{e5}}円<span class="text-xs text-black block">税込({{ Math.floor(c4 * 110 / 100) }}円)</span>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  
+  
+    `,
+    });
+
+
+
+
+
+
+  </script>
   <script>
     app.mount('#store');
     Access.mount('#access');
     services.mount('#services');
+    price.mount('#price_table');
+    karaoke_amu.mount('#booth');
+    BoothPlan.mount('#karaoke');
+    basicPlan.mount('#plan');
   </script>
 </body>
 <style>
-
-
   .active {
     background: rgb(160, 0, 0);
     color: rgb(255, 255, 148);
