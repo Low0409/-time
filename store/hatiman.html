@@ -60,18 +60,31 @@
             <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
           </div>
           <div id="plan">
-            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="1">月～木</p>
 
-            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="1091" b4="1319" b5="1279" c2="学生" c3="773" c4="1182"></basic-plan-table3>
+
+
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="1">月～木</p>
+            <basic-plan-table3 a23basic="基本料金" time1="6:00～18:00" time2="18:00～6:00" b2="30分" b3="228" b4="273" small="1"></basic-plan-table3>
+
+            <basic-plan-table3 a23free="フリータイム" time1="10:00～18:00" time2="18:00～2:00" time3="0:00～8:00" b2="一般" b3="1091" b4="1273" b5="1273" c2="学生/シニア" c3="1000" c4="1182" c5="1182"></basic-plan-table3>
             <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="2">金・祝前日</p>
-            <basic-plan-table3 a23free="フリータイム" time1="10:00～18:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="864" b4="1319" b5="1319" c2="学生" c3="773" c4="1182"></basic-plan-table3>
-  
+            <basic-plan-table3 a23basic="基本料金" time1="6:00～18:00" time2="18:00～6:00" b2="30分" b3="228" b4="291" small="1"></basic-plan-table3>
+
+            <basic-plan-table3 a23free="フリータイム" time1="10:00～18:00" time2="18:00～2:00" time3="0:00～8:00" b2="一般" b3="1091" b4="1728" b5="1728" c2="学生/シニア" c3="1000" c4="1637" c5="1637"></basic-plan-table3>
+
             <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="3">土</p>
-            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="864" b4="1319" b5="1319" c2="学生" c3="773" c4="1182"></basic-plan-table3>
-  
+            <basic-plan-table3 a23basic="基本料金" time1="6:00～18:00" time2="18:00～6:00" b2="30分" b3="273" b4="291" small="1"></basic-plan-table3>
+
+            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="0:00～8:00" b2="一般" b3="1364" b4="1728" b5="1728" c2="学生/シニア" c3="1273" c4="1637" c5="1637"></basic-plan-table3>
+
             <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="4">日・祝日</p>
-            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="24:00～8:00" b2="一般" b3="864" b4="1319" b5="1319" c2="学生" c3="773" c4="1182"></basic-plan-table3>
-  
+            <basic-plan-table3 a23basic="基本料金" time1="6:00～18:00" time2="18:00～6:00" b2="30分" b3="273" b4="273" small="1"></basic-plan-table3>
+
+            <basic-plan-table3 a23free="フリータイム" time1="9:00～20:00" time2="18:00～2:00" time3="0:00～8:00" b2="一般" b3="1364" b4="1273" b5="1273" c2="学生/シニア" c3="1273" c4="1182" c5="1182"></basic-plan-table3>
+            <p class="font-black">満席の際は入店された順に<span class="text-red-500">3時間</span>までのご利用とさせていただきます。</p>
+            <p class="font-black">オーダーストップは、AM1:00です。（再開はAM8:00です）</p>
+            <p class="bg-red-600 text-yellow-400 text-center py-2 font-black">予定時刻より5分経過しますと追加料金が発生いたします</p>
+
           </div>
 
         </div>
@@ -107,11 +120,9 @@
     BoothPlan.mount('#booth');
     basicPlan.mount('#plan');
   </script>
-  
+
 </body>
 <style>
-
-
   .active {
     background: rgb(160, 0, 0);
     color: rgb(255, 255, 148);

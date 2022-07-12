@@ -26,7 +26,8 @@ const price = Vue.createApp({
 });
 
 const basicPlan = Vue.createApp({});
-
+// 2行3列の料金表価格部分が5個　 c5要素がある場合は結合なしで6個
+// smallを受け取った場合、1列と1行分無くなった表になる
 basicPlan.component("basic-plan-table3", {
   props: [
     "a23free",
@@ -42,12 +43,12 @@ basicPlan.component("basic-plan-table3", {
     "c3",
     "c4",
     "c5",
-    "color",
+    "small",
   ],
   template: `          <div><table class="min-w-full text-center bg-white">
     <thead class="border-b">
       <tr>
-        <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+        <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
   
         </th>
         <th scope="col" class="text-sm font-medium sm:px-6 py-4">
@@ -58,7 +59,7 @@ basicPlan.component("basic-plan-table3", {
         <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
           {{time2}}
         </th>
-        <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+        <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200" v-if="!small">
           {{time3}}
         </th>
       </tr>
@@ -67,8 +68,8 @@ basicPlan.component("basic-plan-table3", {
   
     <tbody v-if="a23basic">
       <tr class="border-b">
-        <td class="text-sm font-medium sm:px-6 py-4 md:text-xl basic" rowspan="2" v-bind:class="{'bg-green-200 ': a23basic, 'bg-sky-200': !a23basic}">
-          {{a23basic||a23free}}
+        <td class="text-sm font-medium sm:px-6 py-4 md:text-xl basic bg-green-200" rowspan="2">
+          {{a23basic}}
         </td>
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
           {{b2}}
@@ -79,11 +80,11 @@ basicPlan.component("basic-plan-table3", {
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
         {{b4}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100)  }}円)</span>
         </td>
-        <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+        <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" v-if="!small">
         {{b5}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100)  }}円)</span>
         </td>
       </tr>
-      <tr class="border-b">
+      <tr class="border-b" v-if="!small">
   
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
           {{c2}}
@@ -100,14 +101,11 @@ basicPlan.component("basic-plan-table3", {
   
       </tr>
     </tbody>
-  
-  
-  
-  
+
     <tbody v-if="a23free">
     <tr class="border-b">
       <td class="text-sm font-medium sm:px-6 py-4 bg-blue-200 md:text-xl" rowspan="2">
-        フリータイム
+        {{a23free}}
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
         一般
@@ -118,7 +116,10 @@ basicPlan.component("basic-plan-table3", {
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
       {{b4}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100)  }}円)</span>
       </td>
-      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2">
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2" v-if="!c5">
+      {{b5}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100)  }}円)</span>
+      </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" v-else>
       {{b5}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100)  }}円)</span>
       </td>
     </tr>
@@ -133,12 +134,81 @@ basicPlan.component("basic-plan-table3", {
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
       {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
       </td>
+      <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" v-if="c5">
+      {{c5}}円<span class="text-xs text-black block">税込({{  Math.floor(c5 * 110 / 100)  }}円)</span>
+      </td>
     </tr>
   </tbody>
   
   
   
   </table>
+  </div>
+  `,
+});
+// 時間が2列で2行の表
+basicPlan.component("basic-plan-table2_2", {
+  props: [
+    "time1",
+    "time2",
+    "title1",
+    "title2",
+    "b2",
+    "b3",
+    "b4",
+    "c2",
+    "c3",
+    "c4",
+  ],
+  template: `
+  <table class="min-w-full text-center bg-white">
+  <thead class="border-b">
+      <tr>
+          <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
+          </th>
+          <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
+          </th>
+          <th scope="col" class="bg-orange-200">
+              {{time1}}
+          </th>
+          <th scope="col" class="bg-sky-200">
+              {{time2}}
+          </th>
+
+      </tr>
+  </thead>
+
+  <tbody>
+      <tr class="border-b">
+          <td class="text-sm font-medium sm:px-4 py-4 md:text-xl bg-yellow-200" rowspan="2">
+              {{title1}}<br>{{title2}}
+          </td>
+          <td class="sm:text-xl font-black font-black sm:px-6 py-4">
+            {{b2}}
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+              {{b3}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100)  }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+              {{b4}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100)  }}円)</span>
+          </td>
+
+      </tr>
+      <tr class="border-b">
+
+          <td class="font-black font-black sm:px-4 py-4">
+              {{c2}}
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+              {{c3}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100)  }}円)</span>
+          </td>
+          <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+              {{c4}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+          </td>
+      </tr>
+  </tbody>
+
+</table>
   </div>
   `,
 });
