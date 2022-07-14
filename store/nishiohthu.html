@@ -33,7 +33,7 @@
   </div>
   <!-- 共通パーツend-->
 
-  <div class="max-w-3xl mx-auto">
+  <div class="max-w-4xl mx-auto">
     <img src="../img/store/nishiotsu/04_bell.jpg" alt="" class="mx-auto">
 
     <!--共通パーツ各店舗のグーグルマップurl props -->
@@ -61,8 +61,6 @@
             <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
           </div>
           <div id="plan">
-
-
 
             <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="1">月～木</p>
             <basic-plan-table3 a23basic="基本料金" time1="8:00～18:00" time2="18:00～8:00" b2="30分" b3="237" b4="282" small="1"></basic-plan-table3>
@@ -93,9 +91,9 @@
         </div>
         <div v-show="C2" id="booth">
           <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">月～金</p>
-          <booth-plan-table3 b3="255" c3="87" d3="955" f3="1773" g3="2046" h3="2546" i3="3046" j3="3410" k3="3500" l3="1391" m3="1728"></booth-plan-table3>
+          <booth-plan-table5 title="ブース共通/麻雀格闘俱楽部" b3="255" c3="87" d3="955" f3="1773" g3="2046" h3="2546" i3="3046" j3="3410" k3="3500" l3="1391" m3="1728"></booth-plan-table5>
           <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">土日・祝日</p>
-          <booth-plan-table3 b3="255" c3="87" d3="1046" f3="1864" g3="2137" h3="2637" i3="3137" j3="3500" k3="3910" l3="1482" m3="1819"></booth-plan-table3>
+          <booth-plan-table5 title="ブース共通/麻雀格闘俱楽部" b3="255" c3="87" d3="1046" f3="1864" g3="2137" h3="2637" i3="3137" j3="3500" k3="3910" l3="1482" m3="1819"></booth-plan-table5>
 
         </div>
       </div>
@@ -120,7 +118,7 @@
     Access.mount('#access')
     services.mount('#services')
     price.mount('#price_table');
-    BoothPlan.mount('#booth');
+    BoothPlan2.mount('#booth');
     basicPlan.mount('#plan');
 
   </script>

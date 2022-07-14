@@ -47,153 +47,153 @@
 
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
         料金案内表 —</h2>
-        <p class="text-red-500 font-black text-center">ボタンで料金表が切り替わります</p>
+      <p class="text-red-500 font-black text-center">ボタンで料金表が切り替わります</p>
 
-        <div class="flex max-w-3xl justify-center mx-auto text-xl">
+      <div class="flex max-w-4xl justify-center mx-auto text-xl">
 
 
-          <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
-          <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">ブース料金表</p>
-          <p @click="button3()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C3}">麻雀time料金表</p>
+        <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
+        <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">ブース料金表</p>
+        <p @click="button3()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C3}">麻雀time料金表</p>
+
+      </div>
+      <div>
+        <div v-show="C1" id="karaokeT">
+          <div class="flex justify-center ">
+            <a href="#1" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">月～木</a>
+            <a href="#2" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">金・祝日前</a>
+            <a href="#3" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">土</a>
+            <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
+          </div>
+          <div id="plan">
+
+
+
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="1">月～木</p>
+            <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="910" b4="1319" b5="1319" c2="学生/シニア" c3="819" c4="1137" c5="1137"></basic-plan-table3>
+
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="2">金・祝前日</p>
+            <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="910" b4="1455" b5="1455" c2="学生/シニア" c3="819" c4="1273" c5="1273"></basic-plan-table3>
+
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="3">土</p>
+            <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="1046" b4="1455" b5="1455" c2="学生/シニア" c3="955" c4="1273" c5="1273"></basic-plan-table3>
+
+            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="4">日・祝日</p>
+            <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="1046" b4="1319" b5="1319" c2="学生/シニア" c3="955" c4="1137" c5="1137"></basic-plan-table3>
+            <p class="font-black">※<span class="text-red-500">入店後のフリータイム・時間制の切替はシステム上できません。</span></p>
+            <p class="font-black">※満席の際は入店された順に<span class="text-red-500">3時間</span>までのご利用とさせていただく場合がありますので、ご了承ください。</p>
+            <p class="font-black">※フリータイムでのご利用は、カラオケのみのご利用となります。</p>
+            <p class="bg-red-600 text-yellow-400 text-center py-2 font-black">予定時刻より5分経過しますと追加料金が発生いたします</p>
+
+          </div>
 
         </div>
-        <div>
-          <div v-show="C1" id="karaokeT">
-            <div class="flex justify-center ">
-              <a href="#1" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">月～木</a>
-              <a href="#2" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">金・祝日前</a>
-              <a href="#3" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">土</a>
-              <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
-            </div>
-            <div id="plan">
-  
-  
-  
-              <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="1">月～木</p>
-              <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="910" b4="1319" b5="1319" c2="学生/シニア" c3="819" c4="1137" c5="1137"></basic-plan-table3>
+        <div v-show="C2" id="booth">
+          <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">月～金</p>
+          <booth-plan-table2 text="ブース共通/麻雀格闘俱楽部" b3="255" c3="87" d3="955" e3="1391" f3="1773" g3="2046" h3="2546" i3="3046" j3="3410" k3="3500" l3="1391" m3="1728"></booth-plan-table2>
+          <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">土日・祝日</p>
+          <booth-plan-table2 text="ブース共通/麻雀格闘俱楽部" b3="255" c3="87" d3="1046" e3="1482" f3="1864" g3="2137" h3="2637" i3="3137" j3="3500" k3="3591" l3="1482" m3="1819"></booth-plan-table2>
 
-              <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="2">金・祝前日</p>
-              <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="910" b4="1455" b5="1455" c2="学生/シニア" c3="819" c4="1273" c5="1273"></basic-plan-table3>
-  
-              <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="3">土</p>
-              <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="1046" b4="1455" b5="1455" c2="学生/シニア" c3="955" c4="1273" c5="1273"></basic-plan-table3>
-  
-              <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center mt-8" id="4">日・祝日</p>
-              <basic-plan-table3 a23free="フリータイム" time1="10:00～20:00" time2="18:00～5:00" time3="22:00～8:00" b2="一般" b3="1046" b4="1319" b5="1319" c2="学生/シニア" c3="955" c4="1137" c5="1137"></basic-plan-table3>
-              <p class="font-black">※<span class="text-red-500">入店後のフリータイム・時間制の切替はシステム上できません。</span></p>
-              <p class="font-black">※満席の際は入店された順に<span class="text-red-500">3時間</span>までのご利用とさせていただく場合がありますので、ご了承ください。</p>
-              <p class="font-black">※フリータイムでのご利用は、カラオケのみのご利用となります。</p>
-              <p class="bg-red-600 text-yellow-400 text-center py-2 font-black">予定時刻より5分経過しますと追加料金が発生いたします</p>
-  
-            </div>
-  
-          </div>
-          <div v-show="C2" id="booth">
-            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">月～金</p>
-            <booth-plan-table2 text="ブース共通/麻雀格闘俱楽部" b3="255" c3="87" d3="955" e3="1391" f3="1773" g3="2046" h3="2546" i3="3046" j3="3410" k3="3500" l3="1391" m3="1728"></booth-plan-table2>
-            <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">土日・祝日</p>
-            <booth-plan-table2 text="ブース共通/麻雀格闘俱楽部" b3="255" c3="87" d3="1046" e3="1482" f3="1864" g3="2137" h3="2637" i3="3137" j3="3500" k3="3591" l3="1482" m3="1819"></booth-plan-table2>
-  
-          </div>
-          <div v-show="C3" id="mahjong">
-            <table class="min-w-full text-center bg-white">
-              <thead class="border-b">
-                <tr>
-                  <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-  
-                  </th>
-                  <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-  
-                  </th>
-                  <th scope="col" class="text-md font-medium sm:px-6 py-4">
-                  </th>
-  
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="border-b">
-                  <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl basic" rowspan="2">
-                    基本料金
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                    30分まで
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                    273円<span class="text-xs text-black block">税込(300円)</span>
-                  </td>
-  
-                </tr>
-                <tr class="border-b">
-  
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
-                    延長15分毎
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                    91円<span class="text-xs text-black block">税込(100円)</span>
-                  </td>
-  
-                </tr>
-                <!-- 間 -->
-                <tr class="border-b">
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-  
-                  </td>
-                </tr>
-                <!-- 間 -->
-                <tr class="border-b">
-                  <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="6">
-                    パック料金
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                    3時間
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                    1091円<span class="text-xs text-black block">税込(1200円)</span>
-                  </td>
-                </tr>
-  
-                <tr class="border-b">
-  
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
-                    6時間
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                    1910円<span class="text-xs text-black block">税込(2100円)</span>
-                  </td>
-                </tr>
-                <tr class="border-b">
-  
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                    9時間
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                    2455円<span class="text-xs text-black block">税込(2700円)</span>
-                  </td>
-                </tr>
-                <tr class="border-b">
-  
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
-                    12時間
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                    2910円<span class="text-xs text-black block">税込(3200円)</span>
-                  </td>
-                </tr>
-                <tr class="border-b">
-  
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                    15時間
-                  </td>
-                  <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                    3364円<span class="text-xs text-black block">税込(3700円)</span>
-                  </td>
-  
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <!-- 麻雀time料金↑ -->
         </div>
+        <div v-show="C3" id="mahjong">
+          <table class="min-w-full text-center bg-white">
+            <thead class="border-b">
+              <tr>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
+
+                </th>
+                <th scope="col" class="text-md font-medium sm:px-6 py-4">
+                </th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl basic" rowspan="2">
+                  基本料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
+                  30分まで
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
+                  273円<span class="text-xs text-black block">税込(300円)</span>
+                </td>
+
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  延長15分毎
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  91円<span class="text-xs text-black block">税込(100円)</span>
+                </td>
+
+              </tr>
+              <!-- 間 -->
+              <tr class="border-b">
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+
+                </td>
+              </tr>
+              <!-- 間 -->
+              <tr class="border-b">
+                <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="6">
+                  パック料金
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
+                  3時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
+                  1091円<span class="text-xs text-black block">税込(1200円)</span>
+                </td>
+              </tr>
+
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  6時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  1,910円<span class="text-xs text-black block">税込(2,100円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
+                  9時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
+                  2,455円<span class="text-xs text-black block">税込(2,700円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
+                  12時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
+                  2,910円<span class="text-xs text-black block">税込(3,200円)</span>
+                </td>
+              </tr>
+              <tr class="border-b">
+
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
+                  15時間
+                </td>
+                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
+                  3,364円<span class="text-xs text-black block">税込(3,700円)</span>
+                </td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 麻雀time料金↑ -->
+      </div>
     </div>
 
 
@@ -223,8 +223,6 @@
   </script>
 </body>
 <style>
-
-
   .active {
     background: rgb(160, 0, 0);
     color: rgb(255, 255, 148);

@@ -192,7 +192,7 @@
                   891円<span class="text-xs text-black block">税込(980円)</span>
                 </td>
                 <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                  1073円<span class="text-xs text-black block">税込(1180円)</span>
+                  1,073円<span class="text-xs text-black block">税込(1,180円)</span>
                 </td>
                 <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
                   728円<span class="text-xs text-black block">税込(800円)</span>
@@ -301,13 +301,13 @@
             一般
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{b3}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100) }}円)</span>
+            {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{b4}}円<span class="text-xs text-black block">税込({{ Math.floor(b4 * 110 / 100) }}円)</span>
+            {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(b4 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{b5}}円<span class="text-xs text-black block">税込({{ Math.floor(b5 * 110 / 100) }}円)</span>
+            {{Number(b5).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(b5 * 110 / 100).toLocaleString() }}円)</span>
           </td>
         </tr>
         <tr class="border-b">
@@ -316,13 +316,13 @@
             学生・シニア<br><span class="text-sm">(50歳以上)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{c3}}円<span class="text-xs text-black block">税込({{ Math.floor(c3 * 110 / 100-0.01) }}円)</span>
+            {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c3 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{c4}}円<span class="text-xs text-black block">税込({{ Math.floor(c4 * 110 / 100) }}円)</span>
+            {{Number(c4).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c4 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{c5}}円<span class="text-xs text-black block">税込({{ Math.floor(c5 * 110 / 100) }}円)</span>
+            {{Number(c5).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c5 * 110 / 100).toLocaleString() }}円)</span>
           </td>
         </tr>
 
@@ -336,13 +336,13 @@
             一般
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{d3}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100) }}円)</span>
+            {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{d4}}円<span class="text-xs text-black block">税込({{ Math.floor(d4 * 110 / 100) }}円)</span>
+            {{Number(d4).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d4 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{d5}}円<span class="text-xs text-black block">税込({{ Math.floor(d5 * 110 / 100-0.01) }}円)</span>
+            {{Number(d5).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d5 * 110 / 100-0.01).toLocaleString() }}円)</span>
           </td>
         </tr>
         <tr class="border-b">
@@ -351,13 +351,13 @@
             学生・シニア<br><span class="text-sm">(50歳以上)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{e3}}円<span class="text-xs text-black block">税込({{ Math.floor(e3 * 110 / 100) }}円)</span>
+            {{Number(e3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(e3 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{e4}}円<span class="text-xs text-black block">税込({{ Math.floor(e4 * 110 / 100) }}円)</span>
+            {{Number(e4).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(e4 * 110 / 100).toLocaleString() }}円)</span>
           </td>
           <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-            {{e5}}円<span class="text-xs text-black block">税込({{ Math.floor(c4 * 110 / 100) }}円)</span>
+            {{Number(e5).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c5 * 110 / 100).toLocaleString() }}円)</span>
           </td>
         </tr>
 
