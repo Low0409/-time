@@ -452,7 +452,6 @@ BoothPlan.component("booth-plan-table2", {
     "k3",
     "l3",
     "m3",
-    "five_start",
   ],
   template: `
 
@@ -509,10 +508,7 @@ BoothPlan.component("booth-plan-table2", {
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
                 {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100).toLocaleString() }}円)</span>
               </td>
-  
             </tr>
-
-            
   
             <tr class="border-b">
   

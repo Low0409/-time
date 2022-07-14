@@ -45,15 +45,9 @@
         <!--共通パーツend-->
         <div id="price_table">
 
-
-            <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
-                料金案内表 —</h2>
-                <p class="text-red-500 font-black text-center">ボタンで料金表が切り替わります</p>
-
+            <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">— 料金案内表 —</h2>
             <div class="flex max-w-3xl justify-center mx-auto text-xl">
-
-
-                <p @click="karaoke()" class="cursor-pointer text-center py-2 px-4 m-2 rounded-lg border-solid active">カラオケ料金表</p>
+            <p @click="karaoke()" class="cursor-pointer text-center py-2 px-4 m-2 rounded-lg border-solid active">カラオケ・ダーツ・ビリヤード料金表</p>
 
             </div>
 
@@ -80,6 +74,7 @@
                         </th>
                         <th scope="col" class="bg-orange-200 py-4">
                             10:00～18:00
+
                         </th>
                         <th scope="col" class="bg-sky-200 py-4">
                             18:00～1:00
@@ -117,12 +112,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>※受付17:59まで</td>
-                    <td>※受付22:30まで</td>
-                </tr>
+
 
                 <tbody>
                     <tr class="border-b">
@@ -132,10 +122,10 @@
                         <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
                         </td>
                         <td class="bg-orange-200 py-4 font-black">
-                            10:00～20:00
+                            10:00～20:00<br><span class="text-red-600">※受付17:59まで</span>
                         </td>
                         <td class="bg-sky-200 py-4 font-black">
-                            18:00～1:00
+                            18:00～1:00<br><span class="text-red-600">※受付22:30まで</span>
                         </td>
                     </tr>
                     <tr class="border-b">
@@ -162,16 +152,16 @@
                             1,055円<span class="text-xs text-black block">税込(1,160円)</span>
                         </td>
                     </tr>
-                    <tr class="border-b">
-                        <td></td>
-                        <td colspan="2">※受付19:00まで</td>
-                    </tr>
+
                     <tr class="border-b">
 
                         <td class="sm:text-xl font-black font-black sm:px-6 py-4">
                         </td>
-                        <td class="bg-green-300" colspan="2">
+                        <td class="bg-green-300 py-2 font-black" colspan="2">
                             16:00～22:00
+                            <br>
+                            <span class="text-red-600">※受付19:00まで</span>
+                            
                         </td>
                     </tr>
                     <tr class="border-b">
@@ -233,16 +223,8 @@
                         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
                             282円<span class="text-xs text-black block">税込(310円)</span>
                         </td>
-
-
                     </tr>
                 </tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>※受付17:59まで</td>
-                    <td>※受付22:30まで</td>
-                </tr>
 
                 <tbody>
                     <tr class="border-b">
@@ -253,9 +235,13 @@
                         </td>
                         <th scope="col" class="bg-orange-200 py-4">
                             10:00～20:00
+                            <br>
+                            <span class="text-red-600">※受付17:59まで</span>
                         </th>
                         <th scope="col" class="bg-sky-200 py-4">
                             18:00～3:00
+                            <br>
+                            <span class="text-red-600">※受付00:30まで</span>
                         </th>
                     </tr>
 
@@ -284,16 +270,16 @@
                             1,228円<span class="text-xs text-black block">税込(1,350円)</span>
                         </td>
                     </tr>
-                    <tr class="border-b">
-                        <td></td>
-                        <td colspan="2">※受付19:00まで</td>
-                    </tr>
+
                     <tr class="border-b">
 
                         <td class="sm:text-xl font-black font-black sm:px-6 py-4">
                         </td>
-                        <td class="bg-green-300 py-4" colspan="2">
+                        <td class="bg-green-300 py-2 font-black" colspan="2">
                             16:00～22:00
+                            <br>
+                            <span class="text-red-600">※受付19:00まで</span>
+                            
                         </td>
                     </tr>
                     <tr class="border-b">
@@ -357,12 +343,7 @@
                         </td>
                     </tr>
                 </tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>※受付17:59まで</td>
-                    <td>※受付22:30まで</td>
-                </tr>
+
 
                 <tbody>
                     <tr class="border-b">
@@ -372,10 +353,12 @@
                         <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
                         </td>
                         <th scope="col" class="bg-orange-200 py-4">
-                            10:00～20:00
+                            10:00～20:00<br>
+                            <span class="text-red-600">※受付19:00まで</span>
                         </th>
                         <th scope="col" class="bg-sky-200 py-4">
-                            18:00～3:00
+                            18:00～3:00<br>
+                            <span class="text-red-600">※受付19:00まで</span>
                         </th>
                     </tr>
 
@@ -454,12 +437,6 @@
                         </td>
                     </tr>
                 </tbody>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>※受付17:59まで</td>
-                    <td>※受付22:30まで</td>
-                </tr>
 
                 <tbody>
                     <tr class="border-b">
@@ -469,10 +446,12 @@
                         <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
                         </td>
                         <th scope="col" class="bg-orange-200 py-4">
-                            10:00～20:00
+                            10:00～20:00                            <br>
+                            <span class="text-red-600">※受付17:59まで</span>
                         </th>
                         <th scope="col" class="bg-sky-200 py-4">
-                            18:00～1:00
+                            18:00～1:00                            <br>
+                            <span class="text-red-600">※受付22:30まで</span>
                         </th>
                     </tr>
 
@@ -506,6 +485,14 @@
             <p class="font-black text-red-500">※入店後のフリータイム・時間制の切替はシステム上できません。夜18時をまたぐご利用は延長料金が異なります。</p>
             <p class="bg-red-600 text-yellow-400 text-center py-2 font-black">予定時刻より5分経過しますと追加料金が発生いたします</p>
 
+            <p class="bg-red-700 text-white py-4 pl-4 mt-4">ご利用上の注意</p>
+            <div class="bg-yellow-100 p-4">
+                <p class="text-red-500 font-black text-center">6歳以下のお子様は無料、小学生のお子様は各料金の半額、中学生以上から通常料金となります。</p>
+
+                <p>・チェックアウト予定時間より『5分』を経過しますと延長料金が発生しますので予めご了承ください。</p>
+                <p>・価格は諸事情により変更させていただく場合がございます。詳しくはスタッフまでお尋ねください。</p>
+
+            </div>
             <div id="services">
                 <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4 mt-20 mb-4">—設備・サービス —</h2>
                 <!-- 店舗にないサービスに『1』を渡す -->

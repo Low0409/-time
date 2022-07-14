@@ -68,6 +68,9 @@ services.component("service-div", {
     "soup",
     "kagi",
     "motikomi",
+    "reclining",
+    "captain",
+    "massage"
   ],
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
@@ -195,6 +198,22 @@ services.component("service-div", {
 <div class="col-span-2" v-if="!kagi">
 <img src="../img/icon/service-icon/kagi.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">鍵付き防音個室</p>
+</div>
+<div class="col-span-2" v-if="!reclining">
+<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">リクライニングチェア</p>
+</div>
+<div class="col-span-2" v-if="!captain">
+<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">キャプテンシート</p>
+</div>
+<div class="col-span-2" v-if="!massage">
+<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">マッサージ席</p>
+</div>
+<div class="col-span-2" v-if="!zashiki">
+<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">座敷席</p>
 </div>
 </div>
 
