@@ -3,10 +3,15 @@ const app = Vue.createApp({
     return {
     gameList: [
       {
-        name: "G123",
-        img: "../img/online_game/G123.jpg",
-        url: "https://g123.jp/?lang=ja",
+        name: "Apex Legends",
+        img: "../img/online_game/apex.jpg",
+        url: "https://www.ea.com/ja-jp/games/apex-legends",
       },
+      // {
+      //   name: "G123",
+      //   img: "../img/online_game/G123.jpg",
+      //   url: "https://g123.jp/?lang=ja",
+      // },
       {
         name: "LOST ARK",
         img: "../img/online_game/LA.jpg",
@@ -17,11 +22,11 @@ const app = Vue.createApp({
         img: "../img/online_game/valorant.jpg",
         url: "https://playvalorant.com/ja-jp/",
       },
-      {
-        name: "War Thunder",
-        img: "../img/online_game/WT.jpg",
-        url: "http://www.nepoca.com/title/warthunder/index.html",
-      },
+      // {
+      //   name: "War Thunder",
+      //   img: "../img/online_game/WT.jpg",
+      //   url: "http://www.nepoca.com/title/warthunder/index.html",
+      // },
       {
         name: "ドラゴンクエストX",
         img: "../img/online_game/DQ10.jpg",
@@ -84,7 +89,7 @@ const app = Vue.createApp({
       },
       {
         name: "Alliance of Valiant Arms",
-        img: "../img/online_game/DQ10.jpg",
+        img: "../img/online_game/ALL.jpg",
         url: "https://ava.pmang.jp/lp/",
       },
       {
@@ -97,16 +102,16 @@ const app = Vue.createApp({
         img: "../img/online_game/777.jpg",
         url: "https://www.777town.net/",
       },
-      {
-        name: "デスティニーチャイルド",
-        img: "../img/online_game/DC.jpg",
-        url: "http://www.nepoca.com/title/destinychild/index.html",
-      },
-      {
-        name: "DOAX3",
-        img: "../img/online_game/DOAX3.jpg",
-        url: "http://www.nepoca.com/title/doax-venusvacation/",
-      },
+      // {
+      //   name: "デスティニーチャイルド",
+      //   img: "../img/online_game/DC.jpg",
+      //   url: "http://www.nepoca.com/title/destinychild/index.html",
+      // },
+      // {
+      //   name: "DOAX3",
+      //   img: "../img/online_game/DOAX3.jpg",
+      //   url: "http://www.nepoca.com/title/doax-venusvacation/",
+      // },
       {
         name: "DMM GAMES",
         img: "../img/online_game/DMMgame.jpg",
