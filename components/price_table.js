@@ -1,3 +1,5 @@
+
+// 各店舗ページの料金表の切替タブメニューの表示/非表示↓
 const price = Vue.createApp({
   data() {
     return {
@@ -24,6 +26,11 @@ const price = Vue.createApp({
     },
   },
 });
+// 各店舗ページの料金表の切替タブメニューの表示/非表示↑
+
+
+// 税込価格の計算法・・・Math.floor(b3 * 110 / 100).toLocaleString().replace(/1$/,0)
+// Math.floor小数点以下切り捨て　.toLocaleString()コンマ付ける　.replace(/1$/,0)まれに末尾が1円になってしまう料金があるので0に置き換え　
 
 const basicPlan = Vue.createApp({});
 // 2行3列の料金表価格部分が5個　 c5要素がある場合は結合なしで6個
@@ -111,16 +118,16 @@ basicPlan.component("basic-plan-table3", {
         一般
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" rowspan="2" v-if="!c5">
-      {{Number(b5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" v-else>
-      {{Number(b5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -277,11 +284,11 @@ BoothPlan.component("booth-plan-table", {
         30分まで
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
   
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -290,10 +297,10 @@ BoothPlan.component("booth-plan-table", {
         延長10分毎
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(c4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(c4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -309,10 +316,10 @@ BoothPlan.component("booth-plan-table", {
         3時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(d3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(d3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(d4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(d4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
   
@@ -322,10 +329,10 @@ BoothPlan.component("booth-plan-table", {
         6時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(e3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(e3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(e3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(e3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(e4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(e4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(e4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(e4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -334,10 +341,10 @@ BoothPlan.component("booth-plan-table", {
         9時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(f3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(f3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(f3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(f4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(f4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(f4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -346,10 +353,10 @@ BoothPlan.component("booth-plan-table", {
         12時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(g3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(g3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(g3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(g3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(g4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(g4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -358,10 +365,10 @@ BoothPlan.component("booth-plan-table", {
         15時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(h3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(h3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(h3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(h3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(h4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(h4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(h4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(h4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -370,10 +377,10 @@ BoothPlan.component("booth-plan-table", {
         18時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(i3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(i3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(i3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(i3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(i4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(i4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(i4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(i4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -382,10 +389,10 @@ BoothPlan.component("booth-plan-table", {
         21時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(j3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(j3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(j3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(j3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(j4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(j4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(j4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(j4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -394,10 +401,10 @@ BoothPlan.component("booth-plan-table", {
         24時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(k3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(k3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(k3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(k3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(k4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(k4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(k4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(k4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -408,10 +415,10 @@ BoothPlan.component("booth-plan-table", {
         深夜8時間
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(l3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(l3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(l3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(l3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(l4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(l4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(l4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(l4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
@@ -479,7 +486,7 @@ BoothPlan.component("booth-plan-table2", {
                 30分まで
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
   
               </td>
             </tr>
@@ -489,7 +496,7 @@ BoothPlan.component("booth-plan-table2", {
                 延長10分毎
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -506,7 +513,7 @@ BoothPlan.component("booth-plan-table2", {
                 3時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
   
@@ -516,7 +523,7 @@ BoothPlan.component("booth-plan-table2", {
                 6時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(e3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(e3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(e3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(e3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -526,7 +533,7 @@ BoothPlan.component("booth-plan-table2", {
                 9時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(f3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(f3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(f3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(f3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -536,7 +543,7 @@ BoothPlan.component("booth-plan-table2", {
                 12時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(g3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(g3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(g3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(g3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -546,7 +553,7 @@ BoothPlan.component("booth-plan-table2", {
                 15時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(h3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(h3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(h3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(h3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -556,7 +563,7 @@ BoothPlan.component("booth-plan-table2", {
                 18時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(i3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(i3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(i3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(i3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -566,7 +573,7 @@ BoothPlan.component("booth-plan-table2", {
                 21時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(j3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(j3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(j3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(j3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -576,7 +583,7 @@ BoothPlan.component("booth-plan-table2", {
                 24時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(k3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(k3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(k3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(k3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -588,7 +595,7 @@ BoothPlan.component("booth-plan-table2", {
                 深夜8時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(l3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(l3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(l3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(l3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -598,7 +605,7 @@ BoothPlan.component("booth-plan-table2", {
                 深夜10時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(m3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(m3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(m3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(m3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -652,7 +659,7 @@ BoothPlan2.component("booth-plan-table5", {
                 30分まで
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
             <tr class="border-b">
@@ -661,7 +668,7 @@ BoothPlan2.component("booth-plan-table5", {
                 延長10分毎
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(c3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -678,7 +685,7 @@ BoothPlan2.component("booth-plan-table5", {
                 5時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(d3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
   
@@ -688,7 +695,7 @@ BoothPlan2.component("booth-plan-table5", {
                 9時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(f3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(f3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(f3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(f3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -698,7 +705,7 @@ BoothPlan2.component("booth-plan-table5", {
                 12時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(g3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(g3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(g3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(g3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
             <tr class="border-b">
@@ -707,7 +714,7 @@ BoothPlan2.component("booth-plan-table5", {
                 15時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(h3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(h3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(h3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(h3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
             <tr class="border-b">
@@ -716,7 +723,7 @@ BoothPlan2.component("booth-plan-table5", {
                 18時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(i3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(i3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(i3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(i3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
             <tr class="border-b">
@@ -725,7 +732,7 @@ BoothPlan2.component("booth-plan-table5", {
                 21時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(j3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(j3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(j3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(j3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
             <tr class="border-b">
@@ -734,7 +741,7 @@ BoothPlan2.component("booth-plan-table5", {
                 24時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(k3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(k3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(k3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(k3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
   
             </tr>
@@ -746,7 +753,7 @@ BoothPlan2.component("booth-plan-table5", {
                 深夜8時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                {{Number(l3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(l3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(l3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(l3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
             <tr class="border-b">
@@ -755,7 +762,7 @@ BoothPlan2.component("booth-plan-table5", {
                 深夜10時間
               </td>
               <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                {{Number(m3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(m3 * 110 / 100).toLocaleString() }}円)</span>
+                {{Number(m3).toLocaleString()}}円<span class="text-xs text-black block">税込({{ Math.floor(m3 * 110 / 100).toLocaleString().replace(/1$/,0) }}円)</span>
               </td>
             </tr>
           </tbody>
