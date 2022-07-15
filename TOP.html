@@ -24,6 +24,14 @@
       $('#footer').load('/-time/footer.html');
       $('#searchstore').load('/-time/search.html#store');
     });
+    $(window).on('load', function() {
+  
+      var $widget = $('iframe.twitter-timeline');
+      var $widgetContents = $widget.contents();
+      
+      $widgetContents.find('head').append('<style>.timeline-Tweet{padding:5vw;}</style>');
+
+      });
   </script>
 
 </head>
@@ -95,7 +103,7 @@
         <div class=" lg:max-w-sm transform transition duration-500 hover:scale-110 hover:z-10" v-for="item in ServiceList">
           <a :href="item.path">
             <img class="w-full" :src="item.img" alt="" />
-            <p class="bg-red-800 text-white py-2 text-center">{{item.name}}</p>
+            <p class="bg-red-800 text-white py-2 text-center font-medium">{{item.name}}</p>
           </a>
         </div>
       </div>
@@ -127,9 +135,9 @@
 
 
   <div class="max-w-3xl m-auto">
-    <div class="flex justify-center">
-      <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています。</h2>
-      <img src="./img/icon/twitter.svg" alt="" class="icon">
+    <div class="flex justify-center mt-8 mb-4">
+      <h2 class="text-center text-2xl font-bold my-2">お得な情報を発信しています</h2>
+      <img src="./img/icon/twitter.png" alt="" class="icon">
 
     </div>
 
@@ -178,6 +186,7 @@
   setInterval(function () {
     document.getElementById("nextbtn").click();
   }, 5000);
+
 </script>
 <style>
   .icon {
