@@ -46,7 +46,7 @@
 
       <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">-アミューズメント-</h3>
 
-      <div class="flex flex-wrap flex-row -mx-4 text-center" id="amusement">
+      <div class="flex flex-wrap flex-row text-center" id="amusement">
 
         <div class="flex-shrink px-4 sm:w-1/2 lg:w-1/3 lg:px-6 wow fadeInUp f-640 border-2 border-black shadow-lg transform transition duration-300 ease-in-out hover:-translate-y-2 mt-6 bg-white" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-for="item1 in amusementlist">
           <a :href="item1.url">
@@ -63,7 +63,7 @@
       </div>
       <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">-ネットカフェ-</h3>
 
-      <div class="flex flex-wrap flex-row -mx-4 text-center" id="netcafe">
+      <div class="flex flex-wrap flex-row text-center" id="netcafe">
         <div class="flex-shrink px-4 sm:w-1/2  lg:px-6 wow fadeInUp border-2 border-black shadow-lg transform transition duration-300 ease-in-out hover:-translate-y-2 mt-6 bg-white" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-for="item2 in netcafeServiceList">
           <a :href="item2.url">
             <div class="py-2 sm:px-12 mb-12 bg-gray-50 border-b border-gray-100">
@@ -79,7 +79,7 @@
         </div>
       </div>
       <h3 class="text-2xl leading-normal mb-2 font-bold text-center mt-10">-基本サービス-</h3>
-      <div class="flex flex-wrap flex-row -mx-4 text-center" id="basic">
+      <div class="flex flex-wrap flex-row text-center" id="basic">
 
         <div class="flex-shrink px-4 sm:w-1/2  lg:px-6 wow fadeInUp border-2 border-black shadow-lg transform transition duration-300 ease-in-out hover:-translate-y-2 mt-6 bg-white" data-wow-duration="1s" data-wow-delay=".3s" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInUp;" v-for="item3 in BasicServiceList">
           <a :href="item3.url">
