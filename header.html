@@ -1,19 +1,18 @@
-
 <header class="header items-center h-16 py-8 flex justify-between">
   <a href="/-time/TOP.html">
-    <img src="/-time/img/icon/logo.png" alt="" class="sm:ml-4 w-1/2">
+    <img src="/-time/img/icon/logo.png" alt="" class="sm:ml-4 w-1/2" id="log">
   </a>
 
   <div class="nav-wrapper float-left">
     <!-- ②ナビゲーションメニュー -->
-    <nav class="header-nav font-bold">
+    <nav class="header-nav font-bold ">
       <ul class="nav-list flex">
 
-        <li class="nav-item list-none mr-14"><a href="/-time/first.html" class="a-nav">はじめての方へ</a></li>
-        <li class="nav-item list-none mr-14"><a href="/-time/services.html" class="a-nav">サービス一覧</a></li>
-        <li class="nav-item list-none mr-14"><a href="/-time/booth-menu.html" class="a-nav">お食事メニュー</a></li>
-        <li class="nav-item list-none mr-14"><a href="/-time/search.html" class="a-nav">近くの店舗を探す</a></li>
-        <li class="nav-item list-none mr-14"><a href="/-time/QandA.html" class="a-nav">よくある質問</a></li>
+        <li class="nav-item list-none"><a href="/-time/first.html" class="a-nav py-10 px-8 hover:text-rose-300">はじめての方へ</a></li>
+        <li class="nav-item list-none"><a href="/-time/services.html" class="a-nav py-10 px-8 hover:text-rose-300">サービス一覧</a></li>
+        <li class="nav-item list-none"><a href="/-time/booth-menu.html" class="a-nav py-10 px-8" onmouseover="show()" onmouseleave="hide()" id="header-menu3">お食事メニュー</a></li>
+        <li class="nav-item list-none"><a href="/-time/search.html" class="a-nav py-10 px-8 hover:text-rose-300">近くの店舗を探す</a></li>
+        <li class="nav-item list-none"><a href="/-time/QandA.html" class="a-nav py-10 px-8 hover:text-rose-300">よくある質問</a></li>
       </ul>
     </nav>
   </div>
@@ -24,13 +23,43 @@
   </button>
 </header>
 
+<div class="dropdown-menu" id="menu-dropdown-div" onmouseover="show()" onmouseleave="hide()">
+  <div class="flex justify-center mt-10">
+    <div>
+      <a href="./booth-menu.html">
+        <img src="./img/TOP/1.jpg" alt="" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">ブースメニュー</p>
+      </a>
+    </div>
+
+    <div>
+      <a href="./karaoke-menu.html">
+        <img src="./img/TOP/1.jpg" alt="" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">カラオケメニュー</p>
+      </a>
+    </div>
+  </div>
+</div>
+
+
 <style>
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2;
+  }
 
   .burger-btn {
     display: none;
   }
 
   @media screen and (max-width:900px) {
+
     .burger-btn {
       display: block;
       color: black;
@@ -45,7 +74,7 @@
       height: 39px;
       position: relative;
       width: 39px;
-      z-index: 3;
+      z-index: 10;
       background-color: rgb(0, 0, 0);
     }
 
@@ -58,27 +87,34 @@
       transform: translateX(-50%);
       width: 20px;
     }
+
     .bar_top {
       top: 10px;
     }
+
     .bar_mid {
       top: 50%;
     }
+
     .bar_bottom {
       bottom: 10px;
     }
+
     .burger-btn.close .bar_top {
       transform: translate(-50%, 10px) rotate(45deg);
       transition: transform .3s;
     }
+
     .burger-btn.close .bar_mid {
       opacity: 0;
       transition: opacity .3s;
     }
+
     .burger-btn.close .bar_bottom {
       transform: translate(-50%, -8px) rotate(-45deg);
       transition: transform .3s;
     }
+
     /* スクロール制御 */
     .noscroll {
       overflow: hidden;
@@ -94,14 +130,14 @@
       width: 100vw;
       opacity: 0;
       transition: opacity .5s;
-      z-index: 2;
+      z-index: 3;
     }
 
     .header-nav {
       background-color: #89000A;
       height: 100%;
       width: 100%;
-      z-index: 2;
+      z-index: 9;
     }
 
     .nav-list {
@@ -134,6 +170,21 @@
     $('.nav-wrapper').toggleClass('fade');
     $('body').toggleClass('noscroll');
     $('.nav-list').toggleClass('a-nav');
+    //文字色白にする
+    $('#header-menu3').css('color', 'white')
   });
 
+</script>
+<script>
+  const show = () => {
+    document.getElementById("menu-dropdown-div").style.display = "block";
+    document.getElementById("header-menu3").style.color = "rgb(255, 132, 132)";
+
+  }
+
+  const hide = () => {
+    document.getElementById("menu-dropdown-div").style.display = "none";
+    document.getElementById("header-menu3").style.color = "black";
+
+  }
 </script>
