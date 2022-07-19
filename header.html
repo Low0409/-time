@@ -9,8 +9,8 @@
       <ul class="nav-list flex">
 
         <li class="nav-item list-none"><a href="/-time/first.html" class="a-nav py-10 px-8 hover:text-rose-300">はじめての方へ</a></li>
-        <li class="nav-item list-none"><a href="/-time/services.html" class="a-nav py-10 px-8 hover:text-rose-300">サービス一覧</a></li>
-        <li class="nav-item list-none"><a href="/-time/booth-menu.html" class="a-nav py-10 px-8" onmouseover="show()" onmouseleave="hide()" id="header-menu3">お食事メニュー</a></li>
+        <li class="nav-item list-none"><a href="/-time/services.html" class="a-nav py-10 px-8" onmouseover="show_services()" onmouseleave="hide_services()" id="header-menu2">サービス一覧</a></li>
+        <li class="nav-item list-none"><a href="/-time/booth-menu.html" class="a-nav py-10 px-8" onmouseover="show_menu()" onmouseleave="hide_menu()" id="header-menu3">お食事メニュー</a></li>
         <li class="nav-item list-none"><a href="/-time/search.html" class="a-nav py-10 px-8 hover:text-rose-300">近くの店舗を探す</a></li>
         <li class="nav-item list-none"><a href="/-time/QandA.html" class="a-nav py-10 px-8 hover:text-rose-300">よくある質問</a></li>
       </ul>
@@ -22,24 +22,88 @@
     <span class="bar bar_bottom"></span>
   </button>
 </header>
-
-<div class="dropdown-menu" id="menu-dropdown-div" onmouseover="show()" onmouseleave="hide()">
+<!-- お食事メニュードロップダウンメニュー -->
+<div class="dropdown-menu" id="services-dropdown-div" onmouseover="show_services()" onmouseleave="hide_services()">
   <div class="flex justify-center mt-10">
     <div>
-      <a href="./booth-menu.html">
-        <img src="./img/TOP/1.jpg" alt="" class="w-1/2 hover:brightness-125">
+      <a href="/-time/services/karaoke.html">
+        <img src="/-time/img/TOP/1.jpg" alt="カラオケ" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">カラオケ</p>
+      </a>
+    </div>
+    <div>
+      <a href="/-time/services/amusement/billiard.html">
+        <img src="/-time/img/TOP/2.jpg" alt="ビリヤード" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">ビリヤード</p>
+      </a>
+    </div>
+    <div>
+      <a href="/-time/services/amusement/darts.html">
+        <img src="/-time/img/TOP/3.jpg" alt="ダーツ" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">ダーツ</p>
+      </a>
+    </div>
+    <div>
+      <a href="/-time/services/amusement/takkyu.html">
+        <img src="/-time/img/TOP/4.jpg" alt="卓球" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">卓球</p>
+      </a>
+    </div>
+    <div>
+      <a href="/-time/services/amusement/mahjong.html">
+        <img src="/-time/img/TOP/5.jpg" alt="麻雀" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">麻雀</p>
+      </a>
+    </div>
+  </div>
+  <div class="flex">
+    <div>
+      <a href="/-time/services/net-cafe/video.html">
+        <img src="/-time/img/TOP/6.jpg" alt="動画サービス" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">動画サービス</p>
+      </a>
+    </div>
+    <div>
+      <a href="/-time/comic.html">
+        <img src="/-time/img/TOP/7.jpg" alt="コミック・雑誌" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">コミック・雑誌</p>
+      </a>
+    </div>
+    <div>
+      <a href="/-time/services/net-cafe/work_study.html">
+        <img src="/-time/img/TOP/8.jpg" alt="ビジネス" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">ビジネス</p>
+      </a>
+    </div>
+    <div>
+      <a href="/-time/services/online.html">
+        <img src="/-time/img/TOP/9.jpg" alt="オンラインゲーム" class="w-1/2 hover:brightness-125">
+        <p class="text-white text-center font-black w-1/2">オンラインゲーム</p>
+      </a>
+    </div>
+  </div>
+
+</div>
+<!-- お食事メニュードロップダウンメニュー -->
+<!-- お食事メニュードロップダウンメニュー -->
+<div class="dropdown-menu" id="menu-dropdown-div" onmouseover="show_menu()" onmouseleave="hide_menu()">
+  <div class="flex justify-center mt-10">
+    <div>
+      <a href="/-time/booth-menu.html">
+        <img src="/-time/img/TOP/1.jpg" alt="" class="w-1/2 hover:brightness-125">
         <p class="text-white text-center font-black w-1/2">ブースメニュー</p>
       </a>
     </div>
 
     <div>
-      <a href="./karaoke-menu.html">
-        <img src="./img/TOP/1.jpg" alt="" class="w-1/2 hover:brightness-125">
+      <a href="/-time/karaoke-menu.html">
+        <img src="/-time/img/TOP/1.jpg" alt="" class="w-1/2 hover:brightness-125">
         <p class="text-white text-center font-black w-1/2">カラオケメニュー</p>
       </a>
     </div>
   </div>
 </div>
+<!-- お食事メニュードロップダウンメニュー -->
 
 
 <style>
@@ -49,7 +113,7 @@
     top: 10;
     left: 0;
     width: 100%;
-    height: 30%;
+    height: 40%;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 2;
   }
@@ -170,19 +234,29 @@
     $('.nav-wrapper').toggleClass('fade');
     $('body').toggleClass('noscroll');
     $('.nav-list').toggleClass('a-nav');
-    //文字色白にする
-    $('#header-menu3').css('color', 'white')
+
   });
 
 </script>
 <script>
-  const show = () => {
+  const show_services = () => {
+    document.getElementById("services-dropdown-div").style.display = "block";
+    document.getElementById("header-menu2").style.color = "rgb(255, 132, 132)";
+
+  }
+
+  const hide_services = () => {
+    document.getElementById("services-dropdown-div").style.display = "none";
+    document.getElementById("header-menu2").style.color = "black";
+
+  }
+  const show_menu = () => {
     document.getElementById("menu-dropdown-div").style.display = "block";
     document.getElementById("header-menu3").style.color = "rgb(255, 132, 132)";
 
   }
 
-  const hide = () => {
+  const hide_menu = () => {
     document.getElementById("menu-dropdown-div").style.display = "none";
     document.getElementById("header-menu3").style.color = "black";
 
