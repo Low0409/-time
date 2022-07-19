@@ -25,7 +25,7 @@
 <body background="./img/background/email-pattern.webp">
     <div id="header"></div>
     <div style="background-image:url(./img/TOP/7.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
-        <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">-コミック・雑誌-</h2>
+        <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">-コミック-</h2>
     </div>
     <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
         <div class="container xl:max-w-6xl mx-auto px-4">
@@ -38,6 +38,7 @@
                     <line x1="45.1" y1="30.4" x2="0" y2="30.4" class="stroke-primary" style="stroke-width: 2;stroke-miterlimit: 10;"></line>
                 </svg>
                 <!-- 漫画と雑誌切り替え -->
+                <p class="text-red-500 font-black text-center">ボタンで切り替わります</p>
 
                 <div class="flex flex-wrap justify-center">
                     <div class="w-full md:w-1/2 p-4 bg-red-800">
@@ -51,7 +52,7 @@
                         </div>
                     </div>
 
-                    <a class="w-full md:w-1/2 p-4 bg-gray-400 hover:bg-red-800 text-yellow-100" href="./magazine.html">
+                    <a class="w-full md:w-1/2 p-4 bg-gray-400 hover:bg-red-700 text-yellow-100" href="./magazine.html">
                         <div class="flex flex-col items-center">
                             <div class="flex-1">
                                 <p>雑誌</p>
@@ -67,21 +68,56 @@
             </header>
             <!-- End heading -->
             <!-- row -->
-            <a href=""></a>
-            <div class="text-center">
-                <p class="relative group overflow-hidden py-8 rounded-md bg-lime-500 mx-auto mb-10 font-black text-2xl w-1/2
-                before:absolute 
-                before:inset-0 
-                before:bg-lime-600 
-                before:scale-y-[0.1] 
-                before:origin-bottom
-                before:transition
-                before:duration-300
-                hover:before:scale-y-100
-                ">
-                <span class="relative uppercase text-white">店舗別コミック検索はコチラ</span>
-            </p>
+            <div id="comicsearch">
+                <div class="text-center " @click="modalopen()">
+                    <p class="relative group overflow-hidden py-8 rounded-md bg-lime-500 mx-auto mb-10 font-black text-2xl sm:w-1/2 min-w-4xl
+                    before:absolute 
+                    before:inset-0 
+                    before:bg-lime-600 
+                    before:scale-y-[0.1] 
+                    before:origin-bottom
+                    before:transition
+                    before:duration-300
+                    hover:before:scale-y-100
+                    ">
+                        <span class="relative uppercase text-white">店舗別コミック検索はコチラ</span>
+                    </p>
+                </div>
+                <div class="text-center mb-10" v-show="modal">
+                    <p class="text-red-500 font-black text-center">検索する店舗を選択してください。</p>
+                    <div class="flex flex-wrap">
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MjA2OA" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 長浜店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MjA3MQ" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 長浜バイパス店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MjA2OQ" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 彦根店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MjA3Mw" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 八日市店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MjA3Mg" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 近江八幡店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MTc1OQ" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 水口店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MjA3NA" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 守山店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MjA3MA" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 草津店</p>
+                        </a>
+                        <a href="http://www2.uraraka-comic.com/comic/index.php?tcd=MTc2MA" class="w-1/2 py-4 font-black border-b-2 border-gray-200 hover:text-gray-600">
+                            <p>@time 西大津店</p>
+                        </a>
+                    </div>
+                    <button class="bg-red-600 p-4 text-white hover:bg-red-700 rounded-md" @click="modalclose">✕</button>
+                </div>
             </div>
+
 
             <div class="flex flex-wrap flex-row text-center" id="comiclist">
 
@@ -117,6 +153,25 @@
         <div id="footer"></div>
     </div>
     <script src="./dataJS/comic-data.js"></script>
+    <script>
+
+        const ComicModal = Vue.createApp({
+            data() {
+                return {
+                    modal: false,
+                };
+            },
+            methods: {
+                modalopen() {
+                    this.modal = true;
+                },
+                modalclose() {
+                    this.modal = false;
+                },
+            },
+        }).mount('#comicsearch');
+
+    </script>
     <script>
         const mountedApp = app.mount('#comiclist');
     </script>
