@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="gnavi__wrap">
+        <ul class="gnavi__lists">
+            <li class="gnavi__list">
+                <a href="#">お食事メニュー</a>
+                <ul class="dropdown__lists">
+                    <div id="dropdown-div">
+                        <div>
+                            <img src="./img/services/karaoke.JPG" alt="" class="img">
+                            <a href="./booth-menu.html"><p>ブースメニュー</p></a>
+                        </div>
+                        <div>
+                            <img src="./img/services/karaoke.JPG" alt="" class="img">
+                            <a href="./karaoke-menu.html"><p>カラオケメニュー</p></a>
+                        </div>
+                    </div>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</body>
+<style>
+    .dropdown__lists {
+        display: none;
+        width: 100%;
+    }
+
+    .gnavi__list:hover .dropdown__lists {
+        display: block;
+    }
+
+    #dropdown-div {
+        padding: 20px;
+        width: 100%;
+        background-color: #950000;
+        display: flex;
+        border-radius: 10px;
+    }
+    .gnavi__list{
+        width: 20%;
+    }
+    .img{
+        width:100px;
+    }
+    p{
+        color: white;
+    }
+</style>
+
+</html>

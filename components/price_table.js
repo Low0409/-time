@@ -319,7 +319,7 @@ BoothPlan.component("booth-plan-table", {
       {{Number(d3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(d3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(d4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
+      {{Number(d4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(d4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
   
@@ -356,7 +356,7 @@ BoothPlan.component("booth-plan-table", {
       {{Number(g3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(g3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(g4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
+      {{Number(g4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(g4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
     <tr class="border-b">
