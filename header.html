@@ -239,26 +239,26 @@
 
 </script>
 <script>
-  const show_services = () => {
+  const show_services = () => {//ヘッダーとドロップダウンhover時、サービスドロップダウンメニューを表示する
     document.getElementById("services-dropdown-div").style.display = "block";
     document.getElementById("header-menu2").style.color = "rgb(255, 132, 132)";
 
   }
 
-  const hide_services = () => {
+  const hide_services = () => {//hover外れたときサービスドロップダウンメニューを非表示にする
     document.getElementById("services-dropdown-div").style.display = "none";
-    document.getElementById("header-menu2").style.color = "black";
+    document.getElementById("header-menu2").style.color = "";//style解除
 
   }
-  const show_menu = () => {
+  const show_menu = () => {//ヘッダーとドロップダウンhover時、お食事メニュードロップダウンメニューを表示する
     document.getElementById("menu-dropdown-div").style.display = "block";
     document.getElementById("header-menu3").style.color = "rgb(255, 132, 132)";
 
   }
 
-  const hide_menu = () => {
+  const hide_menu = () => {//hover外れたときお食事メニュードロップダウンメニューを非表示にする
     document.getElementById("menu-dropdown-div").style.display = "none";
-    document.getElementById("header-menu3").style.color = "black";
+    document.getElementById("header-menu3").style.color = "";//style解除
 
   }
 </script>
