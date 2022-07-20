@@ -47,7 +47,7 @@
 
             <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">— 料金案内表 —</h2>
             <div class="flex max-w-3xl justify-center mx-auto text-xl">
-            <p @click="karaoke()" class="cursor-pointer text-center py-2 px-4 m-2 rounded-lg border-solid active">カラオケ・ダーツ・ビリヤード料金表</p>
+                <p @click="karaoke()" class="cursor-pointer text-center py-2 px-4 m-2 rounded-lg border-solid active">カラオケ・ダーツ・ビリヤード料金表</p>
 
             </div>
 
@@ -161,7 +161,7 @@
                             16:00～22:00
                             <br>
                             <span class="text-red-600">※受付19:00まで</span>
-                            
+
                         </td>
                     </tr>
                     <tr class="border-b">
@@ -279,7 +279,7 @@
                             16:00～22:00
                             <br>
                             <span class="text-red-600">※受付19:00まで</span>
-                            
+
                         </td>
                     </tr>
                     <tr class="border-b">
@@ -446,11 +446,11 @@
                         <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
                         </td>
                         <th scope="col" class="bg-orange-200 py-4">
-                            10:00～20:00                            <br>
+                            10:00～20:00 <br>
                             <span class="text-red-600">※受付17:59まで</span>
                         </th>
                         <th scope="col" class="bg-sky-200 py-4">
-                            18:00～1:00                            <br>
+                            18:00～1:00 <br>
                             <span class="text-red-600">※受付22:30まで</span>
                         </th>
                     </tr>
@@ -481,9 +481,14 @@
                     </tr>
                 </tbody>
             </table>
+            <div class="flex w-full">
+                <p class="bg-blue-900 text-white text-center font-black my-2 py-2 sm:rounded-full w-1/2 mx-2">会員カードはグループ1枚でOK!</p>
+                <p class="bg-blue-900 text-white text-center font-black my-2 py-2 sm:rounded-full w-1/2 mx-2">学生・50歳以上の方は、学生証・身分証をご提示下さい</p>
+            </div>
+
             <p class="font-black">※満席の際は入店された順に<span class="text-red-500">3時間分</span>までのご利用とさせていただきます。</p>
             <p class="font-black text-red-500">※入店後のフリータイム・時間制の切替はシステム上できません。夜18時をまたぐご利用は延長料金が異なります。</p>
-            <p class="bg-red-600 text-yellow-400 text-center py-2 font-black">予定時刻より5分経過しますと追加料金が発生いたします</p>
+            <p class="bg-red-600 text-yellow-300 text-center py-2 font-black">予定時刻より5分経過しますと追加料金が発生いたします</p>
 
             <p class="bg-red-700 text-white py-4 pl-4 mt-4">ご利用上の注意</p>
             <div class="bg-yellow-100 p-4">

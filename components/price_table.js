@@ -82,13 +82,13 @@ basicPlan.component("basic-plan-table3", {
           {{b2}}
         </td>
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-          {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100)  }}円)</span>
+          {{Number(b3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
         </td>
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-        {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100)  }}円)</span>
+        {{Number(b4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
         </td>
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" v-if="!small">
-        {{Number(b5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100)  }}円)</span>
+        {{Number(b5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(b5 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
         </td>
       </tr>
       <tr class="border-b" v-if="!small">
@@ -97,13 +97,13 @@ basicPlan.component("basic-plan-table3", {
           {{c2}}
         </td>
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-        {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100)  }}円)</span>
+        {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
         </td>
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-        {{Number(c4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100)  }}円)</span>
+        {{Number(c4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
         </td>
         <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-        {{Number(c5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c5 * 110 / 100)  }}円)</span>
+        {{Number(c5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c5 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
         </td>
   
       </tr>
@@ -136,13 +136,13 @@ basicPlan.component("basic-plan-table3", {
         {{c2}}
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(c3).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c3 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-      {{Number(c4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(c4).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c4 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
       <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500" v-if="c5">
-      {{Number(c5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c5 * 110 / 100).toLocaleString()  }}円)</span>
+      {{Number(c5).toLocaleString()}}円<span class="text-xs text-black block">税込({{  Math.floor(c5 * 110 / 100).toLocaleString().replace(/1$/,0)  }}円)</span>
       </td>
     </tr>
   </tbody>
