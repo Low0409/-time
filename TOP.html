@@ -30,7 +30,8 @@
       var $widget = $('iframe.twitter-timeline');
       var $widgetContents = $widget.contents();
 
-      $widgetContents.find('head').append('<style>.timeline-Tweet{padding:5vw;}</style>');
+      //Twitterのstyle
+      $widgetContents.find('head').append('<style>.timeline-Tweet{ padding:30px; background: white;}.timeline-Tweet:hover{background: white;}</style>');
 
     });
   </script>
@@ -114,7 +115,7 @@
 
   </div>
   <a href="./services.html">
-    <p class="bg-black text-white text-2xl sm:text-3xl py-8 px-8 mb-20 max-w-2xl mx-auto text-center hover:bg-black duration-500 hover:scale-110 rounded-full hover:bg-gray-200 hover:text-black font-black">サービス一覧</p>
+    <p class="text-center text-2xl text-white font-black p-4 my-20 bg-rose-500 max-w-xl mx-auto rounded-full hovor:bg-red-800 duration-500 hover:scale-110">サービス一覧を見る</p>
   </a>
 
 
@@ -123,7 +124,8 @@
     <p class="text-white text-center">料理サムネイル画像</p>
   </div>
   <a href="./booth-menu.html">
-    <p class="bg-black text-white text-2xl sm:text-3xl py-8 px-8 mb-20 max-w-2xl mx-auto text-center hover:bg-black duration-500 hover:scale-110 rounded-full hover:bg-gray-200 hover:text-black font-black mt-8">お食事メニュー一覧</p>
+    <p class="text-center text-2xl text-white font-black p-4 my-20 bg-rose-500 max-w-xl mx-auto rounded-full hovor:bg-red-800 duration-500 hover:scale-110">お食事メニューを詳しく見る</p>
+
   </a>
 
   <p class="bg-red-800 text-white text-2xl sm:text-3xl py-8 px-8 max-w-2xl mx-auto text-center duration-500 mt-20 font-black">店舗を探す</p>
@@ -131,10 +133,6 @@
   <div id="searchstore">
 
   </div>
-
-
-
-
 
 
 
