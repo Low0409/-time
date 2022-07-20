@@ -78,11 +78,11 @@
   </div>
   <h2 class="text-center text-3xl md:text-4xl font-black my-10">—　Infomation —</h2>
 
-
-  <div class="multiple p-0" id="sub-slider">
     <!-- Infomation部分 -->
+  <div class="multiple p-0" id="sub-slider">
     <div v-for="item in SUBsliderList" class="mx-2"><a :href="item.path"><img :src="item.img" class="w-full"></a></div>
   </div>
+    <!-- Infomation部分 -->
 
   <h2 class="text-2xl leading-normal font-bold text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mt-20 mb-10"> @timeのサービス</h2>
 
@@ -221,6 +221,7 @@
       display: none;
     }
   }
+  
 </style>
 
 </html>

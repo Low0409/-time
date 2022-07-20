@@ -96,9 +96,19 @@ const subslider = Vue.createApp({
     return {
       SUBsliderList: [
         {
-          // pathのページ内リンク(#)はcampaign-data.jsのid属性を参照する
+          img: "./img/top-slider-img/7.jpg",
+          path: "./info/campaign.html#corona",
+          alt: "安心の新型コロナウイルス対策",
+        },
+        {
+          img: "./img/top-slider-img/8.jpg",
+          path: "./info/campaign.html#greenchannel",
+          alt: "GREENチャンネル店内放送中",
+        },
+        {
+          // pathのページ内リンク(#)はcampaign-data.jsのid属性と同じにする
           img: "./img/top-slider-img/1.jpg",
-          path: "./info/campaign.html",
+          path: "./info/campaign.html#newplan",
           alt: "カラオケビリヤード新料金プラン登場",
         },
         {
@@ -123,18 +133,8 @@ const subslider = Vue.createApp({
         },
         {
           img: "./img/top-slider-img/6.jpg",
-          path: "./info/campaign.html",
+          path: "./info/campaign.html#borga",
           alt: "ボルガライス",
-        },
-        {
-          img: "./img/top-slider-img/7.jpg",
-          path: "./info/campaign.html",
-          alt: "安心の新型コロナウイルス対策",
-        },
-        {
-          img: "./img/top-slider-img/8.jpg",
-          path: "./info/campaign.html",
-          alt: "GREENチャンネル店内放送中",
         },
         {
           img: "./img/top-slider-img/9.jpg",

@@ -70,7 +70,8 @@ services.component("service-div", {
     "motikomi",
     "reclining",
     "captain",
-    "massage"
+    "massage",
+    "shower_no_free"
   ],
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
@@ -165,6 +166,10 @@ services.component("service-div", {
     <img src="../img/icon/service-icon/shower.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">シャワー無料</p>
   </div>
+  <div class="col-span-2" v-if="shower_no_free">
+    <img src="../img/icon/service-icon/shower.svg" class="rounded-xl px-2" />
+    <p class="text-xs font-semibold sm:text-base text-center">シャワー(有料)</p>
+  </div>
   <div class="col-span-2" v-if="!motikomi">
   <img src="../img/icon/service-icon/motikomi.svg" class="rounded-xl px-2" />
   <p class="text-xs font-semibold sm:text-base text-center">飲食物もちこみok</p>
@@ -219,5 +224,3 @@ services.component("service-div", {
 
 `,
 });
-
-
