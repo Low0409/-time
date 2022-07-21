@@ -106,108 +106,13 @@
           <booth-plan-table b3="255" b4="200" c3="87" c4="64" d3="1046" d4="637" e3="1482" e4="1028" f3="1864" f4="1319" g3="2137" g4="1546" h3="2637" h4="1910" i3="3137" i4="2228" j3="3500" j4="2500" k3="3591" k4="2637" l3="1482" l4="1028" m3="1819" m4="1273"></booth-plan-table>
         </div>
         <!-- ブース料金↑ -->
+
         <!-- 麻雀time料金↓ -->
-
-        <div v-show="C3" id="mahjong">
-          <table class="min-w-full text-center bg-white">
-            <thead class="border-b">
-              <tr>
-                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-                </th>
-                <th scope="col" class="text-sm font-medium sm:px-6 py-4">
-
-                </th>
-                <th scope="col" class="text-md font-medium sm:px-6 py-4">
-                </th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b">
-                <td class="text-sm font-medium sm:px-6 py-4 bg-green-200 md:text-xl basic" rowspan="2">
-                  基本料金
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                  30分まで
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                  273円<span class="text-xs text-black block">税込(300円)</span>
-                </td>
-
-              </tr>
-              <tr class="border-b">
-
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
-                  延長15分毎
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                  91円<span class="text-xs text-black block">税込(100円)</span>
-                </td>
-
-              </tr>
-              <!-- 間 -->
-              <tr class="border-b">
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-
-                </td>
-              </tr>
-              <!-- 間 -->
-              <tr class="border-b">
-                <td class="text-sm font-medium sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="6">
-                  パック料金
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                  3時間
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                  1,091円<span class="text-xs text-black block">税込(1,200円)</span>
-                </td>
-              </tr>
-
-              <tr class="border-b">
-
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
-                  6時間
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                  1,910円<span class="text-xs text-black block">税込(2,100円)</span>
-                </td>
-              </tr>
-              <tr class="border-b">
-
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                  9時間
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                  2,455円<span class="text-xs text-black block">税込(2,700円)</span>
-                </td>
-              </tr>
-              <tr class="border-b">
-
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4">
-                  12時間
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500">
-                  2,910円<span class="text-xs text-black block">税込(3,200円)</span>
-                </td>
-              </tr>
-              <tr class="border-b">
-
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 bg-gray-100">
-                  15時間
-                </td>
-                <td class="sm:text-2xl font-black font-black sm:px-6 py-4 text-red-500 bg-gray-100">
-                  3,364円<span class="text-xs text-black block">税込(3,700円)</span>
-                </td>
-
-              </tr>
-            </tbody>
-          </table>
+        <div v-show="C3" id="mahjong-time">
+          <mahjong-time-price-table></mahjong-time-price-table>
         </div>
         <!-- 麻雀time料金↑ -->
-
       </div>
-      <!-- heading -->
 
     </div>
 
@@ -236,6 +141,7 @@
     price.mount('#price_table');
     basicPlan.mount('#karaokeT');
     BoothPlan.mount('#booth');
+    MahjongTime.mount('#mahjong-time');
 
   </script>
 </body>
