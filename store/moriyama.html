@@ -49,7 +49,7 @@
         料金案内表 —</h2>
       <p class="text-red-500 font-black text-center">ボタンで料金表が切り替わります</p>
 
-      <div class="flex max-w-3xl justify-center mx-auto text-xl">
+      <div class="flex max-w-3xl justify-center mx-auto text-xl mb-10">
 
 
         <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
@@ -152,18 +152,18 @@
         <table class="min-w-full text-center bg-white font-black">
           <thead class="border-b">
             <tr>
-              <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
+              <th scope="col" class="text-sm sm:px-6 py-4 w-1/5">
 
               </th>
-              <th scope="col" class="text-sm font-medium sm:px-6 py-4 w-1/5">
+              <th scope="col" class="text-sm sm:px-6 py-4 w-1/5">
               </th>
-              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-sky-200">
+              <th scope="col" class="text-md sm:px-6 py-4 bg-sky-200">
                 {{time1}}
               </th>
-              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-orange-200">
+              <th scope="col" class="text-md sm:px-6 py-4 bg-orange-200">
                 {{time2}}
               </th>
-              <th scope="col" class="text-md font-medium sm:px-6 py-4 bg-blue-200">
+              <th scope="col" class="text-md sm:px-6 py-4 bg-blue-200">
                 {{time3}}
               </th>
             </tr>
@@ -172,12 +172,12 @@
 
           <tbody>
             <tr class="border-b">
-              <td class="text-sm font-medium sm:px-6 py-4 md:text-xl basic bg-green-200" rowspan="2">
+              <td class="text-sm sm:px-6 py-4 md:text-xl basic bg-green-200" rowspan="2">
                 基本料金
 
               </td>
               <td class="sm:text-2xl sm:px-6 py-4">
-                {{b2}}分
+                {{b2}}分毎
               </td>
               <td class="sm:text-2xl sm:px-6 py-4 text-red-500">
                 {{b3}}円<span class="text-xs text-black block">税込({{ Math.floor(b3 * 110 / 100) }}円)</span>

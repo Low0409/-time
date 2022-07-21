@@ -101,6 +101,11 @@ const subslider = Vue.createApp({
           alt: "安心の新型コロナウイルス対策",
         },
         {
+          img: "./img/top-slider-img/07_darts.jpg",
+          path: "./info/campaign.html#corona",
+          alt: "岩田夏海プロ来店イベント",
+        },
+        {
           img: "./img/top-slider-img/8.jpg",
           path: "./info/campaign.html#greenchannel",
           alt: "GREENチャンネル店内放送中",
@@ -125,11 +130,6 @@ const subslider = Vue.createApp({
           img: "./img/top-slider-img/4.jpg",
           path: "./info/campaign.html",
           alt: "新規入会金無料キャンペーン実施中",
-        },
-        {
-          img: "./img/top-slider-img/5.jpg",
-          path: "./info/campaign.html",
-          alt: "TIGER&BUNNY2スペシャルキャンペーン",
         },
         {
           img: "./img/top-slider-img/6.jpg",
