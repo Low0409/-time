@@ -4,16 +4,18 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>@time | カラオケ&アミューズメント&インターネットカフェ</title>
+  <meta name="description" content="滋賀県に10店舗展開する。カラオケ&アミューズメント&インターネットカフェです。">
+  <meta name="keywords" content="滋賀県,at-time,@time,ネットカフェ,インターネットカフェ,漫画,コミック,バッティングセンター">
+
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
   <link rel="stylesheet" href="./slick/slick-theme.css">
   <link rel="stylesheet" href="./slick/slick.css">
   <script src="./slick/slick.js"></script>
   <link rel="stylesheet" href="./slick/fonts/">
-  <title>@time カラオケ&アミューズメント&インターネットカフェ</title>
+
   <script src="https://unpkg.com/vue@3.2.4"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
@@ -77,12 +79,15 @@
 
   </div>
   <h2 class="text-center text-3xl md:text-4xl font-black my-10">—　Infomation —</h2>
+  <ui-card>
 
-    <!-- Infomation部分 TOP-data.js subslider空読み込み-->
+  </ui-card>
+
+  <!-- Infomation部分 TOP-data.js subslider空読み込み-->
   <div class="multiple p-0" id="sub-slider">
     <div v-for="item in SUBsliderList" class="mx-2"><a :href="item.path"><img :src="item.img" class="w-full"></a></div>
   </div>
-    <!-- Infomation部分 -->
+  <!-- Infomation部分 -->
 
   <h2 class="text-2xl leading-normal font-bold text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mt-20 mb-10"> @timeのサービス</h2>
 
@@ -148,7 +153,6 @@
 
   </div>
   <div id="footer"></div>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="./dataJS/TOP-data.js"></script>
   <script>
@@ -221,7 +225,6 @@
       display: none;
     }
   }
-  
 </style>
 
 </html>

@@ -811,13 +811,13 @@ MahjongTime.component("mahjong-time-price-table", {
           91円<span class="text-xs text-black block">税込(100円)</span>
         </td>
       </tr>
-      <!-- 間 -->
-      <tr class="border-b">
-        <td class="sm:text-2xl sm:px-6 py-4 text-red-500">
+
+      <tr class="border-b bg-green-800">
+      <td class="sm:text-2xl sm:px-6 py-4 text-red-500 bg-green-800" colspan="3">
   
-        </td>
+      </td>
       </tr>
-      <!-- 間 -->
+
       <tr class="border-b">
         <td class="text-sm sm:px-6 py-4 bg-orange-100 md:text-xl" rowspan="6">
           パック料金
@@ -873,7 +873,7 @@ MahjongTime.component("mahjong-time-price-table", {
   <div class="flex bg-white mb-4">
     <div class="p-2 sm:p-6 mt-6">
       <p class="text-2xl font-black text-center">営業時間6:00～24:00</p>
-      <p class="text-red-600">※最終入店受付は23:00までとさせて頂きます。</p>
+      <p class="text-red-600">※最終受付は23:00までとさせて頂きます。</p>
     </div>
     <div class="p-2 sm:p-6">
       <p class="bg-red-500 text-white p-2 text-center">20歳未満(高校生以下)のご利用はお断りいたします。</p>
