@@ -127,9 +127,13 @@ services.component("service-div", {
     <p class="text-xs font-semibold sm:text-base text-center">コミック</p>
   </div>
   <div class="col-span-2" v-if="!online">
-    <img src="../img/icon/service-icon/PC.svg" class="rounded-xl px-2" />
+    <img src="../img/icon/service-icon/game.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">オンラインゲーム</p>
   </div>
+  <div class="col-span-2" v-if="!PC">
+  <img src="../img/icon/service-icon/PC.svg" class="rounded-xl px-2" />
+  <p class="text-xs font-semibold sm:text-base text-center">ビジネス・勉強</p>
+</div>
   <div class="col-span-2" v-if="!video">
   <img src="../img/icon/service-icon/video.svg" class="rounded-xl px-2" />
   <p class="text-xs font-semibold sm:text-base text-center">各種動画サービス</p>
