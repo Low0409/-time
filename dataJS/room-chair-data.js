@@ -64,7 +64,7 @@ const app = Vue.createApp({
         // },
         {
           name: "パーティールーム",
-          img: "./img/room-chair/room_party.jpg",
+          img: "./img/room-chair/room_party2.jpg",
           description:
             "30人ほどが入れる大きなお部屋です。大人数でカラオケを楽しむことができ、打ち上げや二次会などにもご利用頂けます。",
         },
@@ -95,7 +95,7 @@ const app = Vue.createApp({
           {
             name: "ペア座敷席",
             img: "./img/room-chair/booth_pairzashiki.jpg",
-            description: "座敷席をペアでお使いいただけます。パソコンやDVD観賞のほかに、PS2ゲームもお楽しみいただけます。",
+            description: "座敷席をペアでお使いいただけます。パソコンやDVD観賞のほかに、オンラインゲームもお楽しみいただけます。",
           },
           {
             name: "ペアソファ席",

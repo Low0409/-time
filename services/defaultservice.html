@@ -10,62 +10,71 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
     <title>-基本サービス-</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.4"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        //headerパーツ読み込み
-
         $(function () {
             $('#header').load('/-time/header.html');
             $('#footer').load('/-time/footer.html');
         });
     </script>
-
 </head>
 
-<body background="../img/background/email-pattern.jpg">
+<body background="../img/background/email-pattern.jpg" class="font-black">
     <div id="header"></div>
     <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
-        <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－基本サービス－</h2>
+        <h2 class="text-2xl leading-normal mb-2 text-center bg-black text-white py-2">－基本サービス－</h2>
     </div>
-    <div class="max-w-4xl m-auto">
-
-        <h3 class="text-red-800 font-black text-2xl mb-2 text-center">ソフトクリーム無料</h3>
-        <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
-            <img src="../img/services/basic-services/soft.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-            <p class="ml-4 mt-4 align-middle">@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。</p>
-        </div>
-
-
-        <h3 class="text-red-800 font-black text-2xl mb-2 text-center">ドリンクバー無料</h3>
-        <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
-            <img src="../img/services/basic-services/drink.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-            <p class="ml-4 mt-4 align-middle">@timeでは、ソフトドリンクは勿論、淹れたてのコーヒーや紅茶、フローズンドリンクまで。20種類以上のドリンクが全て飲み放題です。</p>
-        </div>
-
-        <h3 class="text-red-800 font-black text-2xl mb-2 text-center">スープバー無料</h3>
-        <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
-            <img src="../img/services/basic-services/soft.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-            <p class="ml-4 mt-4 align-middle">@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。</p>
-        </div>
-
-        <h3 class="text-red-800 font-black text-2xl mb-2 text-center">シャワー無料</h3>
-        <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
-            <img src="../img/services/basic-services/syawa.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-            <p class="ml-4 mt-4 align-middle">汗を流したい⽅には、シャワールームも完備。<br>※一部有料の店舗がございます。詳しくは各店舗ページのサービス一覧をご確認ください。</p>
-
-        </div>
-
-        <h3 class="text-red-800 font-black text-2xl mb-2 text-center">フリーWi-Fi</h3>
-        <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
-            <img src="../img/services/basic-services/wi-fi.jpg" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-            <p class="ml-4 mt-4 align-middle">@timeでは、高速の無料Wi-Fiがご利用頂けます。<br><a href="../info/campaign.html#wifi" class="text-blue-500">登録手順はコチラ</a></p>
+    <div class="max-w-4xl m-auto" id="basic">
+        <div v-for="item in basicServicesList">
+            <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.title}}</h3>
+            <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
+                <div class="w-1/2">
+                    <img :src="item.img" alt="" class="rounded-lg rounded-3xl">
+                </div>
+                <div class="w-1/2">
+                    <p class="ml-4 mt-4 align-middle">{{item.text}}</p>
+                </div>
+            </div>
         </div>
     </div>
-
     <div id="footer"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-
 </body>
-
+<script>
+    const app = Vue.createApp({
+        data() {
+          return {
+            basicServicesList: [
+              {
+                title: "ソフトクリーム無料",
+                img: "../img/services/basic-services/soft.jpg",
+                text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
+              },
+              {
+                title: "ドリンクバー無料",
+                img: "../img/services/basic-services/drink.jpg",
+                text: "@timeでは、ソフトドリンクは勿論、淹れたてのコーヒーや紅茶、フローズンドリンクまで。20種類以上のドリンクが全て飲み放題です。",
+              },
+              {
+                title: "スープバー無料",
+                img: "../img/services/basic-services/soft.jpg",
+                text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
+              },              {
+                title: "シャワー無料",
+                img: "../img/services/basic-services/syawa.jpg",
+                text: "汗を流したい⽅には、シャワールームも完備。<br>※一部有料の店舗がございます。詳しくは各店舗ページのサービス一覧をご確認ください。",
+              },
+              {
+                title: "フリーWi-Fi",
+                img: "../img/services/basic-services/wi-fi.jpg",
+                text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
+              },
+            ],
+          };
+        },
+      }).mount('#basic');
+      
+</script>
 </html>

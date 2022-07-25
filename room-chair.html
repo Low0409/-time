@@ -29,23 +29,31 @@
   <div style="background-image:url(./img/services/karaoke/room.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
     <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－部屋・チェア－</h2>
   </div>
-  <div class="max-w-4xl m-auto" id="room">
+  <div class="max-w-4xl m-auto font-black" id="room">
 
-    <h2 class="text-center text-2xl leading-normal font-black text-white py-2 bg-black mb-20">カラオケルーム</h2>
+    <h2 class="text-center text-2xl leading-normal text-white py-2 bg-black mb-20">カラオケルーム</h2>
     <div v-for="item in roomList">
-      <h3 class="text-red-800 font-black text-2xl mb-2 text-center">{{ item.name}}</h3>
+      <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.name}}</h3>
       <div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-        <img :src="item.img" :alt="item.name" class="sm:w-1/2 rounded-lg rounded-3xl mx-auto">
-        <p class="ml-4 mt-4 align-middle">{{ item.description}}</p>
+        <div class="w-1/2">
+          <img :src="item.img" :alt="item.name" class="rounded-lg rounded-3xl mx-auto w-full">
+        </div>
+        <div class="w-1/2">
+          <p class="ml-4 mt-4 align-middle">{{ item.description}}</p>
+        </div>
       </div>
     </div>
 
-    <h2 class="text-center text-2xl leading-normal font-black text-white py-2 bg-black mb-20">ネットカフェ座席</h2>
+    <h2 class="text-center text-2xl leading-normal text-white py-2 bg-black mb-20">ネットカフェ座席</h2>
     <div v-for="item in chairList">
-      <h3 class="text-red-800 font-black text-2xl mb-2 text-center">{{ item.name}}</h3>
+      <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.name}}</h3>
       <div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-        <img :src="item.img" :alt="item.name" class="sm:w-1/2 rounded-lg rounded-3xl mx-auto">
-        <p class="ml-4 mt-4 align-middle">{{ item.description}}</p>
+        <div class="w-1/2">
+          <img :src="item.img" :alt="item.name" class="rounded-lg rounded-3xl mx-auto w-full">
+        </div>
+        <div class="w-1/2">
+          <p class="ml-4 mt-4 align-middle">{{ item.description}}</p>
+        </div>
       </div>
     </div>
   </div>

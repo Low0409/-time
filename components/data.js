@@ -31,15 +31,7 @@ Access.component("access-div", {
   </div>`,
 });
 
-const Flexdiv = Vue.createApp({});
 
-Flexdiv.component("flex-div", {
-  props: ["src", "text"],
-  template: `<div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-  <img :src="src" alt="" class="sm:w-1/2 rounded-lg rounded-3xl">
-  <p class="ml-4 mt-4 align-middle">{{text}}</p>
-  </div>`,
-});
 
 const services = Vue.createApp({});
 
