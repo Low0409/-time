@@ -20,7 +20,7 @@
 
 </head>
 
-<body background="./img/background/email-pattern.webp">
+<body background="./img/background/email-pattern.jpg">
   <div id="header"></div>
   <div style="background-image:url(./img/background/5.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
     <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">-はじめての方へ-</h2>
@@ -37,8 +37,8 @@
   </div>
   <div class="max-w-4xl m-auto" id="first">
     <!-- @timeサービスの紹介 -->
-    <div v-for="item in ServiceList">
-      <h3 class="text-red-800 font-black text-2xl mb-2 text-center">{{item.name}}</h3>
+    <div v-for="item in ServiceList" class="font-black">
+      <h3 class="text-red-800 text-2xl mb-2 text-center">{{item.name}}</h3>
       <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
         <img :src="item.img" class="sm:w-1/2 rounded-lg rounded-3xl">
         <p class="ml-4 mt-4 align-middle">{{item.description}}</p>
@@ -49,11 +49,11 @@
       <p class="bg-black text-white text-3xl py-8 px-8 mb-20 max-w-2xl mx-auto text-center hover:bg-black duration-500 hover:scale-110 rounded-full">サービス詳細はコチラ</p>
     </a>
     <h2 class="bg-red-800 text-white py-4 text-center text-2xl font-black m-auto mt-20 ">ご利用の流れ/会員登録</h2>
-    <p class="text-center my-8">@timeは、お客様に安心してご利用して頂くために会員制になっております。</p>
+    <p class="text-center my-8 font-black">@timeは、お客様に安心してご利用して頂くために会員制になっております。</p>
 
     <!-- @time来店からの流れ・会員登録 -->
 
-    <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white" v-for="item in  FlowList">
+    <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white font-black" v-for="item in  FlowList">
       <div>
         <h3 class="bg-red-800 text-white text-xl text-center w-1/2 mx-auto py-2">{{item.name}}</h3>
         <p class="ml-4 mt-4 align-middle">{{item.description}}</p>
