@@ -29,10 +29,10 @@
         <div v-for="item in basicServicesList">
             <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.title}}</h3>
             <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
-                <div class="w-1/2">
+                <div class="sm:w-1/2">
                     <img :src="item.img" alt="" class="rounded-lg rounded-3xl">
                 </div>
-                <div class="w-1/2">
+                <div class="sm:w-1/2">
                     <p class="ml-4 mt-4 align-middle">{{item.text}}</p>
                 </div>
             </div>
@@ -45,36 +45,37 @@
 <script>
     const app = Vue.createApp({
         data() {
-          return {
-            basicServicesList: [
-              {
-                title: "ソフトクリーム無料",
-                img: "../img/services/basic-services/soft.jpg",
-                text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
-              },
-              {
-                title: "ドリンクバー無料",
-                img: "../img/services/basic-services/drink.jpg",
-                text: "@timeでは、ソフトドリンクは勿論、淹れたてのコーヒーや紅茶、フローズンドリンクまで。20種類以上のドリンクが全て飲み放題です。",
-              },
-              {
-                title: "スープバー無料",
-                img: "../img/services/basic-services/soft.jpg",
-                text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
-              },              {
-                title: "シャワー無料",
-                img: "../img/services/basic-services/syawa.jpg",
-                text: "汗を流したい⽅には、シャワールームも完備。<br>※一部有料の店舗がございます。詳しくは各店舗ページのサービス一覧をご確認ください。",
-              },
-              {
-                title: "フリーWi-Fi",
-                img: "../img/services/basic-services/wi-fi.jpg",
-                text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
-              },
-            ],
-          };
+            return {
+                basicServicesList: [
+                    {
+                        title: "ソフトクリーム無料",
+                        img: "../img/services/basic-services/soft.jpg",
+                        text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
+                    },
+                    {
+                        title: "ドリンクバー無料",
+                        img: "../img/services/basic-services/drink.jpg",
+                        text: "@timeでは、ソフトドリンクは勿論、淹れたてのコーヒーや紅茶、フローズンドリンクまで。20種類以上のドリンクが全て飲み放題です。",
+                    },
+                    {
+                        title: "スープバー無料",
+                        img: "../img/services/basic-services/soft.jpg",
+                        text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
+                    }, {
+                        title: "シャワー無料",
+                        img: "../img/services/basic-services/syawa.jpg",
+                        text: "汗を流したい⽅には、シャワールームも完備。<br>※一部有料の店舗がございます。詳しくは各店舗ページのサービス一覧をご確認ください。",
+                    },
+                    {
+                        title: "フリーWi-Fi",
+                        img: "../img/services/basic-services/wi-fi.jpg",
+                        text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
+                    },
+                ],
+            };
         },
-      }).mount('#basic');
-      
+    }).mount('#basic');
+
 </script>
+
 </html>
