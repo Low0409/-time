@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="../favicon.ico" id="favicon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/vue@3.2.4"></script>
@@ -21,11 +23,12 @@
 
 <body background="../img/background/email-pattern.webp">
     <div id="header"></div>
-    <div style="background-image:url(../img/background/5.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
+    <div style="background-image:url(../img/background/5.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
         <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－キャンペーン情報－</h2>
-      </div>
+    </div>
     <div class="max-w-3xl mx-auto" id="campaign">
-        <div v-for="item in campaignList" class="mx-auto mb-4 mt-20"><!-- campaign-data.jsから読み込み -->
+        <div v-for="item in campaignList" class="mx-auto mb-4 mt-20">
+            <!-- campaign-data.jsから読み込み -->
             <p class="text-center text-gray-600 font-black text-xl">{{ item.date }}</p> <!-- 掲載日　(ある場合) -->
             <p class="text-2xl font-black text-center border-b-2 border-gray-600 mb-8" :id="item.id">{{ item.title }}</p>
 

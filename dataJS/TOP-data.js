@@ -102,7 +102,7 @@ const subslider = Vue.createApp({
         },
         {
           img: "./img/top-slider-img/07_darts.jpg",
-          path: "./info/campaign.html#corona",
+          path: "./info/campaign.html#iwatapro",
           alt: "岩田夏海プロ来店イベント",
         },
         {

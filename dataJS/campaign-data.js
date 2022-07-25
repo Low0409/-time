@@ -5,7 +5,7 @@ const app = Vue.createApp({
         {
           title: "ダーツ岩田夏海プロ、来店イベント開催！",
           img: "../img/news&campaign/07_darts.jpg",
-          id: "darts",
+          id: "iwatapro",
           date: "2022/07/04",
         },
         {

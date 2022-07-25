@@ -22,7 +22,7 @@ const app = Vue.createApp({
         },
         {
           name: "麻雀格闘俱楽部・麻雀",
-          img: "./img/services/majan.jpeg",
+          img: "./img/services/mahjong.jpg",
           description: "Mahjong",
           url: "./services/amusement/mahjong.html",
         },
@@ -86,7 +86,7 @@ const app = Vue.createApp({
         },
         {
           name: "スープバー",
-          img: "./img/services/majan.jpeg",
+          img: "./img/services/mahjong.jpg",
           description: "Soup bar",
           url: "./services/defaultservice.html",
         },

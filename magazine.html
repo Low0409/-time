@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
 <!-- magazine-data.jsから読み込み -->
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="./favicon.ico" id="favicon">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
     <title>コミック・雑誌一覧</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@3.2.4"></script>
@@ -22,7 +24,7 @@
 
 <body background="./img/background/email-pattern.webp">
     <div id="header"></div>
-    <div style="background-image:url(./img/background/5.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20">
+    <div style="background-image:url(./img/background/5.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
         <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－雑誌－</h2>
     </div>
     <div id="services" class="section relative pt-20 pb-8 md:pt-16 md:pb-0">
@@ -83,6 +85,6 @@
 <script src="./dataJS/magazine-data.js"></script>
 <script>
     const mountedApp = magazinelist.mount('#magazine');
-  </script>
+</script>
 
 </html>
