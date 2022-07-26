@@ -11,7 +11,8 @@
       <ul class="nav-list flex">
 
         <li class="nav-item list-none"><a href="/-time/first.html" class="a-nav py-10 px-8 hover:text-rose-300">はじめての方へ</a></li>
-        <li class="nav-item list-none"><a href="/-time/services.html" class="a-nav py-10 px-8" onmouseover="show_services()" onmouseleave="hide_services()" id="header-menu2">サービス一覧</a></li>
+        <li class="nav-item list-none"><a href="/-time/services.html" class="a-nav py-10 px-8" onmouseover="show_service
+()" onmouseleave="hide_services()" id="header-menu2">サービス一覧</a></li>
         <li class="nav-item list-none"><a href="/-time/booth-menu.html" class="a-nav py-10 px-8" onmouseover="show_menu()" onmouseleave="hide_menu()" id="header-menu3">お食事メニュー</a></li>
         <li class="nav-item list-none"><a href="/-time/search.html" class="a-nav py-10 px-8 hover:text-rose-300">近くの店舗を探す</a></li>
         <li class="nav-item list-none"><a href="/-time/QandA.html" class="a-nav py-10 px-8 hover:text-rose-300">よくある質問</a></li>
@@ -25,7 +26,8 @@
   </button>
 </header>
 <!-- サービスドロップダウンメニュー -->
-<div class="dropdown-menu bg-black" id="services-dropdown-div" onmouseover="show_services()" onmouseleave="hide_services()">
+<div class="dropdown-menu bg-black" id="services-dropdown-div" onmouseover="show_service
+()" onmouseleave="hide_services()">
 
 
   <div class="flex">
@@ -114,26 +116,24 @@
 
 
 <style>
-
-
-
-
   .fadeIn {
-    animation-name: fadein  ; /*←@keyframesにも同じ名前を記述*/
-    animation-duration: 0.6s; 
-    animation-fill-mode:forwards;
-    
+    animation-name: fadein;
+    /*←@keyframesにも同じ名前を記述*/
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+
   }
-  
+
   @keyframes fadein {
     0% {
-       opacity: 0;
+      opacity: 0;
     }
+
     100% {
-       opacity: 1;
+      opacity: 1;
     }
   }
-  
+
 
   .dropdown-menu {
     display: none;
@@ -268,11 +268,12 @@
 
 </script>
 <script>
-  const show_services = () => {//ヘッダーとドロップダウンhover時、サービスドロップダウンメニューを表示する
-    document.getElementById("services-dropdown-div").classList.add("fadeIn");
-    document.getElementById("services-dropdown-div").style.display = "block";
-    document.getElementById("header-menu2").style.color = "rgb(255, 132, 132)";
-  }
+  const show_service
+    = () => {//ヘッダーとドロップダウンhover時、サービスドロップダウンメニューを表示する
+      document.getElementById("services-dropdown-div").classList.add("fadeIn");
+      document.getElementById("services-dropdown-div").style.display = "block";
+      document.getElementById("header-menu2").style.color = "rgb(255, 132, 132)";
+    }
 
   const hide_services = () => {//hover外れたときサービスドロップダウンメニューを非表示にする
     document.getElementById("services-dropdown-div").style.display = "none";

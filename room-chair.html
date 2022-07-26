@@ -34,7 +34,7 @@
     <h2 class="text-center text-2xl leading-normal text-white py-2 bg-black mb-20">カラオケルーム</h2>
     <div v-for="item in roomList">
       <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.name}}</h3>
-      <div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
+      <div class="sm:flex max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
         <div class="sm:w-1/2">
           <img :src="item.img" :alt="item.name" class="rounded-lg rounded-3xl mx-auto w-full">
         </div>
@@ -47,7 +47,7 @@
     <h2 class="text-center text-2xl leading-normal text-white py-2 bg-black mb-20">ネットカフェ座席</h2>
     <div v-for="item in chairList">
       <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.name}}</h3>
-      <div class="sm:flex bg-gray-200 max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
+      <div class="sm:flex max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
         <div class="sm:w-1/2">
           <img :src="item.img" :alt="item.name" class="rounded-lg rounded-3xl mx-auto w-full">
         </div>
