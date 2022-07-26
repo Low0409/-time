@@ -86,8 +86,14 @@ const app = Vue.createApp({
         },
         {
           name: "スープバー",
-          img: "./img/services/mahjong.jpg",
+          img: "./img/services/basic-services/soup.jpg",
           description: "Soup bar",
+          url: "./services/defaultservice.html",
+        },
+        {
+          name: "フリーWi-Fi",
+          img: "./img/services/basic-services/wi-fi.jpg",
+          description: "Free Wi-Fi",
           url: "./services/defaultservice.html",
         },
       ],

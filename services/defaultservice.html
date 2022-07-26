@@ -34,6 +34,9 @@
                 </div>
                 <div class="sm:w-1/2">
                     <p class="ml-4 mt-4 align-middle">{{item.text}}</p>
+                    <p v-if="item.title == 'フリーWi-Fi'" class="ml-4 mt-4 align-middle">
+                        設定方法については<a href="../info/campaign.html#wifi" class="text-blue-500 ">こちら</a>をご確認ください。
+                    </p>
                 </div>
             </div>
         </div>
@@ -59,7 +62,7 @@
                     },
                     {
                         title: "スープバー無料",
-                        img: "../img/services/basic-services/soft.jpg",
+                        img: "../img/services/basic-services/soup.jpg",
                         text: "@timeでは、無料のスープバーもご用意しています。",
                     }, {
                         title: "シャワー無料",
@@ -69,7 +72,7 @@
                     {
                         title: "フリーWi-Fi",
                         img: "../img/services/basic-services/wi-fi.jpg",
-                        text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
+                        text: "@timeでは、フリーWi-Fiをご利用いただけます。",
                     },
                 ],
             };
