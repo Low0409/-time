@@ -1,4 +1,5 @@
 <meta charset="UTF-8">
+<img src="/-time/img/icon/up.svg" alt="" class="button">
 <div id="footer" class="mt-20">
   <div class="bg-yellow-100 pt-8 mx-auto">
     <p class="text-center font-bold text-xl sm:text-3xl text-red-800 font-black">@timeの最新お得情報をCheck!</p>
@@ -24,15 +25,21 @@
 <style>
   .button {
     position: fixed;
+    display: flex;
     align-items: center;
     justify-content: center;
+    right: 0;
+    bottom: 0;
     width: 50px;
     height: 50px;
+    color: #fff;
     transition: .3s;
+    opacity: 0;
     visibility: hidden;
   }
 
   .is-active {
+    /* 表示する */
     opacity: 1;
     visibility: visible;
   }

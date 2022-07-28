@@ -1,7 +1,14 @@
 const app = Vue.createApp({
   data() {
     return {
+      // campaign.htmlのデータ
       campaignList: [
+        {
+          title: "【全店】入会金無料キャンペーン実施中！",
+          img: "../img/news&campaign/07_nyukai.jpg",
+          id: "nyukai",
+          date: "2022/07/25",
+        },
         {
           title: "ダーツ岩田夏海プロ、来店イベント開催！",
           img: "../img/news&campaign/07_darts.jpg",
@@ -46,7 +53,7 @@ const app = Vue.createApp({
           date: "2022/02/24",
         },
         {
-          title: "【彦根店】@time会員カードでジムが利用できます！",
+          title: "【彦根店】@time会員カードでジムが利用できます!",
           img: "../img/news&campaign/12_hikone_hf24.jpg",
           id: "hf24",
           // date: "yyyy/mm/dd",

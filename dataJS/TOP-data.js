@@ -90,10 +90,11 @@ const topslider = Vue.createApp({
     };
   },
 });
-
+//Infomation バナースライド 部分 クリックするとcampaign.htmlに移動する ココ修正するときcampaign-data.jsも同時に書き換える
 const subslider = Vue.createApp({
   data() {
     return {
+      // pathのページ内リンク(#)はcampaign-data.jsのid属性と同じにする
       SUBsliderList: [
         {
           img: "./img/top-slider-img/7.jpg",
@@ -111,7 +112,6 @@ const subslider = Vue.createApp({
           alt: "GREENチャンネル店内放送中",
         },
         {
-          // pathのページ内リンク(#)はcampaign-data.jsのid属性と同じにする
           img: "./img/top-slider-img/1.jpg",
           path: "./info/campaign.html#newplan",
           alt: "カラオケビリヤード新料金プラン登場",
@@ -128,7 +128,7 @@ const subslider = Vue.createApp({
         },
         {
           img: "./img/top-slider-img/4.jpg",
-          path: "./info/campaign.html",
+          path: "./info/campaign.html#nyukai",
           alt: "新規入会金無料キャンペーン実施中",
         },
         {
