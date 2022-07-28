@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="./favicon.ico" id="favicon">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ tailwindcss/ui @latest/dist/tailwind-ui.min.css">
   <title>@time | はじめての方へ</title>
   <script src="https://unpkg.com/vue@3.2.4"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -60,6 +59,36 @@
       </div>
       <img :src="item.img" :alt="item.name" class="sm:w-1/2 rounded-lg rounded-3xl">
     </div>
+
+
+    <div class="max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white font-black">
+      <h3 class="bg-green-500 text-white text-center sm:mx-20 p-2 mb-10">新規入会の方</h3>
+      <div class="sm:flex">
+        <div class="sm:w-1/3">
+          <img src="./img/card1.png" alt="" class="w-full rounded-lg rounded-3xl">
+        </div>
+        <div class="sm:w-2/3 mx-4 mt-4">
+          <p>・@time新規入会のお客様は、<span class="text-red-600">入会金300円</span>が必要となります。</p>
+          <p class="text-red-600">(50歳以上の方は入会金無料)</p>
+          <p>・入会の際には身分証明書(運転免許証・学生証・保険証など)が必要です。</p>
+          <p>・小学生(12歳)以下は席料が半額、3歳以下は無料です。</p>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white font-black">
+      <h3 class="bg-black text-white text-center sm:mx-20 p-2 mb-10">SUNカード・DELIGHTカード会員の方</h3>
+      <div class="sm:flex">
+        <div class="sm:w-1/3">
+          <img src="./img/card2.png" alt="" class="w-full rounded-lg rounded-3xl">
+        </div>
+        <div class="sm:w-2/3 mx-4 mt-4">
+          <p>・SUNMUSIC/DELIGHTメンバーズポイントカードを、そのままご利用いただけます。</p>
+          <p class="text-red-600">(@time 入会金の300円は必要です)</p>
+          <p>・SUNMUSIC、DELIGHT、@time 全店共通でご利用でき、ポイントも貯められます。</p>
+        </div>
+      </div>
+    </div>
+    
     <h2 class="bg-red-800 text-white py-4 text-center text-2xl font-black m-auto mt-20 ">ご利用上の注意</h2>
     <ul class="max-w-4xl mx-auto px-8 py-8 bg-white shadow-2xl rounded-3xl mb-20">
       <li class="mb-2">・ご利用中の外出はご遠慮ください。</li>
@@ -83,18 +112,18 @@
     <h2 class="bg-red-800 text-white py-4 text-center text-2xl font-black m-auto mt-20 " id="terms">利用規約</h2>
     <div class="max-w-4xl mx-auto px-8 py-8 bg-white shadow-2xl rounded-3xl mb-20">
       <ul>
-        <li class="mb-2">          <span class="bg-green-500 text-white font-bold px-3">１</span>
+        <li class="mb-2"> <span class="bg-green-500 text-white font-bold px-3">１</span>
           ご入会の際には身分証明書のご提示が必要となります。（再発行の場合も同様と致します。）
           また、小学生の方は保護者の同意が必要となります。
         </li>
-        <li class="mb-2">          <span class="bg-green-500 text-white font-bold px-3">２</span>
+        <li class="mb-2"> <span class="bg-green-500 text-white font-bold px-3">２</span>
           会員証は入会されたご本人しかご利用になれません。
         </li>
         <li class="mb-2">
           <span class="bg-green-500 text-white font-bold px-3">３</span>
           入会申込書の記載事項に変更があった場合は、ご入会手続きをした店舗まで速やかにご連絡ください。
         </li>
-        <li> <span class="bg-green-500 text-white font-bold px-3">４</span> インターネット上でのトラブル・事故に関しまして、当店では一切責任を負いかねます。</li>
+        <li class="mb-2"> <span class="bg-green-500 text-white font-bold px-3">４</span> インターネット上でのトラブル・事故に関しまして、当店では一切責任を負いかねます。</li>
         <li>
           <span class="bg-green-500 text-white font-bold px-3">５</span>
           お客様の行為による機材や端末の破損などで当店に損害が発生したと判断された場合、 お客様の実費で弁償していたたく場合がございます。
@@ -105,35 +134,35 @@
           <p>・保存データ等の消失、損害など。</p>
           <p>・自然災害、通信事業者が原因で起こる故障などのトラブル。</p>
         </li>
-        <li>
+        <li class="mb-2">
           <span class="bg-green-500 text-white font-bold px-3">
             ７</span>
 
           当店端末でご利用可能なコンテンツに関して、著作権法で保護されている権利は著作者、著作権者などに留保されています。
           従いまして、当店コンテンツのご利用は、当店端末による個人の使用に限らせていただきます。
         </li>
-        <li>
+        <li class="mb-4">
           <span class="bg-green-500 text-white font-bold px-3">８</span>
           以下のいずれかに該当する場合、当店はお客様に会員証の使用を禁止し、会員の除名をさせていただく場合がございます。
-          <p>・入会申込書の記載事項に虚偽の合った場合。また、変更があったにもかかわらず届け出がなかった場合。</p>
-          <p>・他のお客様のご迷惑になる行為を行った場合。（店内ブース提示の【ご入場に関する規定】参照）</p>
-          <p>・当店の営業妨害と判断される言動、行為を行った場合。</p>
-          <p>・当店店内で営利目的の行為を行った場合、および営利目的で当店の端末を使用した場合。</p>
-          <p>・当店の端末を利用して違法行為を行った場合。</p>
+          <p class="ml-4">・入会申込書の記載事項に虚偽の合った場合。また、変更があったにもかかわらず届け出がなかった場合。</p>
+          <p class="ml-4">・他のお客様のご迷惑になる行為を行った場合。（店内ブース提示の【ご入場に関する規定】参照）</p>
+          <p class="ml-4">・当店の営業妨害と判断される言動、行為を行った場合。</p>
+          <p class="ml-4">・当店店内で営利目的の行為を行った場合、および営利目的で当店の端末を使用した場合。</p>
+          <p class="ml-4">・当店の端末を利用して違法行為を行った場合。</p>
         </li>
-        <li>
+        <li class="mb-2">
           <span class="bg-green-500 text-white font-bold px-3">９</span>
           会員の個人情報につきましては、一切公開することはありません。
         </li>
-        <li>
+        <li class="mb-2">
           <span class="bg-green-500 text-white font-bold px-3">10</span>
           会員規約は、諸々の事情により予定なく変更させていただく事がございます。予めご了承ください。
         </li>
-        <li>
+        <li class="mb-2">
           <span class="bg-green-500 text-white font-bold px-3">11</span>
           会員登録されたお客様は、会員規約を承諾されたものといたします。
         </li>
-        <li>
+        <li class="mb-2">
           <span class="bg-green-500 text-white font-bold px-3">12</span>
           ご入店登録後の料金変更は出来兼ねますので、ご了承願います。
         </li>
@@ -189,36 +218,6 @@
 
         開示等の要求の対応にあたっては、印刷代、郵送料等の実費および手数料を申し受け、回答まで数日を要することがありますので、予めご了承ください。
       </p>
-    </div>
-
-
-
-    <div class="max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white font-black">
-      <h3 class="bg-red-600 text-white text-center sm:mx-20 p-2 mb-10">新規入会の方</h3>
-      <div class="sm:flex">
-        <div class="sm:w-1/3">
-          <img src="./img/card1.png" alt="" class="w-full rounded-lg rounded-3xl">
-        </div>
-        <div class="sm:w-2/3 mx-4 mt-4">
-          <p>・@time新規入会のお客様は、<span class="text-red-600">入会金300円</span>が必要となります。</p>
-          <p class="text-red-600">(50歳以上の方は入会金無料)</p>
-          <p>・入会の際には身分証明書(運転免許証・学生証・保険証など)が必要です。</p>
-          <p>・小学生(12歳)以下は席料が半額、3歳以下は無料です。</p>
-        </div>
-      </div>
-    </div>
-    <div class="max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white font-black">
-      <h3 class="bg-red-600 text-white text-center sm:mx-20 p-2 mb-10">SUNカード・DELIGHTカード会員の方</h3>
-      <div class="sm:flex">
-        <div class="sm:w-1/3">
-          <img src="./img/card2.png" alt="" class="w-full rounded-lg rounded-3xl">
-        </div>
-        <div class="sm:w-2/3 mx-4 mt-4">
-          <p>・SUNMUSIC/DELIGHTメンバーズポイントカードを、そのままご利用いただけます。</p>
-          <p class="text-red-600">(@time 入会金の300円は必要です)</p>
-          <p>・SUNMUSIC、DELIGHT、@time 全店共通でご利用でき、ポイントも貯められます。</p>
-        </div>
-      </div>
     </div>
 
   </div>
