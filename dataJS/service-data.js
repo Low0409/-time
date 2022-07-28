@@ -28,7 +28,7 @@ const app = Vue.createApp({
         },
         {
           name: "スポーツパーク",
-          img: "./img/services/sports_batting.jpg",
+          img: "./img/services/sports-park/batting.jpg",
           description: "Sports Park",
           url: "./services/amusement/sportspark.html",
         },

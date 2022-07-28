@@ -8,24 +8,22 @@
     <link rel="icon" href="../favicon.ico" id="favicon">
     <script src="https://unpkg.com/vue@3.2.4"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-
     <title>-基本サービス-</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
-        //headerパーツ読み込み
-
         $(function () {
             $('#header').load('/-time/header.html');
             $('#footer').load('/-time/footer.html');
         });
     </script>
-
 </head>
 
 <body background="../../img/background/email-pattern.jpg" class="font-black">
     <div id="header"></div>
-    <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
-        <h2 class="text-2xl leading-normal mb-2 text-center bg-black text-white py-2">－スポーツパーク－</h2>
+    <div style="background-image:url(../../img/background/3.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
+        <div class=" leading-normal mb-2 bg-black py-2 opacity-80">
+            <h2 class="text-2xl text-white text-center opacity-none">－スポーツパーク－</h2>
+        </div>
     </div>
     <div class="max-w-4xl m-auto" id="sports">
         <div v-for="item in sportsList">
@@ -35,8 +33,7 @@
                     <img :src="item.img" alt="" class="rounded-lg rounded-3xl">
                 </div>
                 <div class="sm:w-1/2">
-                    <p class="ml-4 mt-4 align-middle">{{item.description}}
-                    </p>
+                    <p class="ml-4 mt-4 align-middle">{{item.description}}</p>
                 </div>
             </div>
         </div>
@@ -52,31 +49,34 @@
                     sportsList: [
                         {
                             name: "バッティングドーム",
-                            img: "../../img/services/sports_batting.jpg",
-                            description: "Rokomoko Bowl",
+                            img: "../../img/services/sports-park/batting.jpg",
+                            description: "最新型ピッチングマシンを導入! 130kmの速球にも挑めます。本格的にバッティング練習がしたい方にはもちろん、ストレスや運動不足を解消したいという方にもおすすめです。",
+                        },
+                        {
+                            name: "スラックアウト",
+                            img: "../../img/services/sports-park/strike.jpg",
+                            description: "おなじみの的当てピッチングゲームです。全ての的にボールを当てるのは至難の技！ぜひ挑戦してみてください。",
+                        },
+                        {
+                            name: "ミニサッカー",
+                            img: "../../img/services/sports-park/soccer.jpg",
+                            description: "2F屋外に、ミニサッカーコートを設置しております。普通のサッカーよりもコートが狭いため少人数でも楽しめるほか、シュートもたくさん打てます。小さなお子様でも、お気軽に楽しめます。",
                         },
                         {
                             name: "3on3",
-                            img: "../../img/services/3on3.jpg",
-                            description: "Rokomoko Bowl",
+                            img: "../../img/services/sports-park/3on3.jpg",
+                            description: "2F屋外に設置した「3on3」コートです。ミニサッカーと同じく少人数でもプレイできます。体を動かしたい時などにお使い下さい。",
                         },
                         {
-                            name: "バッティングドーム",
-                            img: "../../img/services/sports_batting.jpg",
-                            description: "Rokomoko Bowl",
-                        },
-                        {
-                            name: "3on3",
-                            img: "../../img/services/3on3.jpg",
-                            description: "Rokomoko Bowl",
+                            name: "バドミントン/ミニバレーボール",
+                            img: "../../img/services/sports-park/bad.jpg",
+                            description: "バドミントンやバレーボールができるミニコートを2面設置しております。家族や友達と一緒にお楽しみ下さい。",
                         },
                     ],
                 };
             },
         }).mount('#sports');
-
     </script>
 </body>
-
 
 </html>
