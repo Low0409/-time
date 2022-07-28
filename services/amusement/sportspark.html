@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../favicon.ico" id="favicon">
-
+    <script src="https://unpkg.com/vue@3.2.4"></script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
     <title>-基本サービス-</title>
@@ -27,26 +27,56 @@
     <div style="background-image:url(../img/store.jpg);" class="relative py-20 bg-cover bg-center bg-no-repeat mb-20 mt-10">
         <h2 class="text-2xl leading-normal mb-2 text-center bg-black text-white py-2">－スポーツパーク－</h2>
     </div>
-    <div class="max-w-4xl m-auto">
-
-
-        <h3 class="text-red-800 text-2xl mb-2 text-center">スポーツパーク</h3>
-        <div class="sm:flex max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-            <div class="sm:w-1/2">
-                <img src="../../img/services/sports_batting.jpg" alt="" class="rounded-lg rounded-3xl">
-            </div>
-            <div class="sm:w-1/2">
-                <p class="ml-4 mt-4 align-middle">バッティングドーム
-                </p>
+    <div class="max-w-4xl m-auto" id="sports">
+        <div v-for="item in sportsList">
+            <h3 class="text-red-800 text-2xl mb-2 text-center">{{item.name}}</h3>
+            <div class="sm:flex max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
+                <div class="sm:w-1/2">
+                    <img :src="item.img" alt="" class="rounded-lg rounded-3xl">
+                </div>
+                <div class="sm:w-1/2">
+                    <p class="ml-4 mt-4 align-middle">{{item.description}}
+                    </p>
+                </div>
             </div>
         </div>
-
     </div>
 
     <div id="footer"></div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
+    <script>
+        const sports = Vue.createApp({
+            data() {
+                return {
+                    sportsList: [
+                        {
+                            name: "バッティングドーム",
+                            img: "../../img/services/sports_batting.jpg",
+                            description: "Rokomoko Bowl",
+                        },
+                        {
+                            name: "3on3",
+                            img: "../../img/services/3on3.jpg",
+                            description: "Rokomoko Bowl",
+                        },
+                        {
+                            name: "バッティングドーム",
+                            img: "../../img/services/sports_batting.jpg",
+                            description: "Rokomoko Bowl",
+                        },
+                        {
+                            name: "3on3",
+                            img: "../../img/services/3on3.jpg",
+                            description: "Rokomoko Bowl",
+                        },
+                    ],
+                };
+            },
+        }).mount('#sports');
 
+    </script>
 </body>
+
 
 </html>
