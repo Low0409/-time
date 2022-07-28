@@ -88,23 +88,23 @@ services.component("service-div", {
     <img src="../img/icon/service-icon/pinpon.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">卓球</p>
   </div>
-  <div class="col-span-2" v-if="!sportspark">
+  <div class="col-span-2" v-if="sportspark">
     <img src="../img/icon/service-icon/batting.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">バッティング</p>
   </div>
-  <div class="col-span-2" v-if="!sportspark">
+  <div class="col-span-2" v-if="sportspark">
     <img src="../img/icon/service-icon/badminton.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">バドミントン</p>
   </div>
-  <div class="col-span-2" v-if="!sportspark">
+  <div class="col-span-2" v-if="sportspark">
     <img src="../img/icon/service-icon/3on3.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">3on3</p>
   </div>
-  <div class="col-span-2" v-if="!sportspark">
+  <div class="col-span-2" v-if="sportspark">
   <img src="../img/icon/service-icon/football.svg" class="rounded-xl px-2" />
   <p class="text-xs font-semibold sm:text-base text-center">フットボール</p>
   </div>
-  <div class="col-span-2" v-if="!sportspark">
+  <div class="col-span-2" v-if="sportspark">
   <img src="../img/icon/service-icon/volleyball.svg" class="rounded-xl px-2" />
   <p class="text-xs font-semibold sm:text-base text-center">バレーボール</p>
   </div>
