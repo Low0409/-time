@@ -86,7 +86,7 @@
 
   </ui-card>
 
-  <!-- Infomation部分 TOP-data.js subslider空読み込み-->
+  <!-- Infomation部分 TOP-data.js subsliderから読み込み-->
   <div class="multiple p-0" id="sub-slider">
     <div v-for="item in SUBsliderList" class="mx-2"><a :href="item.path"><img :src="item.img" class="w-full"></a></div>
   </div>
@@ -95,8 +95,9 @@
   <h2 class="text-2xl leading-normal font-bold text-center text-yellow-100 bg-red-800 py-2 max-w-xs mx-auto mt-20 mb-10"> @timeのサービス</h2>
 
 
-  <div id="k" class="mb-20">
-    <!-- スマホのサービスアイコン -->
+  <div id="services" class="mb-20">
+    <!-- スマホのサービスアイコン TOP-data.jsのServiceListから読み込み-->
+
     <div class="flex items-center justify-center" id="sp-content">
       <div class="grid grid-cols-6 gap-x-1 gap-y-1 m-auto">
         <div class="col-span-2 bg-gray-400" v-for="item in ServiceList">
@@ -161,7 +162,7 @@
   <script type="text/javascript" src="slick/slick.min.js"></script>
   <script src="./dataJS/TOP-data.js"></script>
   <script>
-    const mountedApp1 = app.mount('#k');
+    const mountedApp1 = app.mount('#services');
     const mountedApp2 = topslider.mount('#default-carousel');
     const mountedApp3 = subslider.mount('#sub-slider');
   </script>
