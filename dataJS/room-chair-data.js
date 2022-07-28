@@ -69,45 +69,52 @@ const app = Vue.createApp({
             "30人ほどが入れる大きなお部屋です。大人数でカラオケを楽しむことができ、打ち上げや二次会などにもご利用頂けます。",
         },
       ],
-        chairList: [
-          {
-            name: "リクライニング席",
-            img: "./img/room-chair/booth_reclining.jpg",
-            description: "個室仕様の静かでゆったりとしたリクライニングチェア席です。インターネットだけでなく、DVD鑑賞やゲーム、読書などを楽しむのに最適です。",
-          },
-          {
-            name: "キャプテンシート",
-            img: "./img/room-chair/booth_captain.jpg",
+      chairList: [
+        {
+          name: "リクライニング席",
+          img: "./img/room-chair/booth_reclining.jpg",
+          description:
+            "個室仕様の静かでゆったりとしたリクライニングチェア席です。インターネットだけでなく、DVD鑑賞やゲーム、読書などを楽しむのに最適です。",
+        },
+        {
+          name: "キャプテンシート",
+          img: "./img/room-chair/booth_captain.jpg",
 
-            description: "大人気！！座り心地抜群のキャプテンシート。頭を支えてくれるほどに背もたれが高いので、ビジネスや勉強にと、多目的にご利用いただけます。",
-          },
-          {
-            name: "マッサージチェア",
-            img: "./img/room-chair/booth_massage.jpg",
+          description:
+            "大人気！！座り心地抜群のキャプテンシート。頭を支えてくれるほどに背もたれが高いので、ビジネスや勉強にと、多目的にご利用いただけます。",
+        },
+        {
+          name: "マッサージチェア",
+          img: "./img/room-chair/booth_massage.jpg",
 
-            description: "仕事や生活で溜まった疲れを、アットタイム自慢のスーパーマッサージチェアで癒してください。",
-          },
-          {
-            name: "座敷席",
-            img: "./img/room-chair/booth_zashiki.jpg",
-            description: "個室仕様の静かな座敷席。足を伸ばしてみたり、寝転んでみたり。思い思いの過ごし方をお楽しみいただけます。",
-          },
-          {
-            name: "ペア座敷席",
-            img: "./img/room-chair/booth_pairzashiki.jpg",
-            description: "座敷席をペアでお使いいただけます。パソコンやDVD観賞のほかに、オンラインゲームもお楽しみいただけます。",
-          },
-          {
-            name: "ペアソファ席",
-            img: "./img/room-chair/booth_pairsofa.jpg",
-            description: "大きなソファが人気のペアソファ席。家族や友達とゆったりとした時間をお過ごし下さい。",
-          },
-          {
-            name: "オープン席",
-            img: "./img/room-chair/booth_open.jpg",
-            description: "個室よりもリーズナブルな料金でご利用いただけます。景色を楽しみながらゆっくりとおくつろぎください！",
-          },
-        ],
+          description:
+            "仕事や生活で溜まった疲れを、@time自慢のスーパーマッサージチェアで癒してください。",
+        },
+        {
+          name: "座敷席",
+          img: "./img/room-chair/booth_zashiki.jpg",
+          description:
+            "個室仕様の静かな座敷席。足を伸ばしてみたり、寝転んでみたり。思い思いの過ごし方をお楽しみいただけます。",
+        },
+        {
+          name: "ペア座敷席",
+          img: "./img/room-chair/booth_pairzashiki.jpg",
+          description:
+            "座敷席をペアでお使いいただけます。パソコンやDVD観賞のほかに、オンラインゲームもお楽しみいただけます。",
+        },
+        {
+          name: "ペアソファ席",
+          img: "./img/room-chair/booth_pairsofa.jpg",
+          description:
+            "大きなソファが人気のペアソファ席。家族や友達とゆったりとした時間をお過ごし下さい。",
+        },
+        {
+          name: "オープン席",
+          img: "./img/room-chair/booth_open.jpg",
+          description:
+            "個室よりもリーズナブルな料金でご利用いただけます。景色を楽しみながらゆっくりとおくつろぎください！",
+        },
+      ],
     };
   },
 });
