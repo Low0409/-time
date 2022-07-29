@@ -27,12 +27,28 @@
         <h2 class="text-2xl leading-normal mb-2 font-black text-center bg-black text-white py-2">－キャンペーン情報－</h2>
     </div>
     <div class="max-w-3xl mx-auto" id="campaign">
-        <div v-for="item in campaignList" class="mx-auto mb-4 mt-20">
+        <div v-for="item in campaignList" class="mx-auto mb-4 mt-20 font-black text-center">
             <!-- campaign-data.jsから読み込み -->
-            <p class="text-center text-gray-600 font-black text-xl">{{ item.date }}</p> <!-- 掲載日　(ある場合) -->
-            <p class="text-2xl font-black text-center border-b-2 border-gray-600 mb-8" :id="item.id">{{ item.title }}</p>
+            <p class="text-gray-600 text-xl">{{ item.date }}</p> <!-- 掲載日　(ある場合) -->
+            <p class="text-2xl border-b-2 border-gray-600 mb-8" :id="item.id">{{ item.title }}</p>
 
             <img :src="item.img" class="w-full">
+        </div>
+
+        <div id="coupon" class="mt-8 font-black">
+            <h3 class="bg-red-800 text-white py-4 text-2xl font-md mb-4 text-center">割引クーポン情報</h3>
+            <img src="../img/news&campaign/Coupon/1701.jpg" alt="クーポン" class="mx-auto">
+            <p class="text-xl md:text-2xl mt-4 text-center underline">有効期:2022年9月30日（金 ）24時まで</p>
+            <p class="text-red-500 text-center text-sm">※なお、お盆期間中（8/10～16）の間は割引対象外です。</p>
+
+            <div class="bg-gray-200">
+                <p class="mt-4 text-center pt-4">◆ご利用上の注意◆</p>
+                <ul class="p-4 text-sm">
+                    <li>・他のサービス、割引券との併用はできません。本券は受付の際にご提示ください。</li>
+                    <li>・アットタイム全店でご利用いただけます。</li>
+                    <li>・お一組様につき1枚ご利用いただけます。</li>
+                </ul>
+            </div>
         </div>
     </div>
 
