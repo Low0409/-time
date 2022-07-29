@@ -166,7 +166,13 @@
     const mountedApp2 = topslider.mount('#default-carousel');
     const mountedApp3 = subslider.mount('#sub-slider');
   </script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-rwdImageMaps/1.6/jquery.rwdImageMaps.min.js"></script>
+  <script>
+    $(function(){
+      //rwdImageMaps
+      $('img[usemap]').rwdImageMaps();
+    });
+    </script>
 </body>
 <script type="text/javascript">
 
