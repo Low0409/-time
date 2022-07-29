@@ -4,7 +4,7 @@ const video = Vue.createApp({
       VideoServiceList: [
         {
           name: "BANDAI CHANNEL",
-          img: "../../img/services/movie-services/bandai.JPG",
+          img: "../../img/services/movie-services/bandai.jpg",
           description:
             "最新作から名作までアニメをたっぷり楽しめる動画配信サービス!@timeでは、対象の作品が見放題!",
         },
@@ -28,25 +28,25 @@ const video = Vue.createApp({
         },
         {
           name: "GREEN CHANNEL",
-          img: "../../img/services/movie-services/green.JPG",
+          img: "../../img/services/movie-services/green.jpg",
           description:
             "中央競馬全レースをライブ配信するJRA公式の動画配信サービスです。レース展望など勝ち馬検討に役立つ中央競馬最新情報はもちろん、海外、地方競馬情報のコンテンツも充実。見逃し配信でお好きな時間にVOD動画で視聴することもできます。 ",
         },
         {
           name: "ふらっと動画",
-          img: "../../img/services/movie-services/frat.JPG",
+          img: "../../img/services/movie-services/frat.jpg",
           description:
             "懐かしの名作から最新作まで見放題!全国のふらっと動画公認店舗でお楽しみいただける国内最大の動画配信サービスです。",
         },
         {
           name: "パリーグTV",
-          img: "../../img/services/movie-services/Pa.JPG",
+          img: "../../img/services/movie-services/Pa.jpg",
           description:
             "パ・リーグTVはスマホ、PC、タブレットでパ・リーグ主催全試合をライブ配信します。見逃したシーンはVOD（動画）で見放題!いつでもどこでもプロ野球をお楽しみ頂けます。",
         },
         {
           name: "韓流チャンネル",
-          img: "../../img/services/movie-services/kanryu.JPG",
+          img: "../../img/services/movie-services/kanryu.jpg",
           description:
             "韓国ドラマならではのラブコメや、K-POPアイドルが活躍するドラマ及びバラエティー作品などを中心に、様々なジャンルの韓流映像コンテンツを保有。",
         },

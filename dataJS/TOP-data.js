@@ -102,6 +102,11 @@ const subslider = Vue.createApp({
           alt: "安心の新型コロナウイルス対策",
         },
         {
+          img: "./img/top-slider-img/4.jpg",
+          path: "./info/campaign.html#nyukai",
+          alt: "新規入会金無料キャンペーン実施中",
+        },
+        {
           img: "./img/top-slider-img/07_darts.jpg",
           path: "./info/campaign.html#iwatapro",
           alt: "岩田夏海プロ来店イベント",
@@ -112,24 +117,9 @@ const subslider = Vue.createApp({
           alt: "GREENチャンネル店内放送中",
         },
         {
-          img: "./img/top-slider-img/1.jpg",
-          path: "./info/campaign.html#newplan",
-          alt: "カラオケビリヤード新料金プラン登場",
-        },
-        {
           img: "./img/top-slider-img/2.jpg",
           path: "./info/campaign.html#bellroad",
           alt: "@time彦根ベルロードリニューアルオープン",
-        },
-        {
-          img: "./img/top-slider-img/3.jpg",
-          path: "./info/campaign.html#mahjong",
-          alt: "麻雀格闘俱楽部",
-        },
-        {
-          img: "./img/top-slider-img/4.jpg",
-          path: "./info/campaign.html#nyukai",
-          alt: "新規入会金無料キャンペーン実施中",
         },
         {
           img: "./img/top-slider-img/6.jpg",
@@ -137,12 +127,22 @@ const subslider = Vue.createApp({
           alt: "ボルガライス",
         },
         {
+          img: "./img/top-slider-img/3.jpg",
+          path: "./info/campaign.html#mahjong",
+          alt: "麻雀格闘俱楽部",
+        },
+        {
+          img: "./img/top-slider-img/1.jpg",
+          path: "./info/campaign.html#newplan",
+          alt: "カラオケビリヤード新料金プラン登場",
+        },
+        {
           img: "./img/top-slider-img/9.jpg",
           path: "./info/campaign.html#senior",
           alt: "いつでもシニア割",
         },
         {
-          img: "./img/top-slider-img/10.jpg",
+          img: "./img/top-slider-img/woman.jpg",
           path: "./info/campaign.html#ladies",
           alt: "レディースデー",
         },
