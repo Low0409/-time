@@ -36,7 +36,7 @@ const app = Vue.createApp({
       FlowList: [
         {
           name: "会員登録",
-          img: "./img/services/basic-services/drink.jpg",
+          img: "./img/step/step4.jpg",
           description:
             "初めてご利用のお客様は、フロントにてご入会の手続きをお願い致します。ご本人様であることをご確認する為に、身分証明書（免許書・パスポート・学生証など）をご提示ください。その場で会員証を発行いたします。※別途入会金273円 (税込300円)が必要となります。※ご提示いただいた免許証、パスポート等のコピーをご提供いただいておりますので、ご了承ください。",
         },
@@ -48,13 +48,13 @@ const app = Vue.createApp({
         },
         {
           name: "サービスのご利用",
-          img: "./img/services/basic-services/drink.jpg",
+          img: "./img/TOP/8.jpg",
           description:
             "・ご希望の座席、サービスをお楽しみください。・ドリンクバーはセルフサービスです。すべてご自由にご利用いただけます。・お食事もご用意しております。インターホン又はＰＣからご注文ください。（別料金）",
         },
         {
           name: "ご精算",
-          img: "./img/services/basic-services/drink.jpg",
+          img: "./img/step/step4.jpg",
           description:
             "フロントにて、ご利用サービス・滞在時間に応じた利用料金をご精算ください。※パック設定時間以上の滞在は、通常延長料金でご精算いただいております。※当店は何時間でもご利用いただけますが、24時間ごとに精算をお願いしております。",
         },
