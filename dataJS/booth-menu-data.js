@@ -129,14 +129,14 @@ const plate = Vue.createApp({
           name: "唐揚げプレート",
           price: "619",
           tax_price: "680",
-          img: "./img/menu/Booth/Plate/yakiniku.png",
+          img: "./img/menu/Booth/Plate/karaage.png",
           description: "Deep-fried chiken Plate",
         },
         {
           name: "ハンバーグプレート",
           price: "619",
           tax_price: "680",
-          img: "./img/menu/Booth/Plate/yakiniku.png",
+          img: "./img/menu/Booth/Plate/hamburg.png",
           description: "Hamburg Plate",
         },
         {
