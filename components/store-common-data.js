@@ -73,6 +73,9 @@ services.component("service-div", {
     "blue",
     "family",
     "kids",
+    "party",
+    "pairsofa",
+    "pairzashiki"
   ],
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
@@ -189,14 +192,11 @@ services.component("service-div", {
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">レギュラールーム</p>
   </div>
-  <div class="col-span-2" v-if="!partyroom">
+  <div class="col-span-2" v-if="!party">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">パーティールーム</p>
   </div>
-  <div class="col-span-2" v-if="open">
-  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">オープンブース</p>
-</div>
+
   <div class="col-span-2" v-if="!goldroom">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">金の部屋</p>
@@ -219,7 +219,7 @@ services.component("service-div", {
 </div>
 <div class="col-span-2" v-if="blue">
 <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">赤の部屋</p>
+<p class="text-xs font-semibold sm:text-base text-center">青の部屋</p>
 </div>
 <div class="col-span-2" v-if="family">
 <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
@@ -230,7 +230,7 @@ services.component("service-div", {
 <p class="text-xs font-semibold sm:text-base text-center">キッズルーム</p>
 </div>
 
-<div class="col-span-2" v-if="!kagi">
+<div class="col-span-2" v-if="kagi">
 <img src="../img/icon/service-icon/kagi.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">鍵付き防音個室</p>
 </div>
@@ -249,6 +249,18 @@ services.component("service-div", {
 <div class="col-span-2" v-if="!zashiki">
 <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">座敷席</p>
+</div>
+<div class="col-span-2" v-if="pairzashiki">
+<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">ペア座敷席</p>
+</div>
+<div class="col-span-2" v-if="pairsofa">
+<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">ペアソファ席</p>
+</div>
+<div class="col-span-2" v-if="open">
+<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">オープン席</p>
 </div>
 </div>
 
