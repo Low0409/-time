@@ -31,11 +31,9 @@ Access.component("access-div", {
   </div>`,
 });
 
-
-
 const services = Vue.createApp({});
 // 引数を少なくするためにほとんどの店舗にあるサービスは、無い店舗だけ引数を渡して表示しないようにする　       例) v-if="!darts"
-// 逆に2店舗ぐらいにしかないサービスは引数を渡した店舗にだけ表示させる                                      例) v-if="sportspark"  ("!"付けない)　 
+// 逆に2店舗ぐらいにしかないサービスは引数を渡した店舗にだけ表示させる                                      例) v-if="sportspark"  ("!"付けない)
 
 services.component("service-div", {
   props: [
@@ -55,7 +53,6 @@ services.component("service-div", {
     "shower",
     "massage",
     "zashiki",
-    "kagituki",
     "woman",
     "video",
     "soft",
@@ -68,6 +65,8 @@ services.component("service-div", {
     "shower_no_free",
     "open",
     "flat",
+    "gold",
+    "silver",
     "kaidan",
     "red",
     "blue",
@@ -75,7 +74,9 @@ services.component("service-div", {
     "kids",
     "party",
     "pairsofa",
-    "pairzashiki"
+    "pairzashiki",
+    "tatami",
+    "regular"
   ],
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
@@ -188,32 +189,36 @@ services.component("service-div", {
   <div class="col-span-full mb-3">
     <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">カラオケルーム・ネットカフェ席</p>
   </div>
-  <div class="col-span-2" v-if="!regularroom">
+  <div class="col-span-2" v-if="!regular">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">レギュラールーム</p>
   </div>
+  <div class="col-span-2" v-if="flat">
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p class="text-xs font-semibold sm:text-base text-center">フルフラットルーム</p>
+</div>
+<div class="col-span-2" v-if="kaidan">
+<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">階段の部屋</p>
+</div>
+<div class="col-span-2" v-if="tatami">
+<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">畳の部屋</p>
+</div>
   <div class="col-span-2" v-if="!party">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">パーティールーム</p>
   </div>
 
-  <div class="col-span-2" v-if="!goldroom">
+  <div class="col-span-2" v-if="!gold">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">金の部屋</p>
   </div>
-  <div class="col-span-2" v-if="!silverroom">
+  <div class="col-span-2" v-if="!silver">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">銀の部屋</p>
   </div>
-  <div class="col-span-2" v-if="flat">
-    <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">フルフラットルーム</p>
-  </div>
-  <div class="col-span-2" v-if="kaidan">
-  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">階段の部屋</p>
-</div>
-<div class="col-span-2" v-if="red">
+  <div class="col-span-2" v-if="red">
 <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">赤の部屋</p>
 </div>
@@ -236,11 +241,11 @@ services.component("service-div", {
 </div>
 <div class="col-span-2" v-if="!reclining">
 <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">リクライニングチェア</p>
+<p class="text-xs font-semibold sm:text-base text-center">リクライニング席</p>
 </div>
 <div class="col-span-2" v-if="!captain">
 <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">キャプテンシート</p>
+<p class="text-xs font-semibold sm:text-base text-center">キャプテンシート席</p>
 </div>
 <div class="col-span-2" v-if="!massage">
 <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
