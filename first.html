@@ -36,12 +36,19 @@
   </div>
   <div class="max-w-4xl m-auto" id="first">
     <!-- @timeサービスの紹介 -->
+
     <div v-for="item in ServiceList" class="font-black">
-      <h3 class="text-red-800 text-2xl mb-2 text-center">{{item.name}}</h3>
-      <div class="sm:flex  max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
-        <img :src="item.img" class="sm:w-1/2 rounded-lg rounded-3xl">
-        <p class="ml-4 mt-4 align-middle">{{item.description}}</p>
+
+      <h3 class="text-red-800 font-black text-2xl mb-2 text-center">{{item.name}}</h3>
+      <div class="sm:flex max-w-4xl py-8 px-8 rounded-3xl mb-20 shadow-2xl bg-white">
+          <div class="sm:w-1/2">
+            <img :src="item.img" class="rounded-lg rounded-3xl">
+          </div>
+          <div class="sm:w-1/2">
+              <p class="ml-4 mt-4 align-middle">{{item.description}} </p>
+          </div>
       </div>
+
     </div>
 
     <a href="./services.html">
@@ -53,11 +60,15 @@
     <!-- @time来店からの流れ・会員登録 -->
 
     <div class="sm:flex shadow-2xl max-w-4xl py-8 px-8 rounded-3xl mb-20 bg-white font-black" v-for="item in  FlowList">
-      <div>
-        <h3 class="bg-red-800 text-white text-xl text-center w-1/2 mx-auto py-2">{{item.name}}</h3>
+
+
+      <div class="sm:w-1/2">
+        <h3 class="bg-red-800 text-white text-xl text-center mx-auto py-2">{{item.name}}</h3>
         <p class="ml-4 mt-4 align-middle">{{item.description}}</p>
       </div>
-      <img :src="item.img" :alt="item.name" class="sm:w-1/2 rounded-lg rounded-3xl">
+      <div class="sm:w-1/2">
+              <img :src="item.img" :alt="item.name" class="rounded-lg rounded-3xl">
+      </div>
     </div>
 
 
