@@ -6,8 +6,8 @@
 
     <div class="max-w-4xl m-auto px-4 py-8 flex item-center mx-auto justify-center">
 
-      <a href="https://twitter.com/attime_shiga" class="w-1/6 mx-10" id="twitter"><img src="/-time/img/icon/Twitter.png" alt="@time公式twitter"></a>
-      <a href="./info/campaign.html#line" class="w-1/6 mx-10" id="line"><img src="/-time/img/icon/LINE.png" alt="@time公式LINE"></a>
+      <a href="https://twitter.com/attime_shiga" class="w-1/6 mx-10" id="twitter"><img src="/-time/img/icon/Twitter.png" alt="@time公式twitter" class="hover:brightness-110"></a>
+      <a href="./info/campaign.html#line" class="w-1/6 mx-10" id="line"><img src="/-time/img/icon/LINE.png" alt="@time公式LINE" class="hover:brightness-110"></a>
 
     </div>
   </div>
@@ -50,10 +50,10 @@
   //スムーススクロール
   $(function () {
     $('a[href^="#"]').click(function () {
-      var speed = 500;
-      var href = $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
+      let speed = 500;
+      let href = $(this).attr("href");
+      let target = $(href == "#" || href == "" ? 'html' : href);
+      let position = target.offset().top;
       $("html, body").animate({ scrollTop: position }, speed, "swing");
       return false;
     });

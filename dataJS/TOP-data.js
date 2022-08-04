@@ -102,6 +102,11 @@ const subslider = Vue.createApp({
           alt: "安心の新型コロナウイルス対策",
         },
         {
+          img: "./img/top-slider-img/08_nomihoudai.jpg",
+          path: "./info/campaign.html#nomihoudai",
+          alt: "セルフ飲み放題プラン",
+        },
+        {
           img: "./img/top-slider-img/4.jpg",
           path: "./info/campaign.html#nyukai",
           alt: "新規入会金無料キャンペーン実施中",
@@ -137,7 +142,7 @@ const subslider = Vue.createApp({
           alt: "カラオケビリヤード新料金プラン登場",
         },
         {
-          img: "./img/top-slider-img/9.jpg",
+          img: "./img/top-slider-img/senior.jpg",
           path: "./info/campaign.html#senior",
           alt: "いつでもシニア割",
         },

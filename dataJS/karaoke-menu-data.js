@@ -77,7 +77,7 @@ const onecoin = Vue.createApp({
           name: "タワーオニオンフライ",
           price: "455",
           tax_price: "500",
-          img: "./img/menu/Karaoke/1coin/toworonion.png",
+          img: "./img/menu/Karaoke/1coin/toweronion.png",
           description: "Onion rings",
         },
         {

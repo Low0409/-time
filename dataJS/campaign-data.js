@@ -4,6 +4,12 @@ const app = Vue.createApp({
       // campaign.htmlのデータ
       campaignList: [
         {
+          title: "【ベルロード店】ベルロード店限定！アルコール、セルフ飲み放題プラン実施！",
+          img: "../img/news&campaign/08_nomihoudai.jpg",
+          id: "nomihoudai",
+          date: "2022/08/03",
+        },
+        {
           title: "【全店】入会金無料キャンペーン実施中！",
           img: "../img/news&campaign/07_nyukai.jpg",
           id: "nyukai",
