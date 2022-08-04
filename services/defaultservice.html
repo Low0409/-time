@@ -26,6 +26,7 @@
     </div>
     <div class="max-w-4xl m-auto" id="basic">
         <div v-for="item in basicServicesList">
+            <p class="link-t-a" :id="item.id"></p>
             <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.title}}</h3>
             <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
                 <div class="sm:w-1/2">
@@ -44,6 +45,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
 </body>
+<style>
+    .link-t-a {
+        position: relative;
+        top: -150px;
+        display: block;
+        }
+</style>
 <script>
     const app = Vue.createApp({
         data() {
@@ -51,25 +59,30 @@
                 basicServicesList: [
                     {
                         title: "ソフトクリーム無料",
+                        id: "soft",
                         img: "../img/services/basic-services/soft.jpg",
                         text: "@timeでは、ソフトクリーム食べ放題です。豊富な品揃えのコミックを片手に、思い思いの時間をお過ごしください。",
                     },
                     {
                         title: "ドリンクバー無料",
+                        id: "drink",
                         img: "../img/services/basic-services/drink.jpg",
                         text: "@timeでは、ソフトドリンクは勿論、淹れたてのコーヒーや紅茶、フローズンドリンクまで。20種類以上のドリンクが全て飲み放題です。",
                     },
                     {
                         title: "スープバー無料",
+                        id: "soup",
                         img: "../img/services/basic-services/soupbar.jpg",
                         text: "@timeでは、無料のスープバーもご用意しています。",
                     }, {
                         title: "シャワー無料",
+                        id: "shower",
                         img: "../img/services/basic-services/syawa.jpg",
                         text: `汗を流したい⽅には、シャワールームも完備。※一部有料の店舗がございます。詳しくは各店舗ページのサービス一覧をご確認ください。`,
                     },
                     {
                         title: "フリーWi-Fi",
+                        id: "wifi",
                         img: "../img/services/basic-services/wi-fi.jpg",
                         text: "@timeでは、フリーWi-Fiをご利用いただけます。",
                     },

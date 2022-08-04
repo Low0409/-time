@@ -69,7 +69,7 @@ const study = Vue.createApp({
           name: "WPS Office",
           img: "../../img/services/business/WPSOffice.png",
           description:
-            "ビジネスや勉強にも役立つ「エクセル」「ワード」を全てのパソコンにインストールしてあります。試験勉強やレポート作成の際などにご利用ください。",
+            "@timeのPCで、WPS Officeが利用可能です。試験勉強や資料作成、レポート作成の際などにご利用ください。",
         },
         {
           name: "NewsPicks",
