@@ -86,7 +86,7 @@ const app = Vue.createApp({
         },
         {
           name: "スープバー",
-          img: "./img/services/basic-services/soup.jpg",
+          img: "./img/services/basic-services/soupbar.jpg",
           description: "Soup bar",
           url: "./services/defaultservice.html",
         },
