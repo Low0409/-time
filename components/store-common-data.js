@@ -76,7 +76,8 @@ services.component("service-div", {
     "pairsofa",
     "pairzashiki",
     "tatami",
-    "regular"
+    "regular",
+    "slot",
   ],
   template: `
   <div class="grid grid-cols-12 max-w-4xl">
@@ -113,7 +114,7 @@ services.component("service-div", {
   </div>
   <div class="col-span-2" v-if="sportspark">
   <img src="../img/icon/service-icon/football.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">フットボール</p>
+  <p class="text-xs font-semibold sm:text-base text-center">フットサル</p>
   </div>
   <div class="col-span-2" v-if="sportspark">
   <img src="../img/icon/service-icon/volleyball.svg" class="rounded-xl px-2" />
@@ -146,6 +147,10 @@ services.component("service-div", {
 <div class="col-span-2" v-if="!band">
 <img src="../img/icon/service-icon/band.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">バンドスタジオ</p>
+</div>
+<div class="col-span-2" v-if="slot">
+<img src="../img/icon/service-icon/slot.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">スロットマシン</p>
 </div>
 </div>
 

@@ -472,7 +472,7 @@ BoothPlan.component("booth-plan-table2", {
               </th>
               <th scope="col" class="text-sm sm:px-6 py-4">
               </th>
-              <th scope="col" class="text-md sm:px-6 py-4 bg-gray-300">
+              <th scope="col" class="text-md sm:px-6 py-4 bg-gray-300 w-1/2">
                 {{text}}
               </th>
             </tr>
