@@ -124,10 +124,7 @@ services.component("service-div", {
       <img src="../img/icon/service-icon/table.svg" class="rounded-xl px-2" />
       <p>麻雀卓</p>
     </div>
-    <div class="col-span-2 mt-4" v-if="!mahjongkakutou">
-    <img src="../img/icon/service-icon/mkg.svg" class="rounded-xl px-2" />
-    <p>麻雀格闘俱楽部</p>
-  </div>
+
     <div class="col-span-2" v-if="!comic">
       <img src="../img/icon/service-icon/comic.svg" class="rounded-xl px-2" />
       <p>コミック</p>
@@ -152,6 +149,10 @@ services.component("service-div", {
   <img src="../img/icon/service-icon/slot.svg" class="rounded-xl px-2" />
   <p>スロットマシン</p>
   </div>
+  <div class="col-span-2" v-if="!mahjongkakutou">
+  <img src="../img/icon/service-icon/mkg1.svg" class="rounded-xl px-2" />
+  <p>麻雀格闘俱楽部</p>
+</div>
   </div>
   
 
