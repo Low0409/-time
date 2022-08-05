@@ -150,7 +150,7 @@ services.component("service-div", {
   <p>スロットマシン</p>
   </div>
   <div class="col-span-2" v-if="!mahjongkakutou">
-  <img src="../img/icon/service-icon/mkg1.svg" class="rounded-xl px-2" />
+  <img src="../img/icon/service-icon/MKG1.svg" class="rounded-xl px-2" />
   <p>麻雀格闘俱楽部</p>
 </div>
   </div>
