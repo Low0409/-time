@@ -195,14 +195,15 @@ services.component("service-div", {
     <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">カラオケルーム・ネットカフェ席</p>
   </div>
   <p class="col-span-full text-gray-800 text-center font-black mb-4">カラオケルーム</p>
+  <div class="col-span-2" v-if="!party">
+  <img src="../img/icon/service-icon/partyroom.svg" class="rounded-xl px-2" />
+  <p class="text-xs font-semibold sm:text-base text-center">パーティールーム</p>
+</div>
   <div class="col-span-2" v-if="!regular">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
     <p class="text-xs font-semibold sm:text-base text-center">レギュラールーム</p>
   </div>
-  <div class="col-span-2" v-if="flat">
-  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">フルフラットルーム</p>
-</div>
+
 <div class="col-span-2" v-if="kaidan">
 <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">階段の部屋</p>
@@ -211,10 +212,7 @@ services.component("service-div", {
 <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">畳の部屋</p>
 </div>
-  <div class="col-span-2" v-if="!party">
-    <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">パーティールーム</p>
-  </div>
+
 
   <div class="col-span-2" v-if="!gold">
     <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
@@ -239,6 +237,10 @@ services.component("service-div", {
 <div class="col-span-2" v-if="kids">
 <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
 <p class="text-xs font-semibold sm:text-base text-center">キッズルーム</p>
+</div>
+<div class="col-span-2" v-if="flat">
+<img src="../img/icon/service-icon/flat.svg" class="rounded-xl px-2" />
+<p class="text-xs font-semibold sm:text-base text-center">フルフラットルーム</p>
 </div>
 <p class="col-span-full text-gray-800 text-center font-black my-8">ネットカフェ席</p>
 
