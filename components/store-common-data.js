@@ -61,7 +61,6 @@ services.component("service-div", {
     "motikomi",
     "reclining",
     "captain",
-    "massage",
     "shower_no_free",
     "open",
     "flat",
@@ -78,205 +77,212 @@ services.component("service-div", {
     "tatami",
     "regular",
     "slot",
+    "kids_flat"
   ],
   template: `
-  <div class="grid grid-cols-12 max-w-4xl">
+  <div class="grid grid-cols-12 max-w-4xl text-xs font-semibold sm:text-base text-center">
+    <div class="col-span-full mb-3">
+      <p class="text-2xl text-gray-800 font-black my-10 catch flex justify-center items-center">アミューズメント</p>
+    </div>
+    <div class="col-span-2" v-if="!karaoke">
+      <img src="../img/icon/service-icon/karaoke.svg" class="rounded-xl px-2" />
+      <p>カラオケ</p>
+    </div>
+    <div class="col-span-2" v-if="!billiard">
+      <img src="../img/icon/service-icon/billi.svg" class="rounded-xl px-2" />
+      <p>ビリヤード</p>
+    </div>
+    <div class="col-span-2" v-if="!darts">
+      <img src="../img/icon/service-icon/darts.svg" class="rounded-xl px-2" />
+      <p>ダーツ</p>
+    </div>
+    <div class="col-span-2" v-if="!pinpon">
+      <img src="../img/icon/service-icon/pinpon.svg" class="rounded-xl px-2" />
+      <p>卓球</p>
+    </div>
+    <div class="col-span-2" v-if="sportspark">
+      <img src="../img/icon/service-icon/batting.svg" class="rounded-xl px-2" />
+      <p>バッティング</p>
+    </div>
+    <div class="col-span-2" v-if="sportspark">
+      <img src="../img/icon/service-icon/badminton.svg" class="rounded-xl px-2" />
+      <p>バドミントン</p>
+    </div>
+    <div class="col-span-2" v-if="sportspark">
+      <img src="../img/icon/service-icon/3on3.svg" class="rounded-xl px-2" />
+      <p>3on3</p>
+    </div>
+    <div class="col-span-2" v-if="sportspark">
+    <img src="../img/icon/service-icon/football.svg" class="rounded-xl px-2" />
+    <p>フットサル</p>
+    </div>
+    <div class="col-span-2" v-if="sportspark">
+    <img src="../img/icon/service-icon/volleyball.svg" class="rounded-xl px-2" />
+    <p>バレーボール</p>
+    </div>
+    <div class="col-span-2" v-if="!mahjong">
+      <img src="../img/icon/service-icon/table.svg" class="rounded-xl px-2" />
+      <p>麻雀卓</p>
+    </div>
+    <div class="col-span-2 mt-4" v-if="!mahjongkakutou">
+    <img src="../img/icon/service-icon/mkg.svg" class="rounded-xl px-2" />
+    <p>麻雀格闘俱楽部</p>
+  </div>
+    <div class="col-span-2" v-if="!comic">
+      <img src="../img/icon/service-icon/comic.svg" class="rounded-xl px-2" />
+      <p>コミック</p>
+    </div>
+    <div class="col-span-2" v-if="!online">
+      <img src="../img/icon/service-icon/game.svg" class="rounded-xl px-2" />
+      <p>オンラインゲーム</p>
+    </div>
+    <div class="col-span-2" v-if="!PC">
+    <img src="../img/icon/service-icon/PC.svg" class="rounded-xl px-2" />
+    <p>ビジネス・勉強</p>
+  </div>
+    <div class="col-span-2" v-if="!video">
+    <img src="../img/icon/service-icon/video.svg" class="rounded-xl px-2" />
+    <p>各種動画サービス</p>
+  </div>
+  <div class="col-span-2" v-if="!band">
+  <img src="../img/icon/service-icon/band.svg" class="rounded-xl px-2" />
+  <p>バンドスタジオ</p>
+  </div>
+  <div class="col-span-2" v-if="slot">
+  <img src="../img/icon/service-icon/slot.svg" class="rounded-xl px-2" />
+  <p>スロットマシン</p>
+  </div>
+  </div>
+  
+
+
+
+<div class="grid grid-cols-12 max-w-4xl text-xs font-semibold sm:text-base text-center">
   <div class="col-span-full mb-3">
-    <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">アミューズメント</p>
-  </div>
-  <div class="col-span-2" v-if="!karaoke">
-    <img src="../img/icon/service-icon/karaoke.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">カラオケ</p>
-  </div>
-  <div class="col-span-2" v-if="!billiard">
-    <img src="../img/icon/service-icon/billi.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">ビリヤード</p>
-  </div>
-  <div class="col-span-2" v-if="!darts">
-    <img src="../img/icon/service-icon/darts.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">ダーツ</p>
-  </div>
-  <div class="col-span-2" v-if="!pinpon">
-    <img src="../img/icon/service-icon/pinpon.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">卓球</p>
-  </div>
-  <div class="col-span-2" v-if="sportspark">
-    <img src="../img/icon/service-icon/batting.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">バッティング</p>
-  </div>
-  <div class="col-span-2" v-if="sportspark">
-    <img src="../img/icon/service-icon/badminton.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">バドミントン</p>
-  </div>
-  <div class="col-span-2" v-if="sportspark">
-    <img src="../img/icon/service-icon/3on3.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">3on3</p>
-  </div>
-  <div class="col-span-2" v-if="sportspark">
-  <img src="../img/icon/service-icon/football.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">フットサル</p>
-  </div>
-  <div class="col-span-2" v-if="sportspark">
-  <img src="../img/icon/service-icon/volleyball.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">バレーボール</p>
-  </div>
-  <div class="col-span-2" v-if="!mahjong">
-    <img src="../img/icon/service-icon/table.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">麻雀卓</p>
-  </div>
-  <div class="col-span-2 mt-4" v-if="!mahjongkakutou">
-  <img src="../img/icon/service-icon/mkg.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">麻雀格闘俱楽部</p>
-</div>
-  <div class="col-span-2" v-if="!comic">
-    <img src="../img/icon/service-icon/comic.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">コミック</p>
-  </div>
-  <div class="col-span-2" v-if="!online">
-    <img src="../img/icon/service-icon/game.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">オンラインゲーム</p>
-  </div>
-  <div class="col-span-2" v-if="!PC">
-  <img src="../img/icon/service-icon/PC.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">ビジネス・勉強</p>
-</div>
-  <div class="col-span-2" v-if="!video">
-  <img src="../img/icon/service-icon/video.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">各種動画サービス</p>
-</div>
-<div class="col-span-2" v-if="!band">
-<img src="../img/icon/service-icon/band.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">バンドスタジオ</p>
-</div>
-<div class="col-span-2" v-if="slot">
-<img src="../img/icon/service-icon/slot.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">スロットマシン</p>
-</div>
-</div>
-
-
-
-<div class="grid grid-cols-12 max-w-4xl">
-  <div class="col-span-full mb-3">
-    <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">基本サービス・基本設備</p>
+    <p class="text-2xl text-gray-800 font-black my-10 catch flex justify-center items-center">基本サービス・基本設備</p>
   </div>
   <div class="col-span-2" v-if="!food">
   <img src="../img/icon/service-icon/food.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">お食事</p>
+  <p>お食事</p>
 </div>
   <div class="col-span-2" v-if="!drink">
     <img src="../img/icon/service-icon/drink.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">ドリンクバー無料</p>
+    <p>ドリンクバー無料</p>
   </div>
   <div class="col-span-2" v-if="!soft">
     <img src="../img/icon/service-icon/soft.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">ソフトクリーム食べ放題</p>
+    <p>ソフトクリーム食べ放題</p>
   </div>
   <div class="col-span-2" v-if="!soup">
     <img src="../img/icon/service-icon/soup.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">スープバー無料</p>
+    <p>スープバー無料</p>
   </div>
   <div class="col-span-2" v-if="!shower">
     <img src="../img/icon/service-icon/shower.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">シャワー無料</p>
+    <p>シャワー無料</p>
   </div>
   <div class="col-span-2" v-if="shower_no_free">
     <img src="../img/icon/service-icon/shower.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">シャワー(有料)</p>
+    <p>シャワー(有料)</p>
   </div>
   <div class="col-span-2" v-if="!motikomi">
   <img src="../img/icon/service-icon/motikomi.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">飲食物もちこみok</p>
+  <p>飲食物もちこみok</p>
 </div>
 </div>
 
-<div class="grid grid-cols-12 max-w-4xl">
-  <div class="col-span-full mb-3">
-    <p class="text-2xl text-gray-800 text-center font-black my-10 catch flex justify-center items-center">カラオケルーム・ネットカフェ席</p>
-  </div>
-  <p class="col-span-full text-gray-800 text-center font-black mb-4">カラオケルーム</p>
-  <div class="col-span-2" v-if="!party">
-  <img src="../img/icon/service-icon/partyroom.svg" class="rounded-xl px-2" />
-  <p class="text-xs font-semibold sm:text-base text-center">パーティールーム</p>
+<div class="grid grid-cols-12 max-w-4xl text-xs font-semibold sm:text-base text-center">
+<div class="col-span-full mb-3">
+  <p class="text-2xl text-gray-800 font-black my-10 catch flex justify-center items-center">カラオケルーム・ネットカフェ席</p>
 </div>
-  <div class="col-span-2" v-if="!regular">
-    <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">レギュラールーム</p>
-  </div>
+<p class="col-span-full text-gray-800 font-black mb-4">カラオケルーム</p>
+<div class="col-span-2" v-if="!party">
+  <img src="../img/icon/service-icon/partyroom.svg" class="rounded-xl px-2" />
+  <p>パーティールーム</p>
+</div>
+<div class="col-span-2" v-if="!regular">
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>レギュラールーム</p>
+</div>
 
 <div class="col-span-2" v-if="kaidan">
-<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">階段の部屋</p>
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>階段の部屋</p>
 </div>
 <div class="col-span-2" v-if="tatami">
-<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">畳の部屋</p>
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>畳の部屋</p>
 </div>
 
 
-  <div class="col-span-2" v-if="!gold">
-    <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">金の部屋</p>
-  </div>
-  <div class="col-span-2" v-if="!silver">
-    <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-    <p class="text-xs font-semibold sm:text-base text-center">銀の部屋</p>
-  </div>
-  <div class="col-span-2" v-if="red">
-<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">赤の部屋</p>
+<div class="col-span-2" v-if="!gold">
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>金の部屋</p>
+</div>
+<div class="col-span-2" v-if="!silver">
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>銀の部屋</p>
+</div>
+<div class="col-span-2" v-if="red">
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>赤の部屋</p>
 </div>
 <div class="col-span-2" v-if="blue">
-<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">青の部屋</p>
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>青の部屋</p>
 </div>
 <div class="col-span-2" v-if="family">
-<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">ファミリールーム</p>
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>ファミリールーム</p>
 </div>
 <div class="col-span-2" v-if="kids">
-<img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">キッズルーム</p>
+  <img src="../img/icon/service-icon/room2.svg" class="rounded-xl px-2" />
+  <p>キッズルーム</p>
+</div>
+<div class="col-span-2" v-if="kids_flat">
+  <img src="../img/icon/service-icon/flatroom.svg" class="rounded-xl px-2" />
+  <p>キッズルーム</p>
 </div>
 <div class="col-span-2" v-if="flat">
-<img src="../img/icon/service-icon/flat.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">フルフラットルーム</p>
+  <img src="../img/icon/service-icon/flatroom.svg" class="rounded-xl px-2" />
+  <p>フルフラットルーム</p>
 </div>
 <p class="col-span-full text-gray-800 text-center font-black my-8">ネットカフェ席</p>
 
 <div class="col-span-2" v-if="kagi">
-<img src="../img/icon/service-icon/kagi.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">鍵付き防音個室</p>
+  <img src="../img/icon/service-icon/kagi.svg" class="rounded-xl px-2" />
+  <p>鍵付き防音個室</p>
 </div>
 <div class="col-span-2" v-if="!reclining">
-<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">リクライニング席</p>
+  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+  <p>リクライニング席</p>
 </div>
 <div class="col-span-2" v-if="!captain">
-<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">キャプテンシート席</p>
+  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+  <p>キャプテンシート席</p>
 </div>
 <div class="col-span-2" v-if="!massage">
-<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">マッサージ席</p>
+  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+  <p>マッサージ席</p>
 </div>
 <div class="col-span-2" v-if="!zashiki">
-<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">座敷席</p>
+  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+  <p>座敷席</p>
 </div>
 <div class="col-span-2" v-if="pairzashiki">
-<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">ペア座敷席</p>
+  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+  <p>ペア座敷席</p>
 </div>
 <div class="col-span-2" v-if="pairsofa">
-<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">ペアソファ席</p>
+  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+  <p>ペアソファ席</p>
 </div>
 <div class="col-span-2" v-if="open">
-<img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-<p class="text-xs font-semibold sm:text-base text-center">オープン席</p>
+  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
+  <p>オープン席</p>
 </div>
 </div>
+
 
 `,
 });
