@@ -55,7 +55,7 @@
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—
         料金案内表 —</h2>
       <p class="text-red-500 font-black text-center">ボタンで料金表が切り替わります</p>
-      <div class="flex max-w-3xl justify-center mx-auto text-xl mb-10">
+      <div class="md:flex max-w-3xl justify-center mx-auto text-xl mb-10">
         <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
         <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">カラオケ＆アミューズパック</p>
       </div>
@@ -243,8 +243,7 @@
   <div id="footer"></div>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-  <script src="../components/store-common-data.js
-"></script>
+  <script src="../components/store-common-data.js"></script>
   <script src="../components/price_table.js"></script>
   <script>
 
@@ -373,14 +372,8 @@
     basicPlan.mount('#plan');
     //リンクを変更
   </script>
-  <!-- 店舗のLINEurlに変更 -->
 
 </body>
-<script>
-  window.onload = function () {
-    document.getElementByID("#line").href = "https://lin.ee/ZSzWDYT";
-  };
-</script>
 
 <style>
   .active {
