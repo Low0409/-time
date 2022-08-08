@@ -65,24 +65,29 @@ const app = Vue.createApp({
 const topslider = Vue.createApp({
   data() {
     return {
+      //PC用画像しかないので、スマホ用の画像も入れる
       TOPsliderList: [
         {
-          img: "./img/top-slider-img/slider_11.jpg",
+          pc_img: "./img/top-slider-img/slider_11.jpg",
+          sp_img: "./img/top-slider-img/slider_11.jpg",
           path: "./services/karaoke.html",
           alt: "ダーツ岩田夏海プロ、来店イベント開催！",
         },
         {
-          img: "./img/top-slider-img/slider_6.jpg",
+          pc_img: "./img/top-slider-img/slider_6.jpg",
+          sp_img: "./img/top-slider-img/slider_sp_6.jpg",
           path: "./services/amusement/billiard.html",
           alt: "LIVEDAMAi大量導入!",
         },
         {
-          img: "./img/top-slider-img/slider_4.jpg",
+          pc_img: "./img/top-slider-img/slider_4.jpg",
+          sp_img: "./img/top-slider-img/slider_4.jpg",
           path: "./services/amusement/darts.html",
           alt: "24時間年中無休のカラオケ&アミューズ&インターネットカフェ",
         },
         {
-          img: "./img/top-slider-img/slider_10.jpg",
+          pc_img: "./img/top-slider-img/slider_10.jpg",
+          sp_img: "./img/top-slider-img/slider_10.jpg",
           path: "./services/amusement/takkyu.html",
           alt: "各種アミューズ施設も充実！",
         },
