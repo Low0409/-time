@@ -1,5 +1,5 @@
 const app = Vue.createApp({});
-// 各店舗ページの共通パーツ
+// 各店舗ページの上部
 app.component("store-div", {
   props: ["store", "text", "img"],
   template: `
@@ -21,6 +21,7 @@ app.component("store-div", {
 </div>`,
 });
 
+// 各店舗ページのグーグルマップ
 const Access = Vue.createApp({});
 
 Access.component("access-div", {
