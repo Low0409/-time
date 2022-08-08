@@ -266,14 +266,6 @@ services.component("service-div", {
   <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
   <p>マッサージ席</p>
 </div>
-<div class="col-span-2" v-if="!zashiki">
-  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-  <p>座敷席</p>
-</div>
-<div class="col-span-2" v-if="pairzashiki">
-  <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
-  <p>ペア座敷席</p>
-</div>
 <div class="col-span-2" v-if="pairsofa">
   <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
   <p>ペアソファ席</p>
@@ -281,6 +273,14 @@ services.component("service-div", {
 <div class="col-span-2" v-if="open">
   <img src="../img/icon/service-icon/sheet.svg" class="rounded-xl px-2" />
   <p>オープン席</p>
+</div>
+<div class="col-span-2" v-if="!zashiki">
+  <img src="../img/icon/service-icon/sheet_flat_type.svg" class="rounded-xl px-2" />
+  <p>座敷席</p>
+</div>
+<div class="col-span-2" v-if="pairzashiki">
+  <img src="../img/icon/service-icon/sheet_flat_type.svg" class="rounded-xl px-2" />
+  <p>ペア座敷席</p>
 </div>
 </div>
 

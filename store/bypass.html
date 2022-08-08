@@ -55,7 +55,7 @@
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—料金案内表 —</h2>
       <p class="text-red-500 font-black text-center">ボタンで料金表が切り替わります</p>
 
-      <div class="flex max-w-3xl justify-center mx-auto text-xl mb-10">
+      <div class="md:flex max-w-3xl justify-center mx-auto text-xl mb-10">
         <p @click="button1()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C1}">カラオケ料金表</p>
         <p @click="button2()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C2}">ブース料金表</p>
         <p @click="button3()" class="cursor-pointer text-center text-yellow-100 text-black py-2 px-4 m-2 rounded-lg border-solid" :class="{'active': C3}">麻雀time料金表</p>
@@ -65,7 +65,7 @@
         <!-- カラオケ料金↓ -->
 
         <div v-show="C1" id="karaokeT">
-          <div class="flex justify-center ">
+          <div class="flex justify-center">
             <a href="#1" class="text-yellow-100 bg-red-800 py-2 px-2 sm:px-4 m-2 rounded-lg">月～木</a>
             <a href="#2" class="text-yellow-100 bg-red-800 py-2 px-2 sm:px-4 m-2 rounded-lg">金・祝日前</a>
             <a href="#3" class="text-yellow-100 bg-red-800 py-2 px-2 sm:px-4 m-2 rounded-lg">土</a>
@@ -234,7 +234,7 @@
 
     <div id="services">
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4 mt-10">—設備・サービス —</h2>
-      <!-- 店舗にないサービスに『1』を渡す 例外:sportspark -->
+      <!-- 店舗にない/あるサービスに1渡す common-data.js参照   -->
       <service-div sportspark="1" open="1" kaidan="1" red="1" blue="1" kagi="1"></service-div>
 
     </div>

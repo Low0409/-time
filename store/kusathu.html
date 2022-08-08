@@ -38,7 +38,7 @@
 
   <!-- 共通パーツ・各店舗名・各店舗説明・各店舗画像 props -->
   <div id="store">
-    <store-div store="草津店" text="@time草津店です。最新機種を取り揃えたカラオケ部屋を、20部屋以上ご用意しております。豊富なフリードリンクもございますので、ぜひご利用ください。また、ビリヤード、ダーツ、卓球などを楽しめるアミューズメントスペースもございます。思い思いの時間をおくつろぎください。" img="../img//store/kusatu/kusatu.jpg"></store-div>
+    <store-div store="草津店" text="@time草津店です。最新機種を取り揃えたカラオケ部屋を、15部屋ご用意しております。豊富なフリードリンクもございますので、ぜひご利用ください。また、ビリヤード、ダーツ、卓球などを楽しめるアミューズメントスペースもございます。思い思いの時間をおくつろぎください。" img="../img//store/kusatu/kusatu.jpg"></store-div>
   </div>
   <!-- 共通パーツend-->
 
@@ -67,11 +67,11 @@
       <div>
         <!-- カラオケ料金↓ -->
         <div v-show="C1" id="karaokeT">
-          <div class="flex justify-center ">
-            <a href="#1" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">月～木</a>
-            <a href="#2" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">金・祝日前</a>
-            <a href="#3" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">土</a>
-            <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-4 m-2 rounded-lg">日・祝日</a>
+          <div class="flex justify-center">
+            <a href="#1" class="text-yellow-100 bg-red-800 py-2 px-2 sm:px-4 m-2 rounded-lg">月～木</a>
+            <a href="#2" class="text-yellow-100 bg-red-800 py-2 px-2 sm:px-4 m-2 rounded-lg">金・祝日前</a>
+            <a href="#3" class="text-yellow-100 bg-red-800 py-2 px-2 sm:px-4 m-2 rounded-lg">土</a>
+            <a href="#4" class="text-yellow-100 bg-red-800 py-2 px-2 sm:px-4 m-2 rounded-lg">日・祝日</a>
           </div>
           <div id="plan">
 
@@ -125,7 +125,7 @@
 
     <div id="services">
       <h2 class="text-2xl leading-normal mb-2 font-bold text-center bg-red-800 text-yellow-100 mt-2 py-4">—設備・サービス —</h2>
-      <!-- 店舗にないサービスに『1』を渡す 例外:sportspark -->
+      <!-- 店舗にない/あるサービスに1渡す common-data.js参照   -->
       <service-div band="1" pairzashiki="1" gold="1" silver="1" party="1" slot="1" kids_flat="1"></service-div>
     </div>
 

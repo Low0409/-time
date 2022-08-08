@@ -42,7 +42,7 @@ const app = Vue.createApp({
       netcafeServiceList: [
         {
           name: "動画サービス",
-          img: "./img/services/movie-services/bandai.jpg",
+          img: "./img/TOP/6.jpg",
           description: "Video Content Service",
           url: "./services/net-cafe/video.html",
         },
