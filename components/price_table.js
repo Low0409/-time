@@ -775,6 +775,23 @@ BoothPlan2.component("booth-plan-table5", {
 });
 
 
+const BoothPlanDetail = Vue.createApp({});
+
+BoothPlanDetail.component("booth-plan-detail", {
+
+  template: `
+  <div class="sm:flex font-black border-4 border-orange-500 bg-yellow-100">
+  <div class="bg-orange-500 text-white py-2 sm:py-8 text-center sm:w-1/3 text-xl">自動パック料金<br>キャンペーン実施中!</div>
+  <div class="py-4 sm:pt-10 mx-auto text-xl md:text-2xl text-center text-red-500">お得なパック料金に自動的に<br class="sm:hidden">切り替わります！</div>
+</div>
+<p class="font-black">※0歳～3歳のお子様は無料、4歳～小学生(12歳)のお子様は各席料金の半額となります。(保護者の方同伴のご利用となります。)</p>
+<p class="font-black">※当店は会員制となっております。ご入店のお客様、お一人様ずつの会員登録が必要となります。</p>
+<p class="font-black">※チャックアウト予定時間より5分経過しますと延長料金が発生し、10分毎に料金が加算されますので予めご了承ください。</p>
+</div>
+  `,
+});
+
+
 
 //麻雀timeの料金表/彦根・長浜バイパス・草津に使用　料金は店舗共通のため引数無し
 const MahjongTime = Vue.createApp({});
@@ -886,4 +903,3 @@ MahjongTime.component("mahjong-time-price-table", {
   </div>
   `,
 });
-

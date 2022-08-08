@@ -326,13 +326,9 @@
           <booth-plan-table b3="255" b4="200" c3="87" c4="73" d3="955" d4="573" e3="1391" e4="937" f3="1773" f4="1228" g3="2046" g4="1437" h3="2546" h4="1800" i3="3046" i4="2128" j3="3410" j4="2346" k3="3500" k4="2455" l3="1391" l4="937" m3="1728" m4="1182"></booth-plan-table>
           <p class="bg-black text-2xl p-2 text-white mx-auto my-2 w-1/3 text-center">土日・祝日</p>
           <booth-plan-table b3="255" b4="200" c3="87" c4="73" d3="1046" d4="664" e3="1482" e4="1028" f3="1864" f4="1319" g3="2137" g4="1528" h3="2637" h4="1891" i3="3137" i4="2219" j3="3500" j4="2437" k3="3591" k4="2546" l3="1482" l4="1028" m3="1819" m4="1273"></booth-plan-table>
-          <div class="sm:flex font-black border-4 border-orange-500 bg-yellow-100">
-            <div class="bg-orange-500 text-white py-2 sm:py-8 text-center sm:w-1/3 text-xl">自動パック料金<br>キャンペーン実施中!</div>
-            <div class="py-4 sm:pt-10 mx-auto text-xl md:text-2xl text-center text-red-500">お得なパック料金に自動的に<br class="sm:hidden">切り替わります！</div>
+          <div id="booth-plan-detail">
+            <booth-plan-detail></booth-plan-detail>
           </div>
-          <p class="font-black">※0歳～3歳のお子様は無料、4歳～小学生(12歳)のお子様は各席料金の半額となります。(保護者の方同伴のご利用となります。)</p>
-          <p class="font-black">※当店は会員制となっております。ご入店のお客様、お一人様ずつの会員登録が必要となります。</p>
-          <p class="font-black">※チャックアウト予定時間より5分経過しますと延長料金が発生し、10分毎に料金が加算されますので予めご了承ください。</p>
         </div>
 
         <!-- ブース料金↑ -->
@@ -381,6 +377,7 @@
     price.mount('#price_table');
     BoothPlan.mount('#booth');
     BoothPlan2.mount('#mahjong-kakutou');
+    BoothPlanDetail.mount('#booth-plan-detail');
     MahjongTime.mount('#mahjong-time');
   </script>
 </body>
