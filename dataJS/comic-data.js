@@ -1,7 +1,7 @@
 const app = Vue.createApp({
   data() {
     return {
-      number: 0,
+      more_comic_list: 0,
       btnMore: 1,
       ComicList: [
         {
@@ -145,9 +145,9 @@ const app = Vue.createApp({
     };
   },
   methods: {
-    more() {
-      this.number++;
+    more() {//もっと見るボタンが消えて、コミックリストが表示される
       this.btnMore--;
+      this.more_comic_list++;
     },
   },
 });
