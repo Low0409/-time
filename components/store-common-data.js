@@ -1,15 +1,15 @@
 const app = Vue.createApp({});
 // 各店舗ページの上部
 app.component("store-div", {
-  props: ["store", "text", "img","reservation"],
+  props: ["store", "text", "img","reservation_link"],
   template: `
   <div class="lg:flex items-center shadow-2xl py-12 md:px-20 sm:px-14 px-4 sm:px-6 rounded-2xl mb-20 mx-2 sm:mx-8 bg-white mt-10">
   <div class="md:px-10 sm:px-4">
       <img src="../img/logo.JPG" class="mx-auto">
       <h2 class="text-red-800 py-4 text-center text-4xl font-black m-auto">{{store}}</h2>
       <p class="text-gray-700 mb-2 md:mb-6 text-xl mt-4">{{text}}</p>
-      <a href="https://www.hotpepper.jp/strJ001238778/yoyaku/" target="_blank" v-if="reservation">
-      <button class="text-center my-4 bg-red-600 text-white font-bold py-4 px-2 shadow-2xl text-xl lg:text-2xl hover:bg-red-700 hover:text-white rounded-sm w-full md:mr-8 inline">@time{{store}} <br class="block sm:hidden">Web予約受付中</button>
+      <a :href="reservation_link" target="_blank" v-if="reservation_link">
+      <button class="text-center my-4 bg-red-600 text-white font-bold py-2 sm:py-4 px-2 shadow-2xl text-xl lg:text-2xl hover:bg-red-500 hover:text-white rounded-full md:rounded-sm w-full md:mr-8 inline">@time{{store}} <br class="block sm:hidden">Web予約する</button>
       </a>
   </div>
   <div>
