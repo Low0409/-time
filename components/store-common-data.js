@@ -34,7 +34,7 @@ Access.component("access-div", {
 
 const services = Vue.createApp({});
 // 引数を少なくするためにほとんどの店舗にあるサービスは、無い店舗だけ引数を渡して表示しないようにする　       例) v-if="!darts"
-// 逆に2店舗ぐらいにしかないサービスは引数を渡した店舗にだけ表示させる                                      例) v-if="sportspark"  ("!"付けない)
+//                                                                                                     例) v-if="sportspark"  ("!"付けない)
 
 services.component("service-div", {
   props: [

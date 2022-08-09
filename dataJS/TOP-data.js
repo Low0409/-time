@@ -68,26 +68,26 @@ const topslider = Vue.createApp({
       //PC用画像しかないので、スマホ用の画像も入れる
       TOPsliderList: [
         {
-          pc_img: "./img/top-slider-img/slider_11.jpg",
-          sp_img: "./img/top-slider-img/slider_11.jpg",
+          pc_img: "./img/TOP/top-slider-img/PC/slider_11.jpg",
+          sp_img: "./img/TOP/top-slider-img/PC/slider_11.jpg",
           path: "./services/karaoke.html",
           alt: "ダーツ岩田夏海プロ、来店イベント開催！",
         },
         {
-          pc_img: "./img/top-slider-img/slider_6.jpg",
-          sp_img: "./img/top-slider-img/slider_sp_6.jpg",
+          pc_img: "./img/TOP/top-slider-img/PC/slider_6.jpg",
+          sp_img: "./img/TOP/top-slider-img/SP/slider_sp_6.jpg",
           path: "./services/amusement/billiard.html",
           alt: "LIVEDAMAi大量導入!",
         },
         {
-          pc_img: "./img/top-slider-img/slider_4.jpg",
-          sp_img: "./img/top-slider-img/slider_4.jpg",
+          pc_img: "./img/TOP/top-slider-img/PC/slider_4.jpg",
+          sp_img: "./img/TOP/top-slider-img/PC/slider_4.jpg",
           path: "./services/amusement/darts.html",
           alt: "24時間年中無休のカラオケ&アミューズ&インターネットカフェ",
         },
         {
-          pc_img: "./img/top-slider-img/slider_10.jpg",
-          sp_img: "./img/top-slider-img/slider_10.jpg",
+          pc_img: "./img/TOP/top-slider-img/PC/slider_10.jpg",
+          sp_img: "./img/TOP/top-slider-img/PC/slider_10.jpg",
           path: "./services/amusement/takkyu.html",
           alt: "各種アミューズ施設も充実！",
         },
@@ -102,57 +102,57 @@ const subslider = Vue.createApp({
       // pathのページ内リンク(#)はcampaign-data.jsのid属性と同じにする
       SUBsliderList: [
         {
-          img: "./img/top-slider-img/7.jpg",
+          img: "./img/TOP/top-slider-img/7.jpg",
           path: "./info/campaign.html#corona",
           alt: "安心の新型コロナウイルス対策",
         },
         {
-          img: "./img/top-slider-img/08_nomihoudai.jpg",
+          img: "./img/TOP/top-slider-img/08_nomihoudai.jpg",
           path: "./info/campaign.html#nomihoudai",
           alt: "セルフ飲み放題プラン",
         },
         {
-          img: "./img/top-slider-img/4.jpg",
+          img: "./img/TOP/top-slider-img/4.jpg",
           path: "./info/campaign.html#nyukai",
           alt: "新規入会金無料キャンペーン実施中",
         },
         {
-          img: "./img/top-slider-img/07_darts.jpg",
+          img: "./img/TOP/top-slider-img/07_darts.jpg",
           path: "./info/campaign.html#iwatapro",
           alt: "岩田夏海プロ来店イベント",
         },
         {
-          img: "./img/top-slider-img/8.jpg",
+          img: "./img/TOP/top-slider-img/8.jpg",
           path: "./info/campaign.html#greenchannel",
           alt: "GREENチャンネル店内放送中",
         },
         {
-          img: "./img/top-slider-img/2.jpg",
+          img: "./img/TOP/top-slider-img/2.jpg",
           path: "./info/campaign.html#bellroad",
           alt: "@time彦根ベルロードリニューアルオープン",
         },
         {
-          img: "./img/top-slider-img/6.jpg",
+          img: "./img/TOP/top-slider-img/6.jpg",
           path: "./info/campaign.html#borga",
           alt: "ボルガライス",
         },
         {
-          img: "./img/top-slider-img/3.jpg",
+          img: "./img/TOP/top-slider-img/3.jpg",
           path: "./info/campaign.html#mahjong",
           alt: "麻雀格闘俱楽部",
         },
         {
-          img: "./img/top-slider-img/1.jpg",
+          img: "./img/TOP/top-slider-img/1.jpg",
           path: "./info/campaign.html#newplan",
           alt: "カラオケビリヤード新料金プラン登場",
         },
         {
-          img: "./img/top-slider-img/senior.jpg",
+          img: "./img/TOP/top-slider-img/senior.jpg",
           path: "./info/campaign.html#senior",
           alt: "いつでもシニア割",
         },
         {
-          img: "./img/top-slider-img/woman.jpg",
+          img: "./img/TOP/top-slider-img/woman.jpg",
           path: "./info/campaign.html#ladies",
           alt: "レディースデー",
         },

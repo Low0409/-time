@@ -50,14 +50,14 @@
     <div class="bg-gray-300">
       <div id="default-carousel" class="relative container xl:max-w-6xl mx-auto z-0" data-carousel="static" data-ride="carousel">
         <div class="overflow-hidden relative h-96">
-          <!-- TOP-data.jsのtopsliderから読み込み -->
+          <!-- メインスライドTOP-data.jsのtopsliderから読み込み -->
           <div class="hidden duration-700 ease-in-out" v-for="item in TOPsliderList" data-carousel-item>
             <!-- PC用の画像 -->
             <img :src="item.pc_img" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 hidden sm:block" :alt="item.alt">
-            <!-- SP用の画像 未作成 w700 × h443-->
+            <!-- スマホ用の画像 画像は未作成 w700 × h435-->
             <img :src="item.sp_img" class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 block sm:hidden" :alt="item.alt">
-
           </div>
+          <!-- メインスライド -->
         </div>
         <div class="flex absolute bottom-5 left-1/2 z-30 space-x-3 -translate-x-1/2">
           <!-- sliderのデータ分ボタンを生成 -->
@@ -137,7 +137,9 @@
     </div>
   </a>
 
-  <a href="./booth-menu.html"><p class="text-center text-2xl text-white font-black p-4 my-20 bg-rose-500 max-w-xl mx-auto rounded-full hovor:bg-red-800 duration-500 hover:scale-110">お食事メニューを詳しく見る</p></a>
+  <a href="./booth-menu.html">
+    <p class="text-center text-2xl text-white font-black p-4 my-20 bg-rose-500 max-w-xl mx-auto rounded-full hovor:bg-red-800 duration-500 hover:scale-110">お食事メニューを詳しく見る</p>
+  </a>
   <p class="bg-red-800 text-white text-2xl sm:text-3xl py-8 px-8 max-w-4xl mx-auto text-center duration-500 mt-20 font-black mb-8">店舗を探す</p>
   <div id="searchstore">
   </div>
@@ -216,6 +218,7 @@
     z-index: 2;
   }
 
+  /*search.htmlの埋め込んだ時の無駄な部分隠す*/
   .hide {
     display: none;
   }
