@@ -45,6 +45,7 @@ services.component("service-div", {
     "sportspark",
     "mahjong",
     "mahjongkakutou",
+    "work_study",
     "online",
     "comic",
     "band",
@@ -134,7 +135,7 @@ services.component("service-div", {
       <img src="../img/icon/service-icon/game.svg" class="rounded-xl px-2" />
       <p>オンラインゲーム</p>
     </div>
-    <div class="col-span-2" v-if="!PC">
+    <div class="col-span-2" v-if="!work_study">
     <img src="../img/icon/service-icon/PC.svg" class="rounded-xl px-2" />
     <p>ビジネス・勉強</p>
   </div>
