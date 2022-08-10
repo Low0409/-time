@@ -30,7 +30,7 @@
             <h3 class="text-red-800 text-2xl mb-2 text-center">{{ item.title}}</h3>
             <div class="sm:flex shadow-2xl bg-white max-w-4xl py-8 px-8 rounded-3xl mb-20">
                 <div class="sm:w-1/2">
-                    <img :src="item.img" alt="" class="rounded-lg rounded-3xl">
+                    <img :src="item.img" :alt="item.title" class="rounded-lg rounded-3xl">
                 </div>
                 <div class="sm:w-1/2">
                     <p class="ml-4 mt-4 align-middle">{{item.text}}</p>
