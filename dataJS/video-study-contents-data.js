@@ -4,7 +4,7 @@ const video = Vue.createApp({
       VideoServiceList: [
         {
           name: "BANDAI CHANNEL",
-          img: "../../img/services/movie-services/bandai.jpg",
+          img: "../../img/services/movie-services/bandai.JPG",
           description:
             "最新作から名作までアニメをたっぷり楽しめる動画配信サービス!@timeでは、対象の作品が見放題!",
         },

@@ -158,8 +158,7 @@ basicPlan.component("basic-plan-table2_2", {
   props: [
     "time1",
     "time2",
-    "title1",
-    "title2",
+    "title",
     "b2",
     "b3",
     "b4",
@@ -187,14 +186,14 @@ basicPlan.component("basic-plan-table2_2", {
 
   <tbody>
       <tr class="border-b">
-      <td class="text-sm sm:px-4 py-4 md:text-xl bg-green-200" rowspan="2" v-if="title1==='基本料金'">
-      {{title1}}<br>{{title2}}
+      <td class="text-sm sm:px-4 py-4 md:text-xl bg-green-200" rowspan="2" v-if="title==='基本料金'">
+      {{title}}
   </td>
-  <td class="text-sm sm:px-4 pt-10 md:text-xl bg-blue-200" rowspan="2" v-else-if="title2 ==='フリータイム'">
-          {{title1}}<br>{{title2}}
+  <td class="text-sm sm:px-4 pt-10 md:text-xl bg-blue-200" rowspan="2" v-else-if="title ==='フリータイム'">
+          {{title}}
           </td>
           <td class="text-sm sm:px-4 py-4 md:text-xl bg-yellow-200" rowspan="2" v-else>
-              {{title1}}<br>{{title2}}
+              {{title.substr( 0, 6 )}}<br>{{title.substr( 6, 5 )}}
           </td>
           <td class="sm:text-xl sm:px-6 py-4">
             {{b2}}
